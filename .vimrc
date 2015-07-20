@@ -108,6 +108,7 @@ endif
 set nobackup
 set noswapfile
 set nowrap
+set cursorline
 
 " Format config
 set expandtab
