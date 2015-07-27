@@ -25,6 +25,7 @@ Plugin 'chreekat/vim-paren-crosshairs'
 Plugin 'scrooloose/nerdtree'
 Plugin 'git://github.com/ngmy/vim-rubocop.git'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'mattn/emmet-vim'
 
 " Plugin 'tpope/vim-surround'
 " Plugin 'git://github.com/ngmy/vim-rubocop.git'
