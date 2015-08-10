@@ -141,7 +141,7 @@ set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%
 " " GVIM options
 " set guioptions-=T
 "
-let mapleader = ","
+let mapleader = " "
 "
 nnoremap <leader>d :NERDTreeToggle<cr>
 " nnoremap <leader>g :GundoToggle<cr>
