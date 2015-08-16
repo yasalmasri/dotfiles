@@ -35,7 +35,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 # Ruby aliases
 alias b="bundle exec"
 alias bun='bundle'
-alias rn='rails new'
+alias rn='rails new -T -postgresql'
 alias rs='rails s'
 alias rsp='rails s -p'
 alias rc='rails c'
