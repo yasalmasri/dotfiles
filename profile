@@ -32,6 +32,8 @@ export EDITOR=vim
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
+alias fol='nautilus .'
+
 # Ruby aliases
 alias b="bundle exec"
 alias bun='bundle'
@@ -51,9 +53,6 @@ alias rdbd='rake db:drop'
 alias rdbs='rake db:seed'
 alias rb='rubocop'
 alias sp='rspec'
-
-alias v='vi .'
-alias gv="gvim"
 
 # Heroku aliases
 alias gph='git push heroku master'
