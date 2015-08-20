@@ -69,6 +69,6 @@ alias egt='ember g template'
 alias egc='ember g controller'
 alias egm='ember g model'
 
-bind -f ~/.dotfiles/history_search
+# bind -f ~/.dotfiles/history_search
 
 export TERM=xterm-256color
