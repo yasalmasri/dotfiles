@@ -10,10 +10,13 @@ git clone git://github.com/yalmasri/dotfiles.git ~/.dotfiles; \
 ```
 
 # Aliases
+```
 fol='nautilus .'  --for linux, ubuntu
 op='open .'       --for mac
+```
 
 ### Ruby aliases
+```
 b="bundle exec"
 bun='bundle'
 rn='rails new -T -d postgresql'
@@ -32,17 +35,22 @@ rdbd='rake db:drop'
 rdbs='rake db:seed'
 rb='rubocop'
 sp='rspec'
+```
 
 ### Heroku aliases
+```
 gph='git push heroku master'
 hr='heroku run'
 hl='heroku logs --tail'
 ho='heroku open'
+```
 
 ### Ember aliases
+```
 es='ember s'
 eg='ember g'
 ed='ember d'
 egt='ember g template'
 egc='ember g controller'
 egm='ember g model'
+```
