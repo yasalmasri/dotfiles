@@ -33,6 +33,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
 alias fol='nautilus .'
+alias op='open .'
 
 # Ruby aliases
 alias b="bundle exec"
