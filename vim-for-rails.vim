@@ -26,6 +26,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'git://github.com/ngmy/vim-rubocop.git'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'mattn/emmet-vim'
+Plugin 'slim-template/vim-slim.git'
 
 " Plugin 'tpope/vim-surround'
 " Plugin 'git://github.com/ngmy/vim-rubocop.git'
