@@ -33,6 +33,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
 alias fol='nautilus .'
+alias op='open .'
 
 # Ruby aliases
 alias b="bundle exec"
@@ -67,6 +68,20 @@ alias ed='ember d'
 alias egt='ember g template'
 alias egc='ember g controller'
 alias egm='ember g model'
+
+# Directories
+## Masys
+alias masys='cd ~/dev/masys/'
+alias exam='cd ~/dev/masys/exam/'
+alias acmgb='cd ~/dev/masys/acmgb/'
+alias test='cd ~/dev/test/'
+
+## UKKO
+alias ukko='cd ~/dev/ukko/'
+alias ciac='cd ~/dev/ukko/ciacweb/'
+alias ciacm='cd ~/dev/ukko/ciac_mobile/'
+alias ciaca='cd ~/dev/ukko/ciac_mobile_app/'
+alias sea='cd ~/dev/ukko/sea/'
 
 # bind -f ~/.dotfiles/history_search
 
