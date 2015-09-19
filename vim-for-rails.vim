@@ -111,6 +111,7 @@ set nobackup
 set noswapfile
 set nowrap
 set cursorline
+set cursorline cursorcolumn " show cursor vertical highlight
 
 " Format config
 set expandtab
