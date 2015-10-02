@@ -13,6 +13,9 @@ shopt -s histappend
 # don't put duplicate lines in the history and ignore same sucessive entries.
 export HISTCONTROL=ignoreboth
 
+bind -x '"\C-xt":printf "%${COLUMNS}s\r" $(date +%T)'
+bind '"\C-m":"\C-xt\C-j"'
+
 # GIT ------------------------------------
 # show current branch on shell
 source ~/.dotfiles/bash_git
