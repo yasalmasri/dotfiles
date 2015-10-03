@@ -1,0 +1,14 @@
+ #Directories
+## Masys
+alias masys='cd ~/dev/masys/'
+alias exam='cd ~/dev/masys/exam/'
+alias acmgb='cd ~/dev/masys/acmgb/'
+alias bank='cd ~/dev/masys/bank/'
+alias test='cd ~/dev/test/'
+
+## UKKO
+alias ukko='cd ~/dev/ukko/'
+alias ciac='cd ~/dev/ukko/ciacweb/'
+alias ciacm='cd ~/dev/ukko/ciac_mobile/'
+alias ciaca='cd ~/dev/ukko/ciac_mobile_app/'
+alias sea='cd ~/dev/ukko/sea/'

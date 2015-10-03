@@ -8,5 +8,6 @@ echo source ~/.dotfiles/vim-for-rails.vim  >> ~/.vimrc
 echo source ~/.dotfiles/gvim-for-rails.vim >> ~/.gvimrc
 echo source ~/.dotfiles/profile            >> ~/.profile
 echo source ~/.dotfiles/profile            >> ~/.bashrc
+echo source ~/.dotfiles/zsh                >> ~/.zshrc
 
 vim +PluingInstall +qall
