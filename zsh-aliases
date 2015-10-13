@@ -35,6 +35,10 @@ alias rdbd='rake db:drop'
 alias rdbs='rake db:seed'
 alias rb='rubocop'
 alias sp='rspec'
+alias spc='rspec spec/controllers/'
+alias spm='rspec spec/models/'
+alias spf='rspec spec/features/'
+alias sph='rspec spec/helpers/'
 
 # Heroku aliases
 alias gph='git push heroku master'
