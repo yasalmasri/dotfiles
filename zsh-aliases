@@ -1,3 +1,6 @@
+alias fol='nautilus .'
+alias op='open .'
+
 alias g='git'
 alias ga='git add'
 alias gc='git commit -m'
@@ -11,10 +14,8 @@ alias gpl='git pull origin'
 alias gps='git push origin'
 alias gm='git merge'
 alias grm='git rm'
-alias grm='git ls-files --deleted -z | xargs -0 git rm'
-
-alias fol='nautilus .'
-alias op='open .'
+alias grmf='git ls-files --deleted -z | xargs -0 git rm'
+alias gl='git log'
 
 # Ruby aliases
 alias b="bundle exec"
@@ -43,6 +44,9 @@ alias sph='rspec spec/helpers/'
 # Heroku aliases
 alias gph='git push heroku master'
 alias hr='heroku run'
+alias hdbm='heroku run rake db:migrate'
+alias hdbs='heroku run rake db:seed'
+alias hdbr='heroku pg:reset DATABASE'
 alias hl='heroku logs --tail'
 alias ho='heroku open'
 
