@@ -13,9 +13,10 @@ alias gk="gitk 2>/dev/null --all &"
 alias gpl='git pull origin'
 alias gps='git push origin'
 alias gm='git merge'
+alias gl='git log'
+alias gsh='git show'
 alias grm='git rm'
 alias grmf='git ls-files --deleted -z | xargs -0 git rm'
-alias gl='git log'
 
 # Ruby aliases
 alias b="bundle exec"
@@ -42,6 +43,7 @@ alias spf='rspec spec/features/'
 alias sph='rspec spec/helpers/'
 
 # Heroku aliases
+alias ha='heroku git:remote -a' # to add app to folder.
 alias gph='git push heroku master'
 alias hr='heroku run'
 alias hdbm='heroku run rake db:migrate'
