@@ -1,7 +1,9 @@
 alias fol='nautilus .'
 alias op='open .'
+alias ..='cd ..'
 
 alias g='git'
+alias gcl='git clone'
 alias ga='git add'
 alias gc='git commit -m'
 alias gs='git status'
@@ -23,6 +25,7 @@ alias b="bundle exec"
 alias bun='bundle'
 alias rn='rails new -T -d postgresql'
 alias rs='rails s'
+alias rsb='rails s -b 0.0.0.0'
 alias rsp='rails s -p'
 alias rc='rails c'
 alias rg='rails g'
@@ -46,9 +49,9 @@ alias sph='rspec spec/helpers/'
 alias ha='heroku git:remote -a' # to add app to folder.
 alias gph='git push heroku master'
 alias hr='heroku run'
+alias hdbr='heroku pg:reset DATABASE'
 alias hdbm='heroku run rake db:migrate'
 alias hdbs='heroku run rake db:seed'
-alias hdbr='heroku pg:reset DATABASE'
 alias hl='heroku logs --tail'
 alias ho='heroku open'
 
