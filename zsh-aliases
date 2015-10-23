@@ -1,4 +1,4 @@
-alias fol='nautilus .'
+alias nau='nautilus .'
 alias op='open .'
 alias ..='cd ..'
 
@@ -21,8 +21,8 @@ alias grm='git rm'
 alias grmf='git ls-files --deleted -z | xargs -0 git rm'
 
 # Ruby aliases
-alias b="bundle exec"
-alias bun='bundle'
+alias be="bundle exec"
+alias bn='bundle'
 alias rn='rails new -T -d postgresql'
 alias rs='rails s'
 alias rsb='rails s -b 0.0.0.0'
