@@ -27,6 +27,7 @@ Plugin 'git://github.com/ngmy/vim-rubocop.git'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'mattn/emmet-vim'
 Plugin 'slim-template/vim-slim.git'
+Plugin 'thoughtbot/vim-rspec'
 
 " Plugin 'tpope/vim-surround'
 " Plugin 'git://github.com/ngmy/vim-rubocop.git'
@@ -176,3 +177,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-T> <C-W><C-T>
 vnoremap <leader>p "0p
+
+" Vim-rspec
+map <Leader>s :call RunCurrentSpecFile()<CR>
+map <Leader>t :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_runner = "os_x_iterm2"
