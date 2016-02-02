@@ -28,9 +28,9 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'mattn/emmet-vim'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'kchmck/vim-coffee-script'
 
 " Plugin 'tpope/vim-surround'
-" Plugin 'git://github.com/ngmy/vim-rubocop.git'
 " Plugin 'git://github.com/scrooloose/syntastic.git'
 " Plugin 'git://github.com/terryma/vim-multiple-cursors.git'
 "
@@ -39,7 +39,7 @@ Plugin 'thoughtbot/vim-rspec'
 " Plugin 'Lokaltog/vim-easymotion'
 " Plugin 'godlygeek/tabular'
 " Plugin 'kchmck/vim-coffee-script'
-" " Bundle 'rgp/PHP-Indenting-for-VIm'
+" Bundle 'rgp/PHP-Indenting-for-VIm'
 " Plugin 'terryma/vim-expand-region'
 " Plugin 'MarcWeber/vim-addon-mw-utils'
 " Plugin 'tomtom/tlib_vim'
@@ -85,7 +85,10 @@ colorscheme monokai
 autocmd BufRead,BufNewFile *.json set filetype=json
 autocmd Syntax json sou ~/.vim/syntax/json.vim
 
- " Prettify Vagrantfile
+" Automatically removing all trailing whitespace at the end of line.
+" autocmd BufWritePre * :%s/\s\+$//
+
+" Prettify Vagrantfile
 autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 
 " Prettify Markdown files
@@ -184,3 +187,5 @@ map <Leader>t :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_runner = "os_x_iterm2"
+
+map <Leader>c :%s/\s\+$//<CR>
