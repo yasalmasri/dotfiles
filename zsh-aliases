@@ -1,6 +1,16 @@
 alias nau='nautilus .'
 alias op='open .'
 alias ..='cd ..'
+alias noti='terminal-notifier -title "Specs" -message "Done!"'
+
+# Powder Aliases
+alias pu='powder up'
+alias pd='powder down'
+alias pl='powder link'
+alias pul='powder unlink'
+alias po="powder open -b 'Google Chrome'"
+alias pr='powder restart'
+alias pt='tail -f log/development.log'
 
 alias g='git'
 alias gcl='git clone'
@@ -14,11 +24,14 @@ alias gg="git grep --color -n"
 alias gk="gitk 2>/dev/null --all &"
 alias gpl='git pull origin'
 alias gps='git push origin'
+alias gpsd='git push dokku master'
 alias gm='git merge'
 alias gl='git log'
 alias gsh='git show'
 alias grm='git rm'
 alias grmf='git ls-files --deleted -z | xargs -0 git rm'
+alias grlc='git reset --soft HEAD^'
+alias grh='git reset HEAD'
 
 # Ruby aliases
 alias be="bundle exec"
@@ -34,18 +47,31 @@ alias rgm='rails g model'
 alias rdm='rails d model'
 alias rgc='rails g controller'
 alias rdc='rails d controller'
+alias rgmi='rails g migration'
 alias rdbr='rake db:drop; rake db:create; rake db:migrate;'
 alias rdbrs='rake db:drop; rake db:create; rake db:migrate; rake db:seed;'
 alias rdbc='rake db:create'
 alias rdbm='rake db:migrate'
 alias rdbd='rake db:drop'
 alias rdbs='rake db:seed'
+
+# Rubocop
 alias rb='rubocop'
+alias rbc='rubocop app/controllers/'
+alias rbm='rubocop app/models/'
+alias rbh='rubocop app/helpers/'
+alias rbl='rubocop lib/'
+
+# Specs
 alias sp='rspec'
 alias spc='rspec spec/controllers/'
 alias spm='rspec spec/models/'
 alias spf='rspec spec/features/'
 alias sph='rspec spec/helpers/'
+alias rspec_model='rails g rspec:model'
+alias rspec_con='rails g rspec:controller'
+
+alias ann='annotate'
 
 # Heroku aliases
 alias ha='heroku git:remote -a' # to add app to folder.
@@ -64,3 +90,18 @@ alias ed='ember d'
 alias egt='ember g template'
 alias egc='ember g controller'
 alias egm='ember g model'
+
+# Python
+alias p2='python'
+alias p3='python3'
+
+# Aliases with Bundle exec
+alias besp='bundle exec rspec'
+alias bespc='bundle exec rspec spec/controllers/'
+alias bespm='bundle exec rspec spec/models/'
+alias bespf='bundle exec rspec spec/features/'
+alias besph='bundle exec rspec spec/helpers/'
+alias berdbc='bundle exec rake db:create'
+alias berdbm='bundle exec rake db:migrate'
+alias berdbd='bundle exec rake db:drop'
+alias berdbs='bundle exec rake db:seed'
