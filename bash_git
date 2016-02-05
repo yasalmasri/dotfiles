@@ -10,21 +10,9 @@ function parse_git_branch {
 fi
 
 source ~/.dotfiles/bash_git_completion
-
-alias g='git'
-alias ga='git add'
-alias gc='git commit -m'
-alias gs='git status'
-alias gco='git checkout '
-alias gb='git branch'
-alias gd="git diff"
-alias gg="git grep --color -n"
-alias gk="gitk 2>/dev/null --all &"
-alias gpl='git pull origin'
-alias gps='git push origin'
-alias gm='git merge'
-alias grm='git rm'
-alias grm='git ls-files --deleted -z | xargs -0 git rm'
+source ~/.dotfiles/aliases-ror
+source ~/.dotfiles/aliases-directories
+source ~/.dotfiles/aliases-ssh
 
 complete -o default -o nospace -F _git_branch gb
 complete -o default -o nospace -F _git_checkout gco

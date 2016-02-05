@@ -1,5 +1,6 @@
-source ~/.dotfiles/zsh-aliases
-source ~/.dotfiles/zsh-directories
+source ~/.dotfiles/aliases-ror
+source ~/.dotfiles/aliases-directories
+source ~/.dotfiles/aliases-ssh
 
 setopt prompt_subst
 autoload -Uz vcs_info

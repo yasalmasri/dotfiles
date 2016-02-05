@@ -1,12 +1,16 @@
  #Directories
 ## Masys
+alias devs='cd ~/dev/'
 alias test='cd ~/dev/test/'
 alias masys='cd ~/dev/masys/'
 alias exam='cd ~/dev/masys/exam/'
 alias acmgb='cd ~/dev/masys/acmgb/'
 alias bank='cd ~/dev/masys/bank/'
 alias erp='cd ~/dev/masys/erp/'
+alias serp='cd ~/dev/masys/serp/'
 alias mbase='cd ~/dev/masys/base/'
+alias cfdi='cd ~/dev/masys/CFDI/'
+alias tdw='cd ~/dev/masys/tumblr_downloader_web/'
 
 ## UKKO
 alias ukko='cd ~/dev/ukko/'
@@ -16,3 +20,9 @@ alias ciaca='cd ~/dev/ukko/ciac_mobile_app/'
 alias ciaci='cd ~/dev/ukko/ciac_app_ios/'
 alias sea='cd ~/dev/ukko/sea/'
 alias ubase='cd ~/dev/ukko/base/'
+alias kip='cd ~/dev/ukko/kipping/'
+alias yet='cd ~/dev/ukko/yetto/'
+alias bash='cd ~/dev/ukko/erp-bash/'
+alias khu='cd ~/dev/ukko/khumi/'
+alias err='cd ~/dev/ukko/error_reports/'
+alias sit='cd ~/dev/ukko/sit/'
