@@ -189,3 +189,7 @@ map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_runner = "os_x_iterm2"
 
 map <Leader>c :%s/\s\+$//<CR>
+
+:command! W :w
+:command! Wq :wq
+:command! Q :q
