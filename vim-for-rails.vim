@@ -29,6 +29,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'bronson/vim-trailing-whitespace'
 
 " Plugin 'tpope/vim-surround'
 " Plugin 'git://github.com/scrooloose/syntastic.git'
