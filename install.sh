@@ -11,3 +11,4 @@ echo source ~/.dotfiles/profile            >> ~/.profile
 echo source ~/.dotfiles/profile            >> ~/.bashrc
 echo source ~/.dotfiles/zsh                >> ~/.zshrc
 git config --global core.excludesfile ~/.dotfiles/gitignore_global
+git config --global core.editor `which vim`
