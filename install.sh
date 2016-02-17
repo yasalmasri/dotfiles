@@ -3,7 +3,7 @@ git submodule update
 
 # vim +BundleInstall +qall
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluingInstall +qall
+vim -c "execute \"PluginInstall\" | qa"
 
 echo source ~/.dotfiles/vim-for-rails.vim  >> ~/.vimrc
 echo source ~/.dotfiles/gvim-for-rails.vim >> ~/.gvimrc
