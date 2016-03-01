@@ -157,6 +157,9 @@ nnoremap <leader>d :NERDTreeToggle<cr>
 " " colorscheme desert
 " vmap ,x :!tidy -q -i --show-errors 0<CR>
 " nnoremap <leader>c :nohlsearch<cr>
+" Press F4 to toggle highlighting on/off, and show current value.
+:noremap <leader>h :set hlsearch! hlsearch?<CR>
+:nnoremap <CR> :nohlsearch<CR><CR>
 "
 "
 " "PHP INDENT
