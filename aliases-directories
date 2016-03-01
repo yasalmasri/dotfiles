@@ -11,6 +11,7 @@ alias serp='cd ~/dev/masys/serp/'
 alias mbase='cd ~/dev/masys/base/'
 alias cfdi='cd ~/dev/masys/CFDI/'
 alias tdw='cd ~/dev/masys/tumblr_downloader_web/'
+alias pay='cd ~/dev/masys/payments/'
 
 ## UKKO
 alias ukko='cd ~/dev/ukko/'
@@ -26,3 +27,5 @@ alias bashh='cd ~/dev/ukko/erp-bash/'
 alias khu='cd ~/dev/ukko/khumi/'
 alias err='cd ~/dev/ukko/error_reports/'
 alias sit='cd ~/dev/ukko/sit/'
+alias asis='cd ~/dev/ukko/asistro/'
+alias gpst='cd ~/dev/ukko/GPS-Tracker/'
