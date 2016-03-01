@@ -32,43 +32,6 @@ export EDITOR=vim
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-alias fol='nautilus .'
-alias op='open .'
-
-# Ruby aliases
-alias b="bundle exec"
-alias bun='bundle'
-alias rn='rails new -T -d postgresql'
-alias rs='rails s'
-alias rsp='rails s -p'
-alias rc='rails c'
-alias rg='rails g'
-alias rd='rails d'
-alias rgm='rails g model'
-alias rdm='rails d model'
-alias rgc='rails g controller'
-alias rdc='rails d controller'
-alias rdbc='rake db:create'
-alias rdbm='rake db:migrate'
-alias rdbd='rake db:drop'
-alias rdbs='rake db:seed'
-alias rb='rubocop'
-alias sp='rspec'
-
-# Heroku aliases
-alias gph='git push heroku master'
-alias hr='heroku run'
-alias hl='heroku logs --tail'
-alias ho='heroku open'
-
-#Ember aliases
-alias es='ember s'
-alias eg='ember g'
-alias ed='ember d'
-alias egt='ember g template'
-alias egc='ember g controller'
-alias egm='ember g model'
-
 # bind -f ~/.dotfiles/history_search
 
 export TERM=xterm-256color
