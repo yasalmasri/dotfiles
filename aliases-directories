@@ -1,8 +1,10 @@
  #Directories
-## Masys
 alias devs='cd ~/dev/'
 alias test='cd ~/dev/test/'
 alias masys='cd ~/dev/masys/'
+
+## Masys
+alias blog='cd ~/dev/masys/blog/'
 alias exam='cd ~/dev/masys/exam/'
 alias acmgb='cd ~/dev/masys/acmgb/'
 alias bank='cd ~/dev/masys/bank/'
@@ -11,7 +13,7 @@ alias serp='cd ~/dev/masys/serp/'
 alias mbase='cd ~/dev/masys/base/'
 alias cfdi='cd ~/dev/masys/CFDI/'
 alias tdw='cd ~/dev/masys/tumblr_downloader_web/'
-alias pay='cd ~/dev/masys/payments/'
+alias pay='cd ~/dev/masys/maSysPay/'
 
 ## UKKO
 alias ukko='cd ~/dev/ukko/'

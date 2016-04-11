@@ -16,11 +16,11 @@ alias g='git'
 alias gcl='git clone'
 alias ga='git add'
 alias gc='git commit -m'
-alias gs='git status'
+alias gs='clear && git status'
 alias gco='git checkout '
 alias gcob='git checkout -b'
 alias gb='git branch'
-alias gd="git diff"
+alias gd="clear && git diff"
 alias gg="git grep --color -n"
 alias gk="gitk 2>/dev/null --all &"
 alias gpl='git pull origin'
@@ -33,6 +33,8 @@ alias grm='git rm'
 alias grmf='git ls-files --deleted -z | xargs -0 git rm'
 alias grlc='git reset --soft HEAD^'
 alias grh='git reset HEAD'
+alias gss='git stash save'
+alias gsp='git stash pop'
 
 # Ruby aliases
 alias be="bundle exec"
@@ -55,6 +57,7 @@ alias rdbc='rake db:create'
 alias rdbm='rake db:migrate'
 alias rdbd='rake db:drop'
 alias rdbs='rake db:seed'
+alias rdbrb='rake db:rollback'
 
 # Rubocop
 alias rb='rubocop'
@@ -106,3 +109,12 @@ alias berdbc='bundle exec rake db:create'
 alias berdbm='bundle exec rake db:migrate'
 alias berdbd='bundle exec rake db:drop'
 alias berdbs='bundle exec rake db:seed'
+alias berdbrb='bundle exec rake db:rollback'
+
+# node npm
+alias gsf='grunt serve -f'
+alias sgsf='sudo grunt serve -f'
+
+pgr() {
+  pg_restore -c -O -d"$@"
+}
