@@ -30,6 +30,13 @@ Plugin 'slim-template/vim-slim.git'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'honza/vim-snippets'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'henrik/vim-ruby-runner'
+Plugin 'vim-scripts/jade.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'nono/vim-handlebars'
 
 " Plugin 'tpope/vim-surround'
 " Plugin 'git://github.com/scrooloose/syntastic.git'
@@ -158,8 +165,8 @@ nnoremap <leader>d :NERDTreeToggle<cr>
 " vmap ,x :!tidy -q -i --show-errors 0<CR>
 " nnoremap <leader>c :nohlsearch<cr>
 " Press F4 to toggle highlighting on/off, and show current value.
-:noremap <leader>h :set hlsearch! hlsearch?<CR>
-:nnoremap <CR> :nohlsearch<CR><CR>
+" :noremap <leader>h :set hlsearch! hlsearch?<CR>
+" :nnoremap <CR> :nohlsearch<CR><CR>
 "
 "
 " "PHP INDENT
@@ -168,8 +175,8 @@ nnoremap <leader>d :NERDTreeToggle<cr>
 "
 " map <leader>aa :set tabstop=2  shiftwidth=2 <cr>
 " map <leader>aaaa :set tabstop=4  shiftwidth=4 <cr>
-" map <leader>rn :set relativenumber <cr>
-" map <leader>nrn :set number <cr>
+map <leader>rn :set relativenumber <cr>
+map <leader>nu :set number <cr>
 "
 " au BufRead,BufNewFile *.phtml set filetype=html
 " au BufReadPost *.phtml set syntax=php
@@ -184,16 +191,23 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-T> <C-W><C-T>
 vnoremap <leader>p "0p
-
-" Vim-rspec
-map <Leader>s :call RunCurrentSpecFile()<CR>
-map <Leader>t :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_runner = "os_x_iterm2"
+nmap K k
 
 map <Leader>c :%s/\s\+$//<CR>
+map <F7> mzgg=G`z
+map <F6> v%Vy
+
+" Emmet leader
+let g:user_emmet_leader_key='<C-A>'
 
 :command! W :w
 :command! Wq :wq
 :command! Q :q
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"

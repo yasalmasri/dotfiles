@@ -1,0 +1,6 @@
+# Rubocop
+alias rb='rubocop'
+alias rbc='rubocop app/controllers/'
+alias rbm='rubocop app/models/'
+alias rbh='rubocop app/helpers/'
+alias rbl='rubocop lib/'

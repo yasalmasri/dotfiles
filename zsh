@@ -1,8 +1,6 @@
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-source ~/.dotfiles/aliases-ror
-source ~/.dotfiles/aliases-directories
-source ~/.dotfiles/aliases-ssh
+source ~/.dotfiles/aliases
 
 HISTFILE=~/.histfile
 HISTSIZE=100000

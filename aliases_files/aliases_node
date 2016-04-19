@@ -1,0 +1,3 @@
+# Node npm
+alias gsf='grunt serve -f'
+alias sgsf='sudo grunt serve -f'

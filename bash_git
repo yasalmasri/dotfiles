@@ -10,9 +10,7 @@ function parse_git_branch {
 fi
 
 source ~/.dotfiles/bash_git_completion
-source ~/.dotfiles/aliases-ror
-source ~/.dotfiles/aliases-directories
-source ~/.dotfiles/aliases-ssh
+source ~/.dotfiles/aliases
 
 complete -o default -o nospace -F _git_branch gb
 complete -o default -o nospace -F _git_checkout gco

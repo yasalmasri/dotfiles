@@ -1,0 +1,30 @@
+# Git aliases
+branch_name=$(git symbolic-ref -q HEAD)
+branch_name=${branch_name##refs/heads/}
+branch_name=${branch_name:-HEAD}
+
+alias g='git'
+alias gcl='git clone'
+alias ga='git add'
+alias gc='git commit -m'
+alias gs='clear && git status'
+alias gco='git checkout '
+alias gcob='git checkout -b'
+alias gb='git branch'
+alias gd="clear && git diff"
+alias gg="git grep --color -n"
+alias gk="gitk 2>/dev/null --all &"
+alias gpl='git pull origin'
+alias gplb='git pull origin $branch_name'
+alias gps='git push origin'
+alias gpsb='git push origin $branch_name'
+alias gpsd='git push dokku master'
+alias gm='git merge'
+alias gl='git log'
+alias gsh='git show'
+alias grm='git rm'
+alias grmf='git ls-files --deleted -z | xargs -0 git rm'
+alias grlc='git reset --soft HEAD^'
+alias grh='git reset HEAD'
+alias gss='git stash save'
+alias gsp='git stash pop'

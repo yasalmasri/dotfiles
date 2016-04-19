@@ -1,0 +1,5 @@
+# General
+alias nau='nautilus .'
+alias op='open .'
+alias ..='cd ..'
+alias noti='terminal-notifier -title "Specs" -message "Done!"'

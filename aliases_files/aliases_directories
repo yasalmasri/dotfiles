@@ -1,4 +1,4 @@
- #Directories
+# Directories
 alias devs='cd ~/dev/'
 alias test='cd ~/dev/test/'
 alias masys='cd ~/dev/masys/'
