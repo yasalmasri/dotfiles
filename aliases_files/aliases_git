@@ -1,7 +1,10 @@
 # Git aliases
+branch_name() {
 branch_name=$(git symbolic-ref -q HEAD)
 branch_name=${branch_name##refs/heads/}
 branch_name=${branch_name:-HEAD}
+print $branch_name
+}
 
 alias g='git'
 alias gcl='git clone'
@@ -15,9 +18,9 @@ alias gd="clear && git diff"
 alias gg="git grep --color -n"
 alias gk="gitk 2>/dev/null --all &"
 alias gpl='git pull origin'
-alias gplb='git pull origin $branch_name'
+alias gplb='git pull origin $(branch_name)'
 alias gps='git push origin'
-alias gpsb='git push origin $branch_name'
+alias gpsb='git push origin $(branch_name)'
 alias gpsd='git push dokku master'
 alias gm='git merge'
 alias gl='git log'
