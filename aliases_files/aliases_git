@@ -11,7 +11,7 @@ alias gcl='git clone'
 alias ga='git add'
 alias gc='git commit -m'
 alias gs='clear && git status'
-alias gco='git checkout '
+# alias gco='git checkout '
 alias gcob='git checkout -b'
 alias gb='git branch'
 alias gd="clear && git diff"
@@ -31,3 +31,23 @@ alias grlc='git reset --soft HEAD^'
 alias grh='git reset HEAD'
 alias gss='git stash save'
 alias gsp='git stash pop'
+
+
+function gco() {
+  if [ "$@" = "." ]; then
+    print "Are you sure??"
+    read -rs -k 1 ans
+  case "${ans}" in
+      y|Y)
+        git checkout .
+        return 0
+        ;;
+
+      *)  # This is the default
+        return 1
+
+        esac
+  else
+    git checkout "$@"
+  fi
+}

@@ -37,6 +37,12 @@ Plugin 'henrik/vim-ruby-runner'
 Plugin 'vim-scripts/jade.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'nono/vim-handlebars'
+Plugin 'gaogao1030/vim-slimbars'
+
+" Swift plugins
+" Plugin 'Rip-Rip/clang_complete'
+" Plugin 'eraserhd/vim-ios'
+" Plugin 'msanders/cocoa.vim'
 
 " Plugin 'tpope/vim-surround'
 " Plugin 'git://github.com/scrooloose/syntastic.git'
