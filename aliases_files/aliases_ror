@@ -29,6 +29,7 @@ alias berdbm='bundle exec rake db:migrate'
 alias berdbd='bundle exec rake db:drop'
 alias berdbs='bundle exec rake db:seed'
 alias berdbrb='bundle exec rake db:rollback'
+alias berdbrs='bundle exec rake db:drop; bundle exec rake db:create; bundle exec rake db:migrate; bundle exec rake db:seed;'
 
 pgr() {
   pg_restore -c -O -d"$@"
