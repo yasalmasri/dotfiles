@@ -25,7 +25,6 @@ Plugin 'chreekat/vim-paren-crosshairs'
 Plugin 'scrooloose/nerdtree'
 Plugin 'git://github.com/ngmy/vim-rubocop.git'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'mattn/emmet-vim'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'kchmck/vim-coffee-script'
@@ -38,6 +37,8 @@ Plugin 'vim-scripts/jade.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'nono/vim-handlebars'
 Plugin 'gaogao1030/vim-slimbars'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'mattn/emmet-vim'
 
 " Swift plugins
 " Plugin 'Rip-Rip/clang_complete'
@@ -96,8 +97,8 @@ syntax enable
 colorscheme monokai
 
 " Prettify JSON files
-autocmd BufRead,BufNewFile *.json set filetype=json
-autocmd Syntax json sou ~/.vim/syntax/json.vim
+" autocmd BufRead,BufNewFile *.json set filetype=json
+" autocmd Syntax json sou ~/.vim/syntax/json.vim
 
 " Automatically removing all trailing whitespace at the end of line.
 " autocmd BufWritePre * :%s/\s\+$//
@@ -203,9 +204,6 @@ map <Leader>c :%s/\s\+$//<CR>
 map <F7> mzgg=G`z
 map <F6> v%Vy
 
-" Emmet leader
-let g:user_emmet_leader_key='<C-A>'
-
 :command! W :w
 :command! Wq :wq
 :command! Q :q
@@ -217,3 +215,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" Emmet leader
+" let g:user_emmet_leader_key='<C-Z>'
