@@ -39,6 +39,9 @@ Plugin 'nono/vim-handlebars'
 Plugin 'gaogao1030/vim-slimbars'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'fatih/vim-go'
+Plugin 'posva/vim-vue'
+Plugin 'othree/html5.vim'
 
 " Swift plugins
 " Plugin 'Rip-Rip/clang_complete'
@@ -218,3 +221,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Emmet leader
 " let g:user_emmet_leader_key='<C-Z>'
+
+autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
+autocmd BufRead,BufNewFile *.vue set filetype=html
+" au BufRead,BufNewFile *.vue set filetype=html

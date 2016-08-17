@@ -2,3 +2,5 @@
 alias gsf='grunt serve -f --verbose'
 alias gsdf='grunt serve:dist -f --verbose'
 alias sgsf='sudo grunt serve -f'
+alias R='ramda'
+alias nrd='npm run dev'

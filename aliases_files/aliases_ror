@@ -21,7 +21,7 @@ alias rdbd='rake db:drop'
 alias rdbs='rake db:seed'
 alias rdbrb='rake db:rollback'
 
-alias ann='annotate'
+alias ann='annotate -i'
 
 # Aliases with Bundle exec
 alias berdbc='bundle exec rake db:create'
