@@ -30,24 +30,25 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'honza/vim-snippets'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'henrik/vim-ruby-runner'
-Plugin 'vim-scripts/jade.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'nono/vim-handlebars'
 Plugin 'gaogao1030/vim-slimbars'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'fatih/vim-go'
-Plugin 'posva/vim-vue'
-Plugin 'othree/html5.vim'
+Plugin 'easymotion/vim-easymotion'
 
 " Swift plugins
 " Plugin 'Rip-Rip/clang_complete'
 " Plugin 'eraserhd/vim-ios'
 " Plugin 'msanders/cocoa.vim'
 
+" Plugin 'vim-scripts/jade.vim'
+" Plugin 'leafgarland/typescript-vim'
+" Plugin 'fatih/vim-go'
+" Plugin 'othree/html5.vim'
+" Plugin 'posva/vim-vue'
+" Plugin 'elixir-lang/vim-elixir'
 " Plugin 'tpope/vim-surround'
 " Plugin 'git://github.com/scrooloose/syntastic.git'
 " Plugin 'git://github.com/terryma/vim-multiple-cursors.git'
@@ -204,6 +205,7 @@ vnoremap <leader>p "0p
 nmap K k
 
 map <Leader>c :%s/\s\+$//<CR>
+map <Leader>b :CtrlPBuffer<CR>
 map <F7> mzgg=G`z
 map <F6> v%Vy
 
