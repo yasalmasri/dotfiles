@@ -1,7 +1,9 @@
 # Directories
+alias dot='cd ~/.dotfiles/'
 alias devs='cd ~/dev/'
 alias test='cd ~/dev/test/'
 alias masys='cd ~/dev/masys/'
+alias mamp='cd /Applications/MAMP/htdocs/'
 
 ## Masys
 alias blog='cd ~/dev/masys/blog/'
@@ -35,3 +37,10 @@ alias asis='cd ~/dev/ukko/asistro/'
 alias gpst='cd ~/dev/ukko/GPS-Tracker/'
 alias herm='cd ~/dev/ukko/hermod/'
 alias sam='cd ~/dev/ukko/sampo/'
+
+# Skydrop
+alias skyd='cd ~/dev/skydrop/'
+alias shopi='cd ~/dev/skydrop/skydrop-shopify'
+
+# Genaro
+alias trap='cd ~/dev/genaro/trapos-iOS'

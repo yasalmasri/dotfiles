@@ -1,0 +1,2 @@
+# PHP npm
+alias pun='clear && phpunit'

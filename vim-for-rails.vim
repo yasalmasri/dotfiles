@@ -37,12 +37,14 @@ Plugin 'nono/vim-handlebars'
 Plugin 'gaogao1030/vim-slimbars'
 Plugin 'mattn/emmet-vim'
 Plugin 'easymotion/vim-easymotion'
+" Plugin 'gko/vim-coloresque'
 
 " Swift plugins
 " Plugin 'Rip-Rip/clang_complete'
 " Plugin 'eraserhd/vim-ios'
 " Plugin 'msanders/cocoa.vim'
 
+" Plugin 'captbaritone/better-indent-support-for-php-with-html'
 " Plugin 'vim-scripts/jade.vim'
 " Plugin 'leafgarland/typescript-vim'
 " Plugin 'fatih/vim-go'
@@ -158,6 +160,13 @@ set t_Co=256              " enable 256-color mode.
 set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
 " set visualbell
 
+autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype coffeescript setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype jade setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype json setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 sts=0 expandtab
+autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TRASHCAN
