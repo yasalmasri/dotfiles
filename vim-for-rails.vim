@@ -37,6 +37,7 @@ Plugin 'nono/vim-handlebars'
 Plugin 'gaogao1030/vim-slimbars'
 Plugin 'mattn/emmet-vim'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'leafgarland/typescript-vim'
 " Plugin 'gko/vim-coloresque'
 
 " Swift plugins
@@ -46,7 +47,6 @@ Plugin 'easymotion/vim-easymotion'
 
 " Plugin 'captbaritone/better-indent-support-for-php-with-html'
 " Plugin 'vim-scripts/jade.vim'
-" Plugin 'leafgarland/typescript-vim'
 " Plugin 'fatih/vim-go'
 " Plugin 'othree/html5.vim'
 " Plugin 'posva/vim-vue'
