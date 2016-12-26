@@ -12,3 +12,4 @@ source ~/.dotfiles/aliases_files/aliases_ror
 source ~/.dotfiles/aliases_files/aliases_ror_servers
 source ~/.dotfiles/aliases_files/aliases_rubocop
 source ~/.dotfiles/aliases_files/aliases_specs
+source ~/.dotfiles/aliases_files/aliases_tns

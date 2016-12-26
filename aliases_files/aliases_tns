@@ -1,0 +1,3 @@
+alias tnsios='tns livesync ios --device E087B307-220B-48D2-9C75-5F4CEC709D3A'
+alias tnsrios='tns platform remove ios'
+alias tnsrand='tns platform remove android'
