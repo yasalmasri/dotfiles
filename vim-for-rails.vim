@@ -160,7 +160,7 @@ set t_Co=256              " enable 256-color mode.
 set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
 " set visualbell
 
-autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype coffeescript setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype jade setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
