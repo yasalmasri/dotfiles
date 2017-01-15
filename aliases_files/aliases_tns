@@ -1,4 +1,4 @@
-alias tnsios='tns livesync ios --watch --device E087B307-220B-48D2-9C75-5F4CEC709D3A'
+alias tnsios='tns livesync ios --watch --device 6E748E78-D919-4386-8184-18A00FD61580'
 alias tnsyas='tns run ios --device 32a996fb8567585c7da659092c73215515adfcfc'
 alias tnsand='tns livesync android --watch --device emulator-5554'
 alias tnsrios='tns platform remove ios'
