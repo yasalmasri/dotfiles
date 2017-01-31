@@ -38,18 +38,18 @@ Plugin 'gaogao1030/vim-slimbars'
 Plugin 'mattn/emmet-vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'leafgarland/typescript-vim'
-" Plugin 'gko/vim-coloresque'
+Plugin 'posva/vim-vue'
 
 " Swift plugins
 " Plugin 'Rip-Rip/clang_complete'
 " Plugin 'eraserhd/vim-ios'
 " Plugin 'msanders/cocoa.vim'
 
+" Plugin 'gko/vim-coloresque'
 " Plugin 'captbaritone/better-indent-support-for-php-with-html'
 " Plugin 'vim-scripts/jade.vim'
 " Plugin 'fatih/vim-go'
 " Plugin 'othree/html5.vim'
-" Plugin 'posva/vim-vue'
 " Plugin 'elixir-lang/vim-elixir'
 " Plugin 'tpope/vim-surround'
 " Plugin 'git://github.com/scrooloose/syntastic.git'
@@ -232,6 +232,9 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Emmet leader
 " let g:user_emmet_leader_key='<C-Z>'
+
+" Format JSON
+map <Leader>j !python -m json.tool<CR>
 
 autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
 autocmd BufRead,BufNewFile *.vue set filetype=html

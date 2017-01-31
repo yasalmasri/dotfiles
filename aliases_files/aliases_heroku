@@ -1,5 +1,5 @@
 # Heroku aliases
-alias ha='heroku git:remote -a' # to add app to folder.
+alias hga='heroku git:remote -a' # to add app to folder.
 alias gph='git push heroku master'
 alias hr='heroku run'
 alias hdbr='heroku pg:reset DATABASE'
