@@ -215,6 +215,8 @@ nmap K k
 
 map <Leader>c :%s/\s\+$//<CR>
 map <Leader>b :CtrlPBuffer<CR>
+" Format JSON
+map <Leader>j :%!python -m json.tool<CR>
 map <F7> mzgg=G`z
 map <F6> v%Vy
 
@@ -232,9 +234,6 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Emmet leader
 " let g:user_emmet_leader_key='<C-Z>'
-
-" Format JSON
-map <Leader>j !python -m json.tool<CR>
 
 autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
 autocmd BufRead,BufNewFile *.vue set filetype=html
