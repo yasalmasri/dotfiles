@@ -39,6 +39,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'posva/vim-vue'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Swift plugins
 " Plugin 'Rip-Rip/clang_complete'
@@ -216,7 +217,7 @@ nmap K k
 map <Leader>c :%s/\s\+$//<CR>
 map <Leader>b :CtrlPBuffer<CR>
 " Format JSON
-map <Leader>j :%!python -m json.tool<CR>
+map <Leader>j :%!python3 -m json.tool<CR>
 map <F7> mzgg=G`z
 map <F6> v%Vy
 
