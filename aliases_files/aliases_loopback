@@ -1,0 +1,4 @@
+alias lb='slc loopback'
+alias lbds='slc loopback:datasource'
+alias lbm='slc loopback:model'
+alias lbr='slc loopback:relation'
