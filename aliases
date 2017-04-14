@@ -3,6 +3,7 @@ source ~/.dotfiles/aliases_files/aliases_ember
 source ~/.dotfiles/aliases_files/aliases_general
 source ~/.dotfiles/aliases_files/aliases_git
 source ~/.dotfiles/aliases_files/aliases_heroku
+source ~/.dotfiles/aliases_files/aliases_loopback
 source ~/.dotfiles/aliases_files/aliases_mac
 source ~/.dotfiles/aliases_files/aliases_node
 source ~/.dotfiles/aliases_files/aliases_php
