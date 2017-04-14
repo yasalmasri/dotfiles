@@ -6,18 +6,8 @@ alias masys='cd ~/dev/masys/'
 alias mamp='cd /Applications/MAMP/htdocs/'
 
 ## Masys
-alias blog='cd ~/dev/masys/blog/'
-alias exam='cd ~/dev/masys/exam/'
-alias acmgb='cd ~/dev/masys/acmgb/'
-alias bank='cd ~/dev/masys/bank/'
-alias erp='cd ~/dev/masys/erp/'
-alias serp='cd ~/dev/masys/serp/'
-alias mbase='cd ~/dev/masys/base/'
-alias cfdi='cd ~/dev/masys/m_cfdi/'
-alias tdw='cd ~/dev/masys/tumblr_downloader_web/'
-alias pay='cd ~/dev/masys/maSysPay/'
-alias domas='cd ~/dev/masys/ngDoMas/'
-alias rordo='cd ~/dev/masys/rordomas/'
+alias mror='cd ~/dev/masys/manager-ror/'
+alias mios='cd ~/dev/masys/manager-ios/'
 
 ## UKKO
 alias ukko='cd ~/dev/ukko/'
@@ -38,9 +28,11 @@ alias gpst='cd ~/dev/ukko/GPS-Tracker/'
 alias herm='cd ~/dev/ukko/hermod/'
 alias sam='cd ~/dev/ukko/sampo/'
 
-# Skydrop
-alias skyd='cd ~/dev/skydrop/'
-alias shopi='cd ~/dev/skydrop/skydrop-shopify'
-
 # Genaro
 alias gena='cd ~/dev/genaro/'
+
+# 46Labs
+alias 46='cd ~/dev/46/'
+alias 4cdr='cd ~/dev/46/cdr_parser'
+alias 4api='cd ~/dev/46/globalgig_api'
+alias 4orc='cd ~/dev/46/orchestra'
