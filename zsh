@@ -34,6 +34,11 @@ strlen () {
   echo $LEN
 }
 
+title () {
+  TITLE=$*
+  echo -ne "\033]0;$TITLE\007"
+}
+
 # show right prompt with date ONLY when command is executed
 preexec () {
   DATE=$( date +"[%H:%M:%S]" )
