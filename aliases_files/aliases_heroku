@@ -2,9 +2,10 @@
 alias hga='heroku git:remote -a' # to add app to folder.
 alias gph='git push heroku master'
 alias hr='heroku run'
+alias hrc='heroku run rails c'
+alias hrm='heroku run rake db:migrate'
+alias hrs='heroku run rake db:seed'
 alias hdbr='heroku pg:reset DATABASE'
-alias hdbm='heroku run rake db:migrate'
-alias hdbs='heroku run rake db:seed'
 alias hl='heroku logs --tail'
 alias ho='heroku open'
 alias hpsta='git push staging $(branch_name):master'

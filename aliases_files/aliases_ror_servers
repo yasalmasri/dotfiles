@@ -1,2 +1,2 @@
-alias runsea="sea && open -a '/Applications/Google Chrome.app' 'http://localhost:3501' && rails server -p 3501"
-alias runsit="sit && open -a '/Applications/Google Chrome.app' 'http://localhost:3502' && rails server -p 3502"
+alias serv='./serv'
+alias lvhme='rs -p 3000 -b lvh.me'

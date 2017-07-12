@@ -22,13 +22,12 @@ alias gk="gitk 2>/dev/null --all &"
 alias gpl='git pull origin'
 alias gps='git push origin'
 
-alias gplb='git pull origin $(branch_name)'
-alias gpsb='git push origin $(branch_name)'
-
 alias pull='git pull origin $(branch_name)'
 alias push='git push origin $(branch_name)'
 
-alias gpsd='git push dokku master'
+alias gpsta='git push staging sta:master'
+alias gppro='git push production master'
+
 alias gm='git merge'
 alias gl='git log'
 alias gly='git log --author=Yaser'

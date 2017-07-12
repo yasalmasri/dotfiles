@@ -1,1 +1,2 @@
 alias hid='defaults write com.apple.finder AppleShowAllFiles'
+alias kp='sudo kill `sudo lsof -t -i :$1`'
