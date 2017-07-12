@@ -1,7 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 1. Vbundle
-"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
@@ -40,6 +39,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'posva/vim-vue'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'briancollins/vim-jst'
 
 " Swift plugins
 " Plugin 'Rip-Rip/clang_complete'
@@ -154,6 +154,7 @@ set ignorecase            " Make searches case-insensitive.
 
 set laststatus=2          " last window always has a statusline
 set number                " show line numbers
+set relativenumber        " show line numbers
 set ruler                 " Always show info along bottom.
 set t_Co=256              " enable 256-color mode.
 
@@ -197,7 +198,7 @@ nnoremap <leader>d :NERDTreeToggle<cr>
 " map <leader>aa :set tabstop=2  shiftwidth=2 <cr>
 " map <leader>aaaa :set tabstop=4  shiftwidth=4 <cr>
 map <leader>rn :set relativenumber <cr>
-map <leader>nu :set number <cr>
+map <leader>nu :set norelativenumber <cr>
 "
 " au BufRead,BufNewFile *.phtml set filetype=html
 " au BufReadPost *.phtml set syntax=php
@@ -205,6 +206,7 @@ map <leader>nu :set number <cr>
 " set runtimepath^=~/.vim/bundle/ctrlp.vim
 " nnoremap <leader>p :CtrlP<cr>
 " let g:vimrubocop_keymap = 0
+
 nnoremap <leader>r :RuboCop<cr>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -216,6 +218,8 @@ nmap K k
 
 map <Leader>c :%s/\s\+$//<CR>
 map <Leader>b :CtrlPBuffer<CR>
+let g:ctrlp_show_hidden = 1
+
 " Format JSON
 map <Leader>j :%!python3 -m json.tool<CR>
 map <F7> mzgg=G`z
@@ -234,7 +238,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 " Emmet leader
-" let g:user_emmet_leader_key='<C-Z>'
+" let g:user_emmet_leader_key='<C-M>'
 
 autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
 autocmd BufRead,BufNewFile *.vue set filetype=html
