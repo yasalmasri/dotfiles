@@ -41,11 +41,6 @@ Plugin 'posva/vim-vue'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'briancollins/vim-jst'
 
-" Swift plugins
-" Plugin 'Rip-Rip/clang_complete'
-" Plugin 'eraserhd/vim-ios'
-" Plugin 'msanders/cocoa.vim'
-
 " Plugin 'gko/vim-coloresque'
 " Plugin 'captbaritone/better-indent-support-for-php-with-html'
 " Plugin 'vim-scripts/jade.vim'
@@ -55,8 +50,6 @@ Plugin 'briancollins/vim-jst'
 " Plugin 'tpope/vim-surround'
 " Plugin 'git://github.com/scrooloose/syntastic.git'
 " Plugin 'git://github.com/terryma/vim-multiple-cursors.git'
-"
-" Plugin 'scrooloose/nerdtree'
 
 " Plugin 'Lokaltog/vim-easymotion'
 " Plugin 'godlygeek/tabular'
@@ -67,21 +60,6 @@ Plugin 'briancollins/vim-jst'
 " Plugin 'tomtom/tlib_vim'
 " Plugin 'rgp/snipmate-snippets'
 " Plugin 'garbas/vim-snipmate'
-
-" " My Bundles here:
-"Bundle 'scrooloose/nerdtree'
-"Bundle 'MarcWeber/vim-addon-mw-utils'
-"Bundle 'tomtom/tlib_vim'
-"Bundle 'rgp/snipmate-snippets'
-"Bundle 'garbas/vim-snipmate'
-"Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'godlygeek/tabular'
-"Bundle 'tpope/vim-surround'
-"Bundle 'chreekat/vim-paren-crosshairs'
-"Bundle 'altercation/vim-colors-solarized'
-"Bundle 'kchmck/vim-coffee-script'
-"" Bundle 'rgp/PHP-Indenting-for-VIm'
-"Bundle 'terryma/vim-expand-region'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vbundle trailer
@@ -109,6 +87,9 @@ colorscheme monokai
 
 " Automatically removing all trailing whitespace at the end of line.
 " autocmd BufWritePre * :%s/\s\+$//
+" remove trailing whitespace
+" map <Leader>c :%s/\s\+$//<CR>
+map <Leader>c :FixWhitespace<CR>
 
 " Prettify Vagrantfile
 autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
@@ -189,23 +170,13 @@ nnoremap <leader>d :NERDTreeToggle<cr>
 " Press F4 to toggle highlighting on/off, and show current value.
 " :noremap <leader>h :set hlsearch! hlsearch?<CR>
 " :nnoremap <CR> :nohlsearch<CR><CR>
-"
-"
-" "PHP INDENT
-" nnoremap <leader>h :%!xxd<cr>
-" nnoremap <leader>r :%!xxd -r<cr>
-"
+
+
+
 " map <leader>aa :set tabstop=2  shiftwidth=2 <cr>
 " map <leader>aaaa :set tabstop=4  shiftwidth=4 <cr>
 map <leader>rn :set relativenumber <cr>
 map <leader>nu :set norelativenumber <cr>
-"
-" au BufRead,BufNewFile *.phtml set filetype=html
-" au BufReadPost *.phtml set syntax=php
-"
-" set runtimepath^=~/.vim/bundle/ctrlp.vim
-" nnoremap <leader>p :CtrlP<cr>
-" let g:vimrubocop_keymap = 0
 
 nnoremap <leader>r :RuboCop<cr>
 nnoremap <C-J> <C-W><C-J>
@@ -216,14 +187,17 @@ nnoremap <C-T> <C-W><C-T>
 vnoremap <leader>p "0p
 nmap K k
 
-map <Leader>c :%s/\s\+$//<CR>
+" Ctrl + P
 map <Leader>b :CtrlPBuffer<CR>
 let g:ctrlp_show_hidden = 1
 
-" Format JSON
+" format JSON
 map <Leader>j :%!python3 -m json.tool<CR>
-map <F7> mzgg=G`z
-map <F6> v%Vy
+" indent all lines
+map <Leader>= mzgg=G`z
+" select tag
+map <Leader>st vatV
+" map <F6> v%Vy
 
 :command! W :w
 :command! Wq :wq
@@ -242,4 +216,3 @@ let g:UltiSnipsEditSplit="vertical"
 
 autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
 autocmd BufRead,BufNewFile *.vue set filetype=html
-" au BufRead,BufNewFile *.vue set filetype=html
