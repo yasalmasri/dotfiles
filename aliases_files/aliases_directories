@@ -8,32 +8,16 @@ alias mamp='cd /Applications/MAMP/htdocs/'
 
 ## Masys
 alias mror='cd ~/dev/masys/manager-ror/'
-alias mios='cd ~/dev/masys/manager-ios/'
-
-## UKKO
-alias ukko='cd ~/dev/ukko/'
-alias ciac='cd ~/dev/ukko/ciacweb/'
-alias ciacm='cd ~/dev/ukko/ciac_mobile/'
-alias ciaca='cd ~/dev/ukko/ciac_mobile_app/'
-alias ciaci='cd ~/dev/ukko/ciac_app_ios/'
-alias sea='cd ~/dev/ukko/sea/'
-alias ubase='cd ~/dev/ukko/base/'
-alias kip='cd ~/dev/ukko/kipping/'
-alias yet='cd ~/dev/ukko/yetto/'
-alias bashh='cd ~/dev/ukko/erp-bash/'
-alias khu='cd ~/dev/ukko/khumi/'
-alias err='cd ~/dev/ukko/error_reports/'
-alias sit='cd ~/dev/ukko/sit/'
-alias asis='cd ~/dev/ukko/asistro/'
-alias gpst='cd ~/dev/ukko/GPS-Tracker/'
-alias herm='cd ~/dev/ukko/hermod/'
-alias sam='cd ~/dev/ukko/sampo/'
-
-# Genaro
-alias gena='cd ~/dev/genaro/'
+alias mvue='cd ~/dev/masys/manager-vue/'
+alias eror='cd ~/dev/masys/express-ror/'
+alias evue='cd ~/dev/masys/express-vue/'
 
 # 46Labs
 alias 46='cd ~/dev/46/'
 alias 4cdr='cd ~/dev/46/cdr_parser'
 alias 4api='cd ~/dev/46/globalgig_api'
 alias 4orc='cd ~/dev/46/orchestra'
+
+# Castamic
+alias hdcr='cd ~/dev/castamic/hdc-club-ror'
+alias hdcv='cd ~/dev/castamic/hdc-club-vue'
