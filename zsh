@@ -1,5 +1,11 @@
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+# export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+
+# GO envs
+export GOPATH=$HOME/dev/go # don't forget to change your path correctly!
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 
 source ~/.dotfiles/aliases
 

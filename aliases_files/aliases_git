@@ -12,28 +12,28 @@ alias opgtb='open https://github.$(git config remote.origin.url | cut -f2 -d. | 
 alias gcl='git clone'
 alias ga='git add'
 alias gc='git commit -m'
-alias gs='clear && git status'
+alias gs='clean && git status'
 # alias gco='git checkout '
 alias gcob='git checkout -b'
-alias gb='clear && git branch'
-alias gd="clear && git diff"
-alias gg="git grep --color -n"
-alias gk="gitk 2>/dev/null --all &"
+alias gb='clean && git branch'
+alias gd="clean && git diff"
+alias gg="clean && git grep --color -n"
+# alias gk="gitk 2>/dev/null --all &"
 alias gpl='git pull origin'
 alias gps='git push origin'
 
 alias pull='git pull origin $(branch_name)'
 alias push='git push origin $(branch_name)'
 
-alias gpsta='git push staging sta:master'
-alias gppro='git push production master'
+# alias gpsta='git push staging sta:master'
+# alias gppro='git push production master'
 
 alias gm='git merge'
 alias gl='git log'
 alias gly='git log --author=Yaser'
 alias gsh='git show'
 alias grm='git rm'
-alias grmf='git ls-files --deleted -z | xargs -0 git rm'
+# alias grmf='git ls-files --deleted -z | xargs -0 git rm'
 alias grlc='git reset --soft HEAD^'
 alias grh='git reset HEAD'
 alias gss='git stash save'

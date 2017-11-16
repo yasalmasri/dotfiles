@@ -1,10 +1,10 @@
 # Specs
-alias sp='clear && bundle exec rspec'
-alias spformat='clear && bundle exec rspec --format documentation'
+alias sp='clean && bundle exec rspec --fail-fast=1'
+# alias spformat='clean && bundle exec rspec --fail-fast=1 --format documentation'
 
-alias spc='clear && bundle exec rspec spec/controllers/'
-alias spm='clear && bundle exec rspec spec/models/'
-alias spf='clear && bundle exec rspec spec/features/'
-alias sph='clear && bundle exec rspec spec/helpers/'
+alias spc='clean && bundle exec rspec --fail-fast=1 spec/controllers/'
+alias spm='clean && bundle exec rspec --fail-fast=1 spec/models/'
+alias spf='clean && bundle exec rspec --fail-fast=1 spec/features/'
+alias sph='clean && bundle exec rspec --fail-fast=1 spec/helpers/'
 alias rgspm='rails g rspec:model'
 alias rgspc='rails g rspec:controller'

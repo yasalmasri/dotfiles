@@ -1,0 +1,2 @@
+alias ggdev='psql -d gg_dev'
+alias ggtest='psql -d gg_test'

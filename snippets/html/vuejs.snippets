@@ -1,0 +1,41 @@
+#######################################################################
+#                      Vuejs Snippets for UltiSnips                      #
+#######################################################################
+
+snippet vjsx
+	<template>
+	  <div>
+	  </div>
+	</template>
+
+	<script>
+	import { mapGetters, mapActions } from 'vuex'
+
+	export default {
+	  name: '$0',
+
+		props: [],
+
+		data () {
+		  return {
+			}
+		},
+
+		components: {
+		},
+
+		computed: {
+		  ...mapGetters([])
+		},
+
+		methods: {
+		  ...mapActions([])
+		},
+
+		watch: {
+		},
+
+		mounted () {
+		}
+	}
+	</script>

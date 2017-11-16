@@ -40,6 +40,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'posva/vim-vue'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'briancollins/vim-jst'
+Plugin 'tpope/vim-surround'
 
 " Plugin 'gko/vim-coloresque'
 " Plugin 'captbaritone/better-indent-support-for-php-with-html'
@@ -47,11 +48,9 @@ Plugin 'briancollins/vim-jst'
 " Plugin 'fatih/vim-go'
 " Plugin 'othree/html5.vim'
 " Plugin 'elixir-lang/vim-elixir'
-" Plugin 'tpope/vim-surround'
 " Plugin 'git://github.com/scrooloose/syntastic.git'
 " Plugin 'git://github.com/terryma/vim-multiple-cursors.git'
 
-" Plugin 'Lokaltog/vim-easymotion'
 " Plugin 'godlygeek/tabular'
 " Plugin 'kchmck/vim-coffee-script'
 " Bundle 'rgp/PHP-Indenting-for-VIm'
@@ -87,9 +86,6 @@ colorscheme monokai
 
 " Automatically removing all trailing whitespace at the end of line.
 " autocmd BufWritePre * :%s/\s\+$//
-" remove trailing whitespace
-" map <Leader>c :%s/\s\+$//<CR>
-map <Leader>c :FixWhitespace<CR>
 
 " Prettify Vagrantfile
 autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
@@ -161,8 +157,12 @@ autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
 let mapleader = " "
 "
 nnoremap <leader>d :NERDTreeToggle<cr>
-" nnoremap <leader>g :GundoToggle<cr>
-"
+nnoremap <leader>g :GundoToggle<cr>
+
+" remove trailing whitespace
+map <Leader>c :%s/\s\+$//<CR>
+" map <Leader>c :FixWhitespace<CR>
+
 " " Configuracion personal
 " " colorscheme desert
 " vmap ,x :!tidy -q -i --show-errors 0<CR>
@@ -194,9 +194,11 @@ let g:ctrlp_show_hidden = 1
 " format JSON
 map <Leader>j :%!python3 -m json.tool<CR>
 " indent all lines
-map <Leader>= mzgg=G`z
+map <Leader>= mzgg=GG`zzz
+" select line
+map <Leader>vw ^v$h
 " select tag
-map <Leader>st vatV
+map <Leader>vt vatV
 " map <F6> v%Vy
 
 :command! W :w

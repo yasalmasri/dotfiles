@@ -1,7 +1,7 @@
 # Ember aliases
-alias es='ember s'
-alias eg='ember g'
-alias ed='ember d'
-alias egt='ember g template'
-alias egc='ember g controller'
-alias egm='ember g model'
+# alias es='ember s'
+# alias eg='ember g'
+# alias ed='ember d'
+# alias egt='ember g template'
+# alias egc='ember g controller'
+# alias egm='ember g model'
