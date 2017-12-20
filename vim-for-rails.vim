@@ -196,7 +196,7 @@ map <Leader>j :%!python3 -m json.tool<CR>
 " indent all lines
 map <Leader>= mzgg=GG`zzz
 " select line
-map <Leader>vw ^v$h
+map <Leader>V ^v$h
 " select tag
 map <Leader>vt vatV
 " map <F6> v%Vy
