@@ -14,14 +14,28 @@ Plugin 'gmarik/Vundle.vim'
 " 2. Plugin list
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = " "
+
+Plugin 'scrooloose/nerdtree'
+nnoremap <leader>d :NERDTreeToggle<cr>
 
 Plugin 'git://github.com/kien/ctrlp.vim.git'
+map <Leader>b :CtrlPBuffer<CR>
+let g:ctrlp_show_hidden = 1
+" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+" let g:ctrlp_custom_ignore = '\v[\/]\.(DS_Storegit|hg|svn|optimized|compiled|node_modules)$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
 Plugin 'airblade/vim-gitgutter'
+
 Plugin 'git://github.com/sickill/vim-monokai'
+
 Plugin 'sjl/gundo.vim'
+nnoremap <leader>g :GundoToggle<cr>
+
 Plugin 'tComment'
 Plugin 'chreekat/vim-paren-crosshairs'
-Plugin 'scrooloose/nerdtree'
+
 Plugin 'git://github.com/ngmy/vim-rubocop.git'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'slim-template/vim-slim.git'
@@ -32,15 +46,38 @@ Plugin 'honza/vim-snippets'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'henrik/vim-ruby-runner'
 Plugin 'SirVer/ultisnips'
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+Plugin 'mattn/emmet-vim'
+" Emmet leader
+" let g:user_emmet_leader_key='<C-M>'
+
 Plugin 'nono/vim-handlebars'
 Plugin 'gaogao1030/vim-slimbars'
-Plugin 'mattn/emmet-vim'
+
 Plugin 'easymotion/vim-easymotion'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'posva/vim-vue'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'briancollins/vim-jst'
 Plugin 'tpope/vim-surround'
+
+" Icons
+" Plugin 'ryanoasis/vim-devicons'
+" set encoding=utf8
+" set guifont=DroidSansMono_Nerd_Font:h11
+
+" Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+" let g:NERDTreeFileExtensionHighlightFullName = 1
+" let g:NERDTreeExactMatchHighlightFullName = 1
+" let g:NERDTreePatternMatchHighlightFullName = 1
+
+
 
 " Plugin 'gko/vim-coloresque'
 " Plugin 'captbaritone/better-indent-support-for-php-with-html'
@@ -69,14 +106,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
-"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 3. Color scheme
-"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
 colorscheme monokai
 
@@ -147,31 +177,18 @@ autocmd Filetype json setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TRASHCAN
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" " GVIM options
-" set guioptions-=T
-"
-let mapleader = " "
-"
-nnoremap <leader>d :NERDTreeToggle<cr>
-nnoremap <leader>g :GundoToggle<cr>
-
-" remove trailing whitespace
-map <Leader>c :%s/\s\+$//<CR>
-" map <Leader>c :FixWhitespace<CR>
-
-" " Configuracion personal
-" " colorscheme desert
 " vmap ,x :!tidy -q -i --show-errors 0<CR>
 " nnoremap <leader>c :nohlsearch<cr>
 " Press F4 to toggle highlighting on/off, and show current value.
 " :noremap <leader>h :set hlsearch! hlsearch?<CR>
 " :nnoremap <CR> :nohlsearch<CR><CR>
 
+autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
+autocmd BufRead,BufNewFile *.vue set filetype=html
 
+" remove trailing whitespace
+map <Leader>c :%s/\s\+$//<CR>
+" map <Leader>c :FixWhitespace<CR>
 
 " map <leader>aa :set tabstop=2  shiftwidth=2 <cr>
 " map <leader>aaaa :set tabstop=4  shiftwidth=4 <cr>
@@ -187,10 +204,6 @@ nnoremap <C-T> <C-W><C-T>
 vnoremap <leader>p "0p
 nmap K k
 
-" Ctrl + P
-map <Leader>b :CtrlPBuffer<CR>
-let g:ctrlp_show_hidden = 1
-
 " format JSON
 map <Leader>j :%!python3 -m json.tool<CR>
 " indent all lines
@@ -205,16 +218,22 @@ map <Leader>vt vatV
 :command! Wq :wq
 :command! Q :q
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+if has("gui_macvim")
+  " Press Ctrl-Tab to switch between open tabs (like browser tabs) to
+  " the right side. Ctrl-Shift-Tab goes the other way.
+  noremap <C-Tab> :tabnext<CR>
+  noremap <C-S-Tab> :tabprev<CR>
 
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-" Emmet leader
-" let g:user_emmet_leader_key='<C-M>'
-
-autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
-autocmd BufRead,BufNewFile *.vue set filetype=html
+  " Switch to specific tab numbers with Command-number
+  noremap <D-1> :tabn 1<CR>
+  noremap <D-2> :tabn 2<CR>
+  noremap <D-3> :tabn 3<CR>
+  noremap <D-4> :tabn 4<CR>
+  noremap <D-5> :tabn 5<CR>
+  noremap <D-6> :tabn 6<CR>
+  noremap <D-7> :tabn 7<CR>
+  noremap <D-8> :tabn 8<CR>
+  noremap <D-9> :tabn 9<CR>
+  " Command-0 goes to the last tab
+  noremap <D-0> :tablast<CR>
+endif
