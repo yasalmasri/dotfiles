@@ -19,16 +19,15 @@ let mapleader = " "
 Plugin 'scrooloose/nerdtree'
 nnoremap <leader>d :NERDTreeToggle<cr>
 
-Plugin 'git://github.com/kien/ctrlp.vim.git'
+Plugin 'kien/ctrlp.vim'
 map <Leader>b :CtrlPBuffer<CR>
 let g:ctrlp_show_hidden = 1
-" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-" let g:ctrlp_custom_ignore = '\v[\/]\.(DS_Storegit|hg|svn|optimized|compiled|node_modules)$'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
+" https://github.com/airblade/vim-gitgutter
 Plugin 'airblade/vim-gitgutter'
 
-Plugin 'git://github.com/sickill/vim-monokai'
+Plugin 'sickill/vim-monokai'
 
 Plugin 'sjl/gundo.vim'
 nnoremap <leader>g :GundoToggle<cr>
@@ -43,9 +42,17 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'honza/vim-snippets'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'
+
 Plugin 'vim-ruby/vim-ruby'
+" Plugin 'tpope/vim-rails'
 Plugin 'henrik/vim-ruby-runner'
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -57,15 +64,24 @@ Plugin 'mattn/emmet-vim'
 " Emmet leader
 " let g:user_emmet_leader_key='<C-M>'
 
-Plugin 'nono/vim-handlebars'
+" Plugin 'nono/vim-handlebars'
 Plugin 'gaogao1030/vim-slimbars'
 
 Plugin 'easymotion/vim-easymotion'
-Plugin 'leafgarland/typescript-vim'
+" Plugin 'leafgarland/typescript-vim'
 Plugin 'posva/vim-vue'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'briancollins/vim-jst'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'cespare/vim-toml'
+Plugin 'vim-scripts/Align'
+Plugin 'vim-scripts/SQLUtilities'
+vmap <leader>qf        <Plug>SQLU_Formatter<CR>
+" nmap <leader>scl       <Plug>SQLU_CreateColumnList<CR>
+" nmap <leader>scd       <Plug>SQLU_GetColumnDef<CR>
+" nmap <leader>scdt      <Plug>SQLU_GetColumnDataType<CR>
+" nmap <leader>scp       <Plug>SQLU_CreateProcedure<CR>
 
 " Icons
 " Plugin 'ryanoasis/vim-devicons'
@@ -85,8 +101,8 @@ Plugin 'tpope/vim-surround'
 " Plugin 'fatih/vim-go'
 " Plugin 'othree/html5.vim'
 " Plugin 'elixir-lang/vim-elixir'
-" Plugin 'git://github.com/scrooloose/syntastic.git'
-" Plugin 'git://github.com/terryma/vim-multiple-cursors.git'
+" Plugin 'scrooloose/syntastic'
+" Plugin 'terryma/vim-multiple-cursors'
 
 " Plugin 'godlygeek/tabular'
 " Plugin 'kchmck/vim-coffee-script'
@@ -95,7 +111,6 @@ Plugin 'tpope/vim-surround'
 " Plugin 'MarcWeber/vim-addon-mw-utils'
 " Plugin 'tomtom/tlib_vim'
 " Plugin 'rgp/snipmate-snippets'
-" Plugin 'garbas/vim-snipmate'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vbundle trailer
@@ -143,6 +158,7 @@ endif
 set nobackup
 set noswapfile
 set nowrap
+
 set cursorline
 set cursorline cursorcolumn " show cursor vertical highlight
 
@@ -158,6 +174,8 @@ set shiftround            " always indent/outdent to the nearest tabstop
 set nohlsearch            " Don't continue to highlight searched phrases.
 set incsearch             " But do highlight as you type your search.
 set ignorecase            " Make searches case-insensitive.
+" Toggle Highlight Search
+noremap <F4> :set hlsearch! hlsearch?<CR>
 
 set laststatus=2          " last window always has a statusline
 set number                " show line numbers
@@ -213,6 +231,8 @@ map <Leader>V ^v$h
 " select tag
 map <Leader>vt vatV
 " map <F6> v%Vy
+
+map <Leader>f V$%zf
 
 :command! W :w
 :command! Wq :wq
