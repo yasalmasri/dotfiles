@@ -13,13 +13,20 @@ alias rdm='rails d model'
 alias rgc='rails g controller'
 alias rdc='rails d controller'
 alias rgmi='rails g migration'
-alias rdbr='bundle exec rake db:drop; bundle exec rake db:create; bundle exec rake db:migrate;'
+alias rdbr='bundle exec rake db:drop; bundle exec rake db:create; bundle exec rake db:migrate; RAILS_ENV=test bundle exec rake db:migrate;'
 alias rdbrs='bundle exec rake db:drop; bundle exec rake db:create; bundle exec rake db:migrate; bundle exec rake db:seed;'
 alias rdbc='bundle exec rake db:create'
-alias rdbm='bundle exec rake db:migrate'
+alias rdbm='bundle exec rake db:migrate; RAILS_ENV=test bundle exec rake db:migrate'
 alias rdbd='bundle exec rake db:drop'
 alias rdbs='bundle exec rake db:seed'
-alias rdbrb='bundle exec rake db:rollback'
+alias rdbrb='bundle exec rake db:rollback; RAILS_ENV=test bundle exec rake db:rollback'
+
+# Test db
+alias trdbc='RAILS_ENV=test bundle exec rake db:create'
+alias trdbm='RAILS_ENV=test bundle exec rake db:migrate'
+alias trdbd='RAILS_ENV=test bundle exec rake db:drop'
+alias trdbs='RAILS_ENV=test bundle exec rake db:seed'
+alias trdbrb='RAILS_ENV=test bundle exec rake db:rollback'
 
 alias ann='annotate -i'
 

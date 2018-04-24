@@ -2,15 +2,21 @@
 alias dot='cd ~/.dotfiles/'
 alias mdot='mvim ~/.dotfiles/'
 alias devs='cd ~/dev/'
-alias test='cd ~/dev/test/'
 alias masys='cd ~/dev/masys/'
-alias mamp='cd /Applications/MAMP/htdocs/'
+alias test='cd ~/dev/test/'
 
 ## Masys
 alias mror='cd ~/dev/masys/manager-ror/'
 alias mvue='cd ~/dev/masys/manager-vue/'
+
 alias eror='cd ~/dev/masys/express-ror/'
 alias evue='cd ~/dev/masys/express-vue/'
+
+alias gtr='cd ~/dev/masys/game-trade-ror/'
+alias gtv='cd ~/dev/masys/game-trade-vue/'
+
+alias chr='cd ~/dev/masys/chronos-ror/'
+alias chv='cd ~/dev/masys/chronos-vue/'
 
 # 46Labs
 alias 46='cd ~/dev/46/'

@@ -21,6 +21,7 @@ alias gg="clean && git grep --color -n"
 # alias gk="gitk 2>/dev/null --all &"
 alias gpl='git pull origin'
 alias gps='git push origin'
+alias gpr='git remote prune origin'
 
 alias pull='git pull origin $(branch_name)'
 alias push='git push origin $(branch_name)'
