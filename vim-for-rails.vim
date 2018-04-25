@@ -12,109 +12,29 @@ Plugin 'gmarik/Vundle.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 2. Plugin list
-"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = " "
-
-Plugin 'scrooloose/nerdtree'
-nnoremap <leader>d :NERDTreeToggle<cr>
-
-Plugin 'kien/ctrlp.vim'
-map <Leader>b :CtrlPBuffer<CR>
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
-
-" https://github.com/airblade/vim-gitgutter
-Plugin 'airblade/vim-gitgutter'
-
 Plugin 'sickill/vim-monokai'
-
-Plugin 'sjl/gundo.vim'
-nnoremap <leader>g :GundoToggle<cr>
-
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'tComment'
 Plugin 'chreekat/vim-paren-crosshairs'
-
-Plugin 'git://github.com/ngmy/vim-rubocop.git'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'slim-template/vim-slim.git'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'ngmy/vim-rubocop'
 Plugin 'honza/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
-let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'
-
-Plugin 'vim-ruby/vim-ruby'
-" Plugin 'tpope/vim-rails'
 Plugin 'henrik/vim-ruby-runner'
-" Plugin 'SirVer/ultisnips'
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
 Plugin 'mattn/emmet-vim'
-" Emmet leader
-" let g:user_emmet_leader_key='<C-M>'
-
-" Plugin 'nono/vim-handlebars'
-Plugin 'gaogao1030/vim-slimbars'
-
 Plugin 'easymotion/vim-easymotion'
-" Plugin 'leafgarland/typescript-vim'
-Plugin 'posva/vim-vue'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'briancollins/vim-jst'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
-Plugin 'cespare/vim-toml'
-Plugin 'vim-scripts/Align'
-Plugin 'vim-scripts/SQLUtilities'
-vmap <leader>qf        <Plug>SQLU_Formatter<CR>
-" nmap <leader>scl       <Plug>SQLU_CreateColumnList<CR>
-" nmap <leader>scd       <Plug>SQLU_GetColumnDef<CR>
-" nmap <leader>scdt      <Plug>SQLU_GetColumnDataType<CR>
-" nmap <leader>scp       <Plug>SQLU_CreateProcedure<CR>
 
-" Icons
-" Plugin 'ryanoasis/vim-devicons'
-" set encoding=utf8
-" set guifont=DroidSansMono_Nerd_Font:h11
-
-" Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-" let g:NERDTreeFileExtensionHighlightFullName = 1
-" let g:NERDTreeExactMatchHighlightFullName = 1
-" let g:NERDTreePatternMatchHighlightFullName = 1
-
-
-
-" Plugin 'gko/vim-coloresque'
-" Plugin 'captbaritone/better-indent-support-for-php-with-html'
-" Plugin 'vim-scripts/jade.vim'
-" Plugin 'fatih/vim-go'
-" Plugin 'othree/html5.vim'
-" Plugin 'elixir-lang/vim-elixir'
-" Plugin 'scrooloose/syntastic'
-" Plugin 'terryma/vim-multiple-cursors'
-
-" Plugin 'godlygeek/tabular'
-" Plugin 'kchmck/vim-coffee-script'
-" Bundle 'rgp/PHP-Indenting-for-VIm'
-" Plugin 'terryma/vim-expand-region'
-" Plugin 'MarcWeber/vim-addon-mw-utils'
-" Plugin 'tomtom/tlib_vim'
-" Plugin 'rgp/snipmate-snippets'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vbundle trailer
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'slim-template/vim-slim.git'
+Plugin 'posva/vim-vue'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -122,24 +42,11 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 
+let mapleader = " "
+nnoremap <leader>d :NERDTreeToggle<cr>
+
 syntax enable
 colorscheme monokai
-
-" Prettify JSON files
-" autocmd BufRead,BufNewFile *.json set filetype=json
-" autocmd Syntax json sou ~/.vim/syntax/json.vim
-
-" Automatically removing all trailing whitespace at the end of line.
-" autocmd BufWritePre * :%s/\s\+$//
-
-" Prettify Vagrantfile
-autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
-
-" Prettify Markdown files
-augroup markdown
-  au!
-  au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-augroup END
 
 " Highlight characters that go over 80 columns (by drawing a border on the 81st)
 if exists('+colorcolumn')
@@ -150,10 +57,6 @@ else
   match OverLength /\%81v.\+/
 endif
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 4. Configuration
-"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Backup files (.swo .swp)
 set nobackup
 set noswapfile
@@ -183,10 +86,6 @@ set relativenumber        " show line numbers
 set ruler                 " Always show info along bottom.
 set t_Co=256              " enable 256-color mode.
 
-" set showmatch
-set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
-" set visualbell
-
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype coffeescript setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype jade setlocal ts=4 sw=4 sts=0 expandtab
@@ -195,23 +94,8 @@ autocmd Filetype json setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
 
-" vmap ,x :!tidy -q -i --show-errors 0<CR>
-" nnoremap <leader>c :nohlsearch<cr>
-" Press F4 to toggle highlighting on/off, and show current value.
-" :noremap <leader>h :set hlsearch! hlsearch?<CR>
-" :nnoremap <CR> :nohlsearch<CR><CR>
-
-autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
-autocmd BufRead,BufNewFile *.vue set filetype=html
-
 " remove trailing whitespace
 map <Leader>c :%s/\s\+$//<CR>
-" map <Leader>c :FixWhitespace<CR>
-
-" map <leader>aa :set tabstop=2  shiftwidth=2 <cr>
-" map <leader>aaaa :set tabstop=4  shiftwidth=4 <cr>
-map <leader>rn :set relativenumber <cr>
-map <leader>nu :set norelativenumber <cr>
 
 nnoremap <leader>r :RuboCop<cr>
 nnoremap <C-J> <C-W><C-J>
@@ -257,3 +141,12 @@ if has("gui_macvim")
   " Command-0 goes to the last tab
   noremap <D-0> :tablast<CR>
 endif
+
+" Plugin 'kien/ctrlp.vim' Config:
+map <Leader>b :CtrlPBuffer<CR>
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
+let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'
