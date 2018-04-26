@@ -24,15 +24,19 @@ Plugin 'honza/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-Plugin 'henrik/vim-ruby-runner'
 Plugin 'mattn/emmet-vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
+" Plugin 'chrisbra/NrrwRgn'
+" Plugin 'w0rp/ale'
 
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'jelera/vim-javascript-syntax'
+" Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
+" Plugin 'isRuslan/vim-es6'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'posva/vim-vue'
 
@@ -45,8 +49,27 @@ filetype plugin indent on    " required
 let mapleader = " "
 nnoremap <leader>d :NERDTreeToggle<cr>
 
+" Plugin 'kien/ctrlp.vim' Config:
+map <Leader>b :CtrlPBuffer<CR>
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
+" Plugin 'garbas/vim-snipmate' Config:
+let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'
+
 syntax enable
 colorscheme monokai
+
+" " Prettify Vagrantfile
+" autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
+"
+" " Prettify Markdown files
+" augroup markdown
+"   au!
+"   au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+" augroup END
 
 " Highlight characters that go over 80 columns (by drawing a border on the 81st)
 if exists('+colorcolumn')
@@ -86,6 +109,10 @@ set relativenumber        " show line numbers
 set ruler                 " Always show info along bottom.
 set t_Co=256              " enable 256-color mode.
 
+" " set showmatch
+" set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
+" " set visualbell
+
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype coffeescript setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype jade setlocal ts=4 sw=4 sts=0 expandtab
@@ -93,6 +120,9 @@ autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype json setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
+
+autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
+autocmd BufRead,BufNewFile *.vue set filetype=html
 
 " remove trailing whitespace
 map <Leader>c :%s/\s\+$//<CR>
@@ -141,12 +171,3 @@ if has("gui_macvim")
   " Command-0 goes to the last tab
   noremap <D-0> :tablast<CR>
 endif
-
-" Plugin 'kien/ctrlp.vim' Config:
-map <Leader>b :CtrlPBuffer<CR>
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
-
-let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
-let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'
