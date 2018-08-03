@@ -29,6 +29,8 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'vim-syntastic/syntastic'
 " Plugin 'chrisbra/NrrwRgn'
 " Plugin 'w0rp/ale'
 
@@ -58,6 +60,11 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'
+set runtimepath+=/Users/yaser/.dotfiles/vim-snippets/
+
+" let g:javascript_plugin_ngdoc = 1
+let g:html_indent_script1 = "zero"
+" let g:html_indent_style1 = "inc"
 
 syntax enable
 colorscheme monokai
@@ -124,6 +131,8 @@ autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
 autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
 autocmd BufRead,BufNewFile *.vue set filetype=html
 
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+\%#\@<!$/
 " remove trailing whitespace
 map <Leader>c :%s/\s\+$//<CR>
 
@@ -145,8 +154,9 @@ map <Leader>V ^v$h
 " select tag
 map <Leader>vt vatV
 " map <F6> v%Vy
-
 map <Leader>f V$%zf
+" zf{ fold function
+map <Leader>zf{ V$%zf
 
 :command! W :w
 :command! Wq :wq
@@ -171,3 +181,29 @@ if has("gui_macvim")
   " Command-0 goes to the last tab
   noremap <D-0> :tablast<CR>
 endif
+
+" Save folds
+" augroup AutoSaveFolds
+"   autocmd!
+"   autocmd BufWinLeave *.* mkview
+"   autocmd BufWinEnter *.* silent loadview
+" augroup END
+
+" vim-syntastic/syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['standard']
+let g:syntastic_enable_highlighting = 1
+nnoremap <leader>e :SyntasticCheck<cr>
+
+" Syntax coloring lines that are too long just slows down the world
+" set synmaxcol=128
+" set ttyfast " u got a fast terminal
+" set ttyscroll=3
+" set lazyredraw " to avoid scrolling problems
+" set nocursorline
