@@ -20,10 +20,17 @@ alias chv='cd ~/dev/masys/chronos-vue/'
 
 # 46Labs
 alias 46='cd ~/dev/46/'
-alias 4cdr='cd ~/dev/46/cdr_parser'
-alias 4api='cd ~/dev/46/globalgig_api'
-alias 4orc='cd ~/dev/46/orchestra'
+alias gga='cd ~/dev/46/globalgig_api'
+alias orc='cd ~/dev/46/orchestra'
 
 # Castamic
 alias hdcr='cd ~/dev/castamic/hdc-club-ror'
 alias hdcv='cd ~/dev/castamic/hdc-club-vue'
+
+# Quiken
+alias qui='cd ~/dev/quiken'
+alias quc='cd ~/dev/quiken/core'
+
+# Kraken
+alias kra='cd ~/dev/kraken'
+alias shi='cd ~/dev/kraken/shipkraken'

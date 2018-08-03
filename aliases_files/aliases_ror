@@ -28,7 +28,7 @@ alias trdbd='RAILS_ENV=test bundle exec rake db:drop'
 alias trdbs='RAILS_ENV=test bundle exec rake db:seed'
 alias trdbrb='RAILS_ENV=test bundle exec rake db:rollback'
 
-alias ann='annotate -i'
+alias ann='annotate -i -p bottom --ck'
 
 # Aliases with Bundle exec
 # alias berdbc='bundle exec rake db:create'
