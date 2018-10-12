@@ -31,6 +31,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'farfanoide/inflector.vim'
 " Plugin 'chrisbra/NrrwRgn'
 " Plugin 'w0rp/ale'
 
@@ -157,6 +158,8 @@ map <Leader>vt vatV
 map <Leader>f V$%zf
 " zf{ fold function
 map <Leader>zf{ V$%zf
+" replace " with '
+map <Leader>" :s/"/'/g<CR>
 
 :command! W :w
 :command! Wq :wq
@@ -207,3 +210,9 @@ nnoremap <leader>e :SyntasticCheck<cr>
 " set ttyscroll=3
 " set lazyredraw " to avoid scrolling problems
 " set nocursorline
+
+" Plugin 'farfanoide/inflector.vim'
+let g:inflector_mapping = 'gI'
+
+" Ruby Hash
+nnoremap <leader>rh :%s/:\([^=,'"]*\) =>/\1:/g<CR>

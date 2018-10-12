@@ -26,9 +26,6 @@ alias gpr='git remote prune origin'
 alias pull='git pull origin $(branch_name)'
 alias push='git push origin $(branch_name)'
 
-# alias gpsta='git push staging sta:master'
-# alias gppro='git push production master'
-
 alias gm='git merge'
 alias gl='git log'
 alias gly='git log --author=Yaser'
@@ -40,6 +37,12 @@ alias grh='git reset HEAD'
 alias gss='git stash save'
 alias gsp='git stash pop'
 
+alias gppro="git push prod master"
+function gpsta() {
+  BRANCH="`git branch | grep \* | cut -d ' ' -f2`"
+  CMD="git push stage $BRANCH:master"
+  eval $CMD
+}
 
 function gco() {
   if [ "$@" = "." ]; then
@@ -58,4 +61,8 @@ function gco() {
   else
     git checkout "$@"
   fi
+}
+
+function gpi() {
+  git push $1 master
 }

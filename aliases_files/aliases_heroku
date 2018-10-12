@@ -1,6 +1,7 @@
 # Heroku aliases
 alias hga='heroku git:remote -a' # to add app to folder.
 alias gph='git push heroku master'
+alias gphd='git push heroku dev:master'
 alias hr='heroku run'
 alias hrc='heroku run rails c'
 alias hrm='heroku run rake db:migrate'

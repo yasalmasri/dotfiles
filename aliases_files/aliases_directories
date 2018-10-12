@@ -32,5 +32,7 @@ alias qui='cd ~/dev/quiken'
 alias quc='cd ~/dev/quiken/core'
 
 # Kraken
-alias kra='cd ~/dev/kraken'
-alias shi='cd ~/dev/kraken/shipkraken'
+alias hyd='cd ~/dev/hydra-co'
+alias hsh='cd ~/dev/hydra-co/ship'
+alias hfr='cd ~/dev/hydra-co/front'
+alias hhy='cd ~/dev/hydra-co/hydra'

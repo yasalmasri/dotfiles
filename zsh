@@ -6,6 +6,8 @@ export GOPATH=$HOME/dev/go # don't forget to change your path correctly!
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
+export NODE_PATH=/Users/yaser/.nvm/versions/node/v8.9.1/lib/node_modules
 
 source ~/.dotfiles/aliases
 

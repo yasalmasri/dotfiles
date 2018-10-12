@@ -1,2 +1,4 @@
 alias ggdev='psql -d gg_dev'
 alias ggtest='psql -d gg_test'
+alias ggdbd='scp root@db1:/home/globalgig_api/prod_backup ~/backups/gg_dev'
+alias ggres='gga && node bin/drop.js && psql gg_dev < ~/backups/gg_dev && npm run migrate'
