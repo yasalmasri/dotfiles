@@ -5,6 +5,7 @@
 # alias R='ramda'
 alias nrd='clean && npm run dev'
 alias nrb='clean && npm run build'
+alias nri='clean && npm run integration'
 alias nrt='clean && npm test -b'
 alias nrth='clean && npm test test/hooks'
 alias nrtl='clean && npm test test/lib'

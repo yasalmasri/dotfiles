@@ -13,6 +13,7 @@ alias rdm='rails d model'
 alias rgc='rails g controller'
 alias rdc='rails d controller'
 alias rgmi='rails g migration'
+alias rgs='rails g serializer'
 alias rdbr='bundle exec rake db:drop; bundle exec rake db:create; bundle exec rake db:migrate; RAILS_ENV=test bundle exec rake db:migrate;'
 alias rdbrs='bundle exec rake db:drop; bundle exec rake db:create; bundle exec rake db:migrate; bundle exec rake db:seed;'
 alias rdbc='bundle exec rake db:create'
@@ -28,7 +29,7 @@ alias trdbd='RAILS_ENV=test bundle exec rake db:drop'
 alias trdbs='RAILS_ENV=test bundle exec rake db:seed'
 alias trdbrb='RAILS_ENV=test bundle exec rake db:rollback'
 
-alias ann='annotate -i -p bottom --ck'
+alias ann='bundle exec annotate -i -p bottom --ck'
 
 # Aliases with Bundle exec
 # alias berdbc='bundle exec rake db:create'

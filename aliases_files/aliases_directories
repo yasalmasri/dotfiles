@@ -8,6 +8,8 @@ alias test='cd ~/dev/test/'
 ## Masys
 alias mror='cd ~/dev/masys/manager-ror/'
 alias mvue='cd ~/dev/masys/manager-vue/'
+alias sli='cd ~/dev/masys/slimarket/'
+alias pri='cd ~/dev/masys/priacc/'
 
 alias eror='cd ~/dev/masys/express-ror/'
 alias evue='cd ~/dev/masys/express-vue/'
@@ -18,10 +20,11 @@ alias gtv='cd ~/dev/masys/game-trade-vue/'
 alias chr='cd ~/dev/masys/chronos-ror/'
 alias chv='cd ~/dev/masys/chronos-vue/'
 
-# 46Labs
-alias 46='cd ~/dev/46/'
-alias gga='cd ~/dev/46/globalgig_api'
-alias orc='cd ~/dev/46/orchestra'
+# GG
+alias ggd='cd ~/dev/gg/'
+alias gga='cd ~/dev/gg/globalgig_api'
+alias orc='cd ~/dev/gg/orchestra'
+alias gpb='cd ~/dev/gg/pre_bill'
 
 # Castamic
 alias hdcr='cd ~/dev/castamic/hdc-club-ror'
@@ -31,8 +34,12 @@ alias hdcv='cd ~/dev/castamic/hdc-club-vue'
 alias qui='cd ~/dev/quiken'
 alias quc='cd ~/dev/quiken/core'
 
-# Kraken
+# Hydra
 alias hyd='cd ~/dev/hydra-co'
 alias hsh='cd ~/dev/hydra-co/ship'
 alias hfr='cd ~/dev/hydra-co/front'
 alias hhy='cd ~/dev/hydra-co/hydra'
+alias hdh='cd ~/dev/hydra-co/dhl'
+
+# billetero
+alias bic='cd ~/dev/billetero/core'

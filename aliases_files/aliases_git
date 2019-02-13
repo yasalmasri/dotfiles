@@ -12,6 +12,7 @@ alias opgtb='open https://github.$(git config remote.origin.url | cut -f2 -d. | 
 alias gcl='git clone'
 alias ga='git add'
 alias gc='git commit -m'
+alias gcn='git commit --no-verify -m'
 alias gs='clean && git status'
 # alias gco='git checkout '
 alias gcob='git checkout -b'
