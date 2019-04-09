@@ -43,3 +43,4 @@ alias hdh='cd ~/dev/hydra-co/dhl'
 
 # billetero
 alias bic='cd ~/dev/billetero/core'
+alias bweb='cd ~/dev/billetero/web'

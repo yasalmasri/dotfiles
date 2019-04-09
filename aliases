@@ -8,6 +8,7 @@ source ~/.dotfiles/aliases_files/aliases_mac
 source ~/.dotfiles/aliases_files/aliases_node
 source ~/.dotfiles/aliases_files/aliases_php
 source ~/.dotfiles/aliases_files/aliases_powder
+source ~/.dotfiles/aliases_files/aliases_psql
 source ~/.dotfiles/aliases_files/aliases_python
 source ~/.dotfiles/aliases_files/aliases_ror
 source ~/.dotfiles/aliases_files/aliases_ror_servers

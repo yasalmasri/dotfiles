@@ -67,3 +67,21 @@ function gco() {
 function gpi() {
   git push $1 master
 }
+
+function gpti() {
+  TAG="`git describe --abbrev=0 --tags`"
+  CMD="git push $1 $TAG:master"
+  eval $CMD
+}
+
+function gpt() {
+  TAG="`git describe --abbrev=0 --tags`"
+  CMD="git push origin $TAG"
+  eval $CMD
+}
+
+function gdt() {
+  TAG="`git describe --abbrev=0 --tags`"
+  CMD="git push prod $TAG:master"
+  eval $CMD
+}

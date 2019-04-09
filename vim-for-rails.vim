@@ -42,6 +42,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'posva/vim-vue'
+Plugin 'wavded/vim-stylus'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -155,6 +156,7 @@ map <Leader>V ^v$h
 " select tag
 map <Leader>vt vatV
 " map <F6> v%Vy
+" fold
 map <Leader>f V$%zf
 " zf{ fold function
 map <Leader>zf{ V$%zf
