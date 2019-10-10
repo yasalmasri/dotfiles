@@ -8,23 +8,18 @@ alias test='cd ~/dev/test/'
 ## Masys
 alias mror='cd ~/dev/masys/manager-ror/'
 alias mvue='cd ~/dev/masys/manager-vue/'
-alias sli='cd ~/dev/masys/slimarket/'
-alias pri='cd ~/dev/masys/priacc/'
-
-alias eror='cd ~/dev/masys/express-ror/'
-alias evue='cd ~/dev/masys/express-vue/'
-
-alias gtr='cd ~/dev/masys/game-trade-ror/'
-alias gtv='cd ~/dev/masys/game-trade-vue/'
-
-alias chr='cd ~/dev/masys/chronos-ror/'
-alias chv='cd ~/dev/masys/chronos-vue/'
+alias slim='cd ~/dev/masys/slimarket/'
 
 # GG
 alias ggd='cd ~/dev/gg/'
-alias gga='cd ~/dev/gg/globalgig_api'
+alias gga='cd ~/dev/gg/globalgig-api-js'
+alias ggr='cd ~/dev/gg/globalgig-api-rails'
 alias orc='cd ~/dev/gg/orchestra'
-alias gpb='cd ~/dev/gg/pre_bill'
+alias gmya='cd ~/dev/gg/myaccount-enterprise'
+alias ocp='cd ~/dev/gg/globalgig-ocp'
+alias mya='cd ~/dev/gg/globalgig-my-account'
+alias coa='cd ~/dev/gg/globalgig-coverage-api'
+alias cou='cd ~/dev/gg/globalgig-coverage-ui'
 
 # Castamic
 alias hdcr='cd ~/dev/castamic/hdc-club-ror'
@@ -44,3 +39,6 @@ alias hdh='cd ~/dev/hydra-co/dhl'
 # billetero
 alias bic='cd ~/dev/billetero/core'
 alias bweb='cd ~/dev/billetero/web'
+
+# Lagggom
+alias lag='cd ~/dev/lagggom'
