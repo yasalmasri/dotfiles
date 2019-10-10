@@ -4,6 +4,7 @@
 # alias sgsf='sudo grunt serve -f'
 # alias R='ramda'
 alias nrd='clean && npm run dev'
+alias nrs='clean && npm run serve'
 alias nrb='clean && npm run build'
 alias nri='clean && npm run integration'
 alias nrt='clean && npm test -b'

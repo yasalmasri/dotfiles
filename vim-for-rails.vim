@@ -80,7 +80,7 @@ colorscheme monokai
 "   au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 " augroup END
 
-" Highlight characters that go over 80 columns (by drawing a border on the 81st)
+" Highlight characters that go over 100 columns (by drawing a border on the 81st)
 if exists('+colorcolumn')
   set colorcolumn=101
   highlight ColorColumn ctermbg=red
@@ -162,6 +162,8 @@ map <Leader>f V$%zf
 map <Leader>zf{ V$%zf
 " replace " with '
 map <Leader>" :s/"/'/g<CR>
+" replace ' with "
+map <Leader>' :s/'/"/g<CR>
 
 :command! W :w
 :command! Wq :wq
@@ -218,3 +220,8 @@ let g:inflector_mapping = 'gI'
 
 " Ruby Hash
 nnoremap <leader>rh :%s/:\([^=,'"]*\) =>/\1:/g<CR>
+
+com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
+
+" format xml
+nnoremap <leader>xml :FormatXML<Cr>

@@ -13,7 +13,8 @@ KEYWORDS = [
   '\ ap\ ',
   '\ fit\ ',
   '\ fcontext\ ',
-  '\ fdescribe\ '
+  '\ fdescribe\ ',
+  'fdescribe\ '
 ]
 
 def red(text)    "\033[31m#{text}\033[0m"; end

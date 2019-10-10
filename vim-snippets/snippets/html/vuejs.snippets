@@ -9,12 +9,10 @@ snippet vjsx
 	</template>
 
 	<script>
-	import { mapGetters, mapActions } from 'vuex'
-
 	export default {
 	  name: '${0}',
 
-		props: [],
+		props: {},
 
 		data () {
 		  return {
@@ -25,17 +23,15 @@ snippet vjsx
 		},
 
 		computed: {
-		  ...mapGetters([])
 		},
 
 		methods: {
-		  ...mapActions([])
 		},
 
 		watch: {
 		},
 
-		mounted () {
+		async mounted () {
 		}
 	}
 	</script>
