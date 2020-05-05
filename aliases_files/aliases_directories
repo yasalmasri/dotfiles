@@ -10,6 +10,9 @@ alias mror='cd ~/dev/masys/manager-ror/'
 alias mvue='cd ~/dev/masys/manager-vue/'
 alias slim='cd ~/dev/masys/slimarket/'
 
+# Quack
+alias qua='cd ~/dev/quack/'
+
 # GG
 alias ggd='cd ~/dev/gg/'
 alias gga='cd ~/dev/gg/globalgig-api-js'
@@ -21,24 +24,10 @@ alias mya='cd ~/dev/gg/globalgig-my-account'
 alias coa='cd ~/dev/gg/globalgig-coverage-api'
 alias cou='cd ~/dev/gg/globalgig-coverage-ui'
 
-# Castamic
-alias hdcr='cd ~/dev/castamic/hdc-club-ror'
-alias hdcv='cd ~/dev/castamic/hdc-club-vue'
-
-# Quiken
-alias qui='cd ~/dev/quiken'
-alias quc='cd ~/dev/quiken/core'
-
 # Hydra
 alias hyd='cd ~/dev/hydra-co'
 alias hsh='cd ~/dev/hydra-co/ship'
 alias hfr='cd ~/dev/hydra-co/front'
-alias hhy='cd ~/dev/hydra-co/hydra'
-alias hdh='cd ~/dev/hydra-co/dhl'
-
-# billetero
-alias bic='cd ~/dev/billetero/core'
-alias bweb='cd ~/dev/billetero/web'
 
 # Lagggom
 alias lag='cd ~/dev/lagggom'

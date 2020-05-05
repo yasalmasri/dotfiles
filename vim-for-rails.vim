@@ -40,9 +40,10 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
 " Plugin 'isRuslan/vim-es6'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'slim-template/vim-slim.git'
+Plugin 'slim-template/vim-slim'
 Plugin 'posva/vim-vue'
 Plugin 'wavded/vim-stylus'
+Plugin 'arkwright/vim-whiplash' " switch between projects
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,6 +52,7 @@ filetype plugin indent on    " required
 "filetype plugin on
 
 let mapleader = " "
+let g:NERDTreeNodeDelimiter = "\u00a0"
 nnoremap <leader>d :NERDTreeToggle<cr>
 
 " Plugin 'kien/ctrlp.vim' Config:
@@ -64,9 +66,11 @@ let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'
 set runtimepath+=/Users/yaser/.dotfiles/vim-snippets/
 
+" :help html-indenting
 " let g:javascript_plugin_ngdoc = 1
-let g:html_indent_script1 = "zero"
-" let g:html_indent_style1 = "inc"
+let g:html_indent_script1 = 'auto'
+" let g:html_indent_script1 = 'zero'
+let g:html_indent_style1 = 'auto'
 
 syntax enable
 colorscheme monokai
@@ -80,13 +84,13 @@ colorscheme monokai
 "   au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 " augroup END
 
-" Highlight characters that go over 100 columns (by drawing a border on the 81st)
+" Highlight characters that go over 100 columns (by drawing a border on the 101st)
 if exists('+colorcolumn')
   set colorcolumn=101
   highlight ColorColumn ctermbg=red
 else
   highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-  match OverLength /\%81v.\+/
+  match OverLength /\%101v.\+/
 endif
 
 " Backup files (.swo .swp)
@@ -221,7 +225,37 @@ let g:inflector_mapping = 'gI'
 " Ruby Hash
 nnoremap <leader>rh :%s/:\([^=,'"]*\) =>/\1:/g<CR>
 
-com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
+" arkwright/vim-whiplash
+let g:WhiplashProjectsDir = "~/dev/"
+let g:WhiplashCommandName = "SW"
+let g:WhiplashConfigDir = "~/dev/whiplash-config/"
 
-" format xml
-nnoremap <leader>xml :FormatXML<Cr>
+function! DoPrettyXML()
+  " save the filetype so we can restore it later
+  let l:origft = &ft
+  set ft=
+  " delete the xml header if it exists. This will
+  " permit us to surround the document with fake tags
+  " without creating invalid xml.
+  1s/<?xml .*?>//e
+  " insert fake tags around the entire document.
+  " This will permit us to pretty-format excerpts of
+  " XML that may contain multiple top-level elements.
+  0put ='<PrettyXML>'
+  $put ='</PrettyXML>'
+  silent %!xmllint --format -
+  " xmllint will insert an <?xml?> header. it's easy enough to delete
+  " if you don't want it.
+  " delete the fake tags
+  2d
+  $d
+  " restore the 'normal' indentation, which is one extra level
+  " too deep due to the extra tags we wrapped around the document.
+  silent %<
+  " back to home
+  1
+  " restore the filetype
+  exe "set ft=" . l:origft
+endfunction
+command! PrettyXML call DoPrettyXML()
+nnoremap <leader>xml :PrettyXML<CR>

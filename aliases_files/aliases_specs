@@ -1,6 +1,6 @@
 # Specs
-alias sp='clean && bundle exec rspec --fail-fast=1'
-alias rbsp='clean && rubocop -a && bundle exec rspec --fail-fast=1'
+alias sp='clean && bundle exec rspec'
+alias rbsp='clean && rubocop -a && bundle exec rspec'
 # alias spformat='clean && bundle exec rspec --fail-fast=1 --format documentation'
 
 alias spc='clean && bundle exec rspec --fail-fast=1 spec/controllers/'
