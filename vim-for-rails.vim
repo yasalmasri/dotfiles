@@ -41,9 +41,11 @@ Plugin 'pangloss/vim-javascript'
 " Plugin 'isRuslan/vim-es6'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'slim-template/vim-slim'
-Plugin 'posva/vim-vue'
 Plugin 'wavded/vim-stylus'
-Plugin 'arkwright/vim-whiplash' " switch between projects
+Plugin 'Quramy/tsuquyomi'
+Plugin 'Quramy/vim-js-pretty-template'
+Plugin 'posva/vim-vue'
+Plugin 'keith/swift.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -59,6 +61,7 @@ nnoremap <leader>d :NERDTreeToggle<cr>
 map <Leader>b :CtrlPBuffer<CR>
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:30'
 
 " Plugin 'garbas/vim-snipmate' Config:
 let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
@@ -68,21 +71,21 @@ set runtimepath+=/Users/yaser/.dotfiles/vim-snippets/
 
 " :help html-indenting
 " let g:javascript_plugin_ngdoc = 1
-let g:html_indent_script1 = 'auto'
-" let g:html_indent_script1 = 'zero'
-let g:html_indent_style1 = 'auto'
+" let g:html_indent_script1 = 'auto'
+let g:html_indent_script1 = 'zero'
+" let g:html_indent_style1 = 'auto'
 
 syntax enable
 colorscheme monokai
 
-" " Prettify Vagrantfile
-" autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
-"
-" " Prettify Markdown files
-" augroup markdown
-"   au!
-"   au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-" augroup END
+" Prettify Vagrantfile
+autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
+
+" Prettify Markdown files
+augroup markdown
+  au!
+  au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
 
 " Highlight characters that go over 100 columns (by drawing a border on the 101st)
 if exists('+colorcolumn')
@@ -122,9 +125,9 @@ set relativenumber        " show line numbers
 set ruler                 " Always show info along bottom.
 set t_Co=256              " enable 256-color mode.
 
-" " set showmatch
+" set showmatch
 set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
-" " set visualbell
+" set visualbell
 
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype coffeescript setlocal ts=4 sw=4 sts=0 expandtab
@@ -134,8 +137,8 @@ autocmd Filetype json setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
 
-autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
-autocmd BufRead,BufNewFile *.vue set filetype=html
+" autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
+" autocmd BufRead,BufNewFile *.vue set filetype=html
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+\%#\@<!$/
@@ -168,6 +171,10 @@ map <Leader>zf{ V$%zf
 map <Leader>" :s/"/'/g<CR>
 " replace ' with "
 map <Leader>' :s/'/"/g<CR>
+" set visualedit=all
+map <Leader>vea :set ve=all<CR>
+" set visualedit=block
+map <Leader>veb :set ve=block<CR>
 
 :command! W :w
 :command! Wq :wq
@@ -259,3 +266,9 @@ function! DoPrettyXML()
 endfunction
 command! PrettyXML call DoPrettyXML()
 nnoremap <leader>xml :PrettyXML<CR>
+
+function! ParseJSON()
+  :%s/\\n/\r/g
+  :%s/\\"/"/g
+endfunction
+command! ParseJSON call ParseJSON()
