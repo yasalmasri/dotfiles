@@ -4,30 +4,23 @@ alias mdot='mvim ~/.dotfiles/'
 alias devs='cd ~/dev/'
 alias masys='cd ~/dev/masys/'
 alias test='cd ~/dev/test/'
+alias xcd='cd /Users/yaser/Desktop/Xcode'
 
 ## Masys
 alias mror='cd ~/dev/masys/manager-ror/'
 alias mvue='cd ~/dev/masys/manager-vue/'
-alias slim='cd ~/dev/masys/slimarket/'
-
-# Quack
-alias qua='cd ~/dev/quack/'
+alias groa='cd ~/dev/masys/groceries-api/'
+alias groi='cd /Users/yaser/Desktop/Xcode/Groceries/'
+alias ppa='cd /Users/yaser/dev/masys/ping-pong-api'
+alias ppi='cd /Users/yaser/Desktop/Xcode/ping-pong'
+alias tga='cd /Users/yaser/dev/masys/trade_games-api'
+alias tgu='cd /Users/yaser/dev/masys/trade_games-ui'
+alias tgi='cd /Users/yaser/Desktop/Xcode/TradeGames'
 
 # GG
 alias ggd='cd ~/dev/gg/'
-alias gga='cd ~/dev/gg/globalgig-api-js'
-alias ggr='cd ~/dev/gg/globalgig-api-rails'
-alias orc='cd ~/dev/gg/orchestra'
-alias gmya='cd ~/dev/gg/myaccount-enterprise'
-alias ocp='cd ~/dev/gg/globalgig-ocp'
-alias mya='cd ~/dev/gg/globalgig-my-account'
-alias coa='cd ~/dev/gg/globalgig-coverage-api'
-alias cou='cd ~/dev/gg/globalgig-coverage-ui'
 
 # Hydra
 alias hyd='cd ~/dev/hydra-co'
 alias hsh='cd ~/dev/hydra-co/ship'
 alias hfr='cd ~/dev/hydra-co/front'
-
-# Lagggom
-alias lag='cd ~/dev/lagggom'

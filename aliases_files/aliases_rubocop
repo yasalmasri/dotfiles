@@ -1,5 +1,5 @@
 # Rubocop
-alias rb='clean && rubocop'
+alias rb='clean && bundle exec rubocop'
 # alias rbc='rubocop app/controllers/'
 # alias rbm='rubocop app/models/'
 # alias rbh='rubocop app/helpers/'

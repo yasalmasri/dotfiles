@@ -1,2 +1,3 @@
 alias serv='./serv'
 alias lvhme='rs -p 3000 -b lvh.me'
+alias fors='foreman start'
