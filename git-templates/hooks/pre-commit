@@ -11,6 +11,8 @@ KEYWORDS = [
   'debugger',
   '\.only\(',
   '\ ap\ ',
+  '\ puts\ ',
+  '\ pp\ ',
   '\ fit\ ',
   '\ fcontext\ ',
   '\ fdescribe\ ',
