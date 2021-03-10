@@ -1,4 +1,5 @@
 source ~/.dotfiles/aliases_files/aliases_directories
+source ~/.dotfiles/aliases_files/aliases_docker
 source ~/.dotfiles/aliases_files/aliases_ember
 source ~/.dotfiles/aliases_files/aliases_general
 source ~/.dotfiles/aliases_files/aliases_git

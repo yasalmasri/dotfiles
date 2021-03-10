@@ -1,0 +1,6 @@
+alias doc='docker'
+alias dimgs='docker images'
+alias dimg='docker image'
+alias dcc='docker container ls'
+alias dnet='docker network ls'
+alias dlog='docker logs'
