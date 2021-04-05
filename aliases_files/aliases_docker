@@ -6,8 +6,10 @@ alias dnet='docker network ls'
 alias dlog='docker logs'
 
 function dccr() {
-  CMD="docker container stop $1"
-  CMD="docker container rm $1"
-  CMD="docker image rm $1"
-  eval $CMD
+  CMD1="docker container stop $1"
+  eval $CMD1
+  CMD2="docker container rm $1"
+  eval $CMD2
+  CMD3="docker image rm $1"
+  eval $CMD3
 }
