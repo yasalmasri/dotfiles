@@ -4,3 +4,10 @@ alias dimg='docker image'
 alias dcc='docker container ls'
 alias dnet='docker network ls'
 alias dlog='docker logs'
+
+function dccr() {
+  CMD="docker container stop $1"
+  CMD="docker container rm $1"
+  CMD="docker image rm $1"
+  eval $CMD
+}
