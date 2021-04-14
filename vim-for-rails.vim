@@ -46,7 +46,8 @@ Plugin 'Quramy/tsuquyomi'
 Plugin 'Quramy/vim-js-pretty-template'
 Plugin 'posva/vim-vue'
 Plugin 'keith/swift.vim'
-Plugin 'thoughtbot/vim-rspec'
+" Plugin 'thoughtbot/vim-rspec'
+Plugin 'itmammoth/run-rspec.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -276,9 +277,15 @@ endfunction
 command! ParseJSON call ParseJSON()
 
 " RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = "bundle exec rspec {spec}"
-let g:rspec_runner = "os_x_iterm2"
+" map <Leader>t :call RunCurrentSpecFile()<CR>
+" map <Leader>s :call RunNearestSpec()<CR>
+" map <Leader>l :call RunLastSpec()<CR>
+" map <Leader>a :call RunAllSpecs()<CR>
+" let g:rspec_command = "bundle exec rspec {spec}"
+" let g:rspec_runner = "os_x_iterm2"
+
+" itmammoth/run-rspec.vim
+nnoremap <leader>sp :RunSpec<CR>
+nnoremap <leader>sl :RunSpecLine<CR>
+nnoremap <leader>se :RunSpecLastRun<CR>
+nnoremap <leader>csp :RunSpecCloseResult<CR>
