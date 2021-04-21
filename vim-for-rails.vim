@@ -233,7 +233,8 @@ nnoremap <leader>e :SyntasticCheck<cr>
 let g:inflector_mapping = 'gI'
 
 " Ruby Hash
-nnoremap <leader>rh :%s/:\([^=,'"]*\) =>/\1:/g<CR>
+" nnoremap <leader>rh :%s/:\([^=,'"]*\) =>/\1:/g<CR>
+nnoremap <leader>rh :%s/[":]\([a-z0-9_]\+\)\("\)\?\( \)\?=>\( \)\?/\1: /g<CR>
 
 " arkwright/vim-whiplash
 let g:WhiplashProjectsDir = "~/dev/"
