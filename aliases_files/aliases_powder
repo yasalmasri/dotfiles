@@ -1,8 +1,0 @@
-# Powder Aliases
-# alias pu='powder up'
-# alias pd='powder down'
-# alias pl='powder link'
-# alias pul='powder unlink'
-# alias po="powder open -b 'Google Chrome'"
-# alias pr='powder restart'
-# alias pt='tail -f log/development.log'

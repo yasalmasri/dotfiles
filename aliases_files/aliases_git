@@ -1,9 +1,9 @@
 # Git aliases
 branch_name() {
-branch_name=$(git symbolic-ref -q HEAD)
-branch_name=${branch_name##refs/heads/}
-branch_name=${branch_name:-HEAD}
-print $branch_name
+  branch_name=$(git symbolic-ref -q HEAD)
+  branch_name=${branch_name##refs/heads/}
+  branch_name=${branch_name:-HEAD}
+  print $branch_name
 }
 
 alias g='git'
@@ -87,10 +87,5 @@ function gpt() {
 function gdt() {
   TAG="`git describe --abbrev=0 --tags`"
   CMD="git push prod $TAG:master"
-  eval $CMD
-}
-
-function kllp() {
-  CMD="lsof -t -i tcp:$1 | xargs kill"
   eval $CMD
 }

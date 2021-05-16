@@ -1,0 +1,5 @@
+alias trn='tmuxinator new'
+alias trs='tmuxinator start'
+alias trls='tmuxinator list'
+alias tmls='tmux ls'
+alias tma='tmux a -t'

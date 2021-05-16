@@ -1,3 +1,4 @@
+export EDITOR='vim'
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
 

@@ -1,5 +1,1 @@
-alias ggdev='psql -d gg_dev'
-alias ggtest='psql -d gg_test'
 alias ggres='gga && node bin/drop.js && psql gg_dev < ~/backups/gg_dev && npm run migrate'
-
-alias shres='pg_restore -d ship_dev < ~/backups/ship'
