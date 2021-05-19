@@ -1,2 +1,6 @@
 alias hid='defaults write com.apple.finder AppleShowAllFiles'
-alias kp='kill `sudo lsof -t -i :$1`'
+
+function kp() {
+  CMD="lsof -t -i tcp:$1 | xargs kill"
+  eval $CMD
+}
