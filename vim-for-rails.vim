@@ -49,8 +49,7 @@ Plugin 'keith/swift.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'itmammoth/run-rspec.vim'
 
-set autochdir
-set tags=tags;pwd/.git
+set tags=tags
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
