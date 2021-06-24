@@ -165,10 +165,10 @@ nnoremap <C-T> <C-W><C-T>
 vnoremap <leader>p "0p
 nmap K k
 
-" Buffers - explore/next/previous: Alt-F12, F12, Shift-F12.
-nnoremap <silent> <M-F12> :BufExplorer<CR>
-nnoremap <silent> <F12> :bn<CR>
-nnoremap <silent> <S-F12> :bp<CR>
+" Buffers - explore/next/previous: Alt--, Alt-=
+nnoremap – :bp<CR>
+nnoremap ≠ :bn<CR>
+
 
 " format JSON
 map <Leader>j :%!python3 -m json.tool<CR>
