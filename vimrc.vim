@@ -48,6 +48,8 @@ Plugin 'posva/vim-vue'
 Plugin 'keith/swift.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'itmammoth/run-rspec.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 set tags=tags,./.git/tags
 
@@ -162,6 +164,11 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-T> <C-W><C-T>
 vnoremap <leader>p "0p
 nmap K k
+
+" Buffers - explore/next/previous: Alt-F12, F12, Shift-F12.
+nnoremap <silent> <M-F12> :BufExplorer<CR>
+nnoremap <silent> <F12> :bn<CR>
+nnoremap <silent> <S-F12> :bp<CR>
 
 " format JSON
 map <Leader>j :%!python3 -m json.tool<CR>
@@ -296,3 +303,7 @@ let g:rspec_runner = "os_x_iterm2"
 " nnoremap <leader>sl :RunSpecLine<CR>
 " nnoremap <leader>se :RunSpecLastRun<CR>
 " nnoremap <leader>csp :RunSpecCloseResult<CR>
+
+" vim-airline/vim-airline
+let g:airline#extensions#tabline#enabled = 1
+
