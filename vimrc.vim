@@ -48,8 +48,8 @@ Plugin 'posva/vim-vue'
 Plugin 'keith/swift.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'itmammoth/run-rspec.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
 
 set tags=tags,./.git/tags
 
@@ -305,5 +305,5 @@ let g:rspec_runner = "os_x_iterm2"
 " nnoremap <leader>csp :RunSpecCloseResult<CR>
 
 " vim-airline/vim-airline
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 
