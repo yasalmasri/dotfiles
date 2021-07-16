@@ -1,4 +1,4 @@
 # Rubocop
-alias rb='clean && bundle exec rubocop'
-alias rba='clean && bundle exec rubocop -a'
-alias rbao='clean && bundle exec rubocop -A --only'
+alias rb='clean && bin/rubocop'
+alias rba='clean && bin/rubocop -a'
+alias rbao='clean && bin/rubocop -A --only'
