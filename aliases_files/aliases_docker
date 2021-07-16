@@ -4,6 +4,7 @@ alias dimg='docker image'
 alias dcc='docker container ls'
 alias dnet='docker network ls'
 alias dlog='docker logs'
+alias dcsa='docker stop $(docker ps -q)' # Docker stop all
 
 function dccr() {
   CMD1="docker container stop $1"
