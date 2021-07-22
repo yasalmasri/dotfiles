@@ -131,7 +131,7 @@ noremap <F4> :set hlsearch! hlsearch?<CR>
 
 set laststatus=2          " last window always has a statusline
 set number                " show line numbers
-set relativenumber        " show line numbers
+" set relativenumber        " show line numbers
 set ruler                 " Always show info along bottom.
 set t_Co=256              " enable 256-color mode.
 set showcmd               " show selected lines count
