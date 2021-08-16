@@ -156,7 +156,7 @@ match ExtraWhitespace /\s\+\%#\@<!$/
 " remove trailing whitespace
 map <Leader>c :%s/\s\+$//<CR>
 
-nnoremap <leader>r :RuboCop<cr>
+nnoremap <leader>r :RuboCop -A<cr>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
