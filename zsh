@@ -1,20 +1,19 @@
 export EDITOR='vim'
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-# export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+
+if [ -x "$(command -v figlet)" ]; then
+  figlet -f starwars 'Welcome Yaser'
+fi
 
 # GO envs
 export GOPATH=$HOME/dev/go # don't forget to change your path correctly!
 export GOROOT="$(brew --prefix golang)/libexec"
-# export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
-# export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
-export NODE_PATH=/Users/yaser/.nvm/versions/node/v8.9.1/lib/node_modules
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# . "/usr/local/opt/nvm/nvm.sh"
+
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -22,17 +21,17 @@ export LC_ALL=en_US.UTF-8
 # place this after nvm initialization!
 autoload -U add-zsh-hook
 load-nvmrc() {
-  if [[ -f .nvmrc && -r .nvmrc ]]; then
-    nvm use
-  elif [[ $(nvm version) != $(nvm version default)  ]]; then
-    echo "Reverting to nvm default version"
-    nvm use default
+  if [ -x "$(command -v nvm)" ]; then
+    if [[ -f .nvmrc && -r .nvmrc ]]; then
+      nvm use
+    elif [[ $(nvm version) != $(nvm version default)  ]]; then
+      echo "Reverting to nvm default version"
+      nvm use default
+    fi
   fi
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
-
-source ~/.dotfiles/aliases
 
 HISTFILE=~/.histfile
 HISTSIZE=100000
@@ -90,5 +89,6 @@ preexec () {
   else
     echo -e "${RDATE}"
   fi
-
 }
+
+source ~/.dotfiles/aliases
