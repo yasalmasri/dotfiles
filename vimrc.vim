@@ -50,6 +50,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'itmammoth/run-rspec.vim'
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
+Plugin 'dracula/vim', { 'name': 'dracula' }
 
 set tags=tags,./.git/tags
 
@@ -88,6 +89,7 @@ let g:html_indent_script1 = 'zero'
 
 syntax enable
 colorscheme monokai
+colorscheme dracula
 
 " Prettify Vagrantfile
 autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
