@@ -89,3 +89,9 @@ function gdt() {
   CMD="git push prod $TAG:master"
   eval $CMD
 }
+
+function gfiles() {
+  BRANCH="`git rev-parse --abbrev-ref HEAD`"
+  CMD="git diff --name-only $BRANCH $(git merge-base $BRANCH master)"
+  eval $CMD
+}
