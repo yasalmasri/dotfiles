@@ -1,3 +1,4 @@
+export PATH="/usr/local/bin:/usr/bin:$PATH"
 export EDITOR='vim'
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -11,8 +12,8 @@ export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
-# export NVM_DIR="$HOME/.nvm"
-# . "/usr/local/opt/nvm/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export LC_CTYPE=en_US.UTF-8
