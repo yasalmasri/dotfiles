@@ -51,6 +51,7 @@ Plugin 'itmammoth/run-rspec.vim'
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
 Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'andymass/vim-matchup'
 
 set tags=tags,./.git/tags
 
