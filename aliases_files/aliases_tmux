@@ -1,6 +1,7 @@
 # tmux
 alias tmls='tmux ls'
 alias tma='tmux a -t'
+alias tmks='tmux kill-session -t'
 
 # tmuxinator
 alias mux=tmuxinator

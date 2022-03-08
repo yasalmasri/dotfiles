@@ -22,7 +22,7 @@ export LC_ALL=en_US.UTF-8
 # place this after nvm initialization!
 autoload -U add-zsh-hook
 load-nvmrc() {
-  if [ -x "$(command -v nvm)" ]; then
+  if command -v nvm >/dev/null 2>&1; then
     if [[ -f .nvmrc && -r .nvmrc ]]; then
       nvm use
     elif [[ $(nvm version) != $(nvm version default)  ]]; then
