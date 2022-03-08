@@ -41,3 +41,7 @@ if $?.exitstatus.zero?
   puts "Use 'git commit --no-verify' to skip this validation"
   exit 1
 end
+
+puts "Running project pre commit..."
+git_hook = "#{Dir.pwd}/.git/hooks/pre-commit"
+system git_hook
