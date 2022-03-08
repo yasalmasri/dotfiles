@@ -311,3 +311,6 @@ let g:rspec_runner = "os_x_iterm2"
 " vim-airline/vim-airline
 " let g:airline#extensions#tabline#enabled = 1
 
+" vim-gitgutter
+map <Leader>gb :Git blame<CR>
+
