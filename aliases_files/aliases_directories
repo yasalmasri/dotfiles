@@ -7,20 +7,20 @@ alias test='cd ~/dev/test/'
 alias xcd='cd /Users/yaser/Desktop/Xcode'
 
 ## Masys
-alias mror='cd ~/dev/masys/manager-ror/'
-alias mvue='cd ~/dev/masys/manager-vue/'
-alias groa='cd ~/dev/masys/groceries-api/'
-alias groi='cd /Users/yaser/Desktop/Xcode/Groceries/'
-alias ppa='cd /Users/yaser/dev/masys/ping-pong-api'
-alias ppi='cd /Users/yaser/Desktop/Xcode/ping-pong'
-alias tga='cd /Users/yaser/dev/masys/trade_games-api'
-alias tgu='cd /Users/yaser/dev/masys/trade_games-ui'
-alias tgi='cd /Users/yaser/Desktop/Xcode/TradeGames'
+# alias mror='cd ~/dev/masys/manager-ror/'
+# alias mvue='cd ~/dev/masys/manager-vue/'
+# alias groa='cd ~/dev/masys/groceries-api/'
+# alias groi='cd /Users/yaser/Desktop/Xcode/Groceries/'
+# alias ppa='cd /Users/yaser/dev/masys/ping-pong-api'
+# alias ppi='cd /Users/yaser/Desktop/Xcode/ping-pong'
+# alias tga='cd /Users/yaser/dev/masys/trade_games-api'
+# alias tgu='cd /Users/yaser/dev/masys/trade_games-ui'
+# alias tgi='cd /Users/yaser/Desktop/Xcode/TradeGames'
 
 # GG
-alias ggd='cd ~/dev/gg/'
+# alias ggd='cd ~/dev/gg/'
 
 # Hydra
-alias hyd='cd ~/dev/hydra-co'
-alias hsh='cd ~/dev/hydra-co/ship'
-alias hfr='cd ~/dev/hydra-co/front'
+# alias hyd='cd ~/dev/hydra-co'
+# alias hsh='cd ~/dev/hydra-co/ship'
+# alias hfr='cd ~/dev/hydra-co/front'
