@@ -4,7 +4,7 @@ My dotfiles
 
 # How to install:
 ```
-git clone git://github.com/yalmasri/dotfiles.git ~/.dotfiles; \
+git clone git@github.com:yasalmasri/dotfiles.git ~/.dotfiles; \
   cd ~/.dotfiles; \
   ./install.sh
 ```
