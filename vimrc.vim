@@ -160,6 +160,7 @@ match ExtraWhitespace /\s\+\%#\@<!$/
 " remove trailing whitespace
 map <Leader>c :%s/\s\+$//<CR>
 
+let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
 nnoremap <leader>r :RuboCop -A<cr>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
