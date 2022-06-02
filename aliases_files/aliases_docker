@@ -1,16 +1,16 @@
-alias doc='docker'
-alias dimgs='docker images'
-alias dimg='docker image'
-alias dcc='docker container ls'
-alias dnet='docker network ls'
-alias dlog='docker logs'
-alias dcsa='docker stop $(docker ps -q)' # Docker stop all
+# alias doc='docker'
+# alias dimgs='docker images'
+# alias dimg='docker image'
+# alias dcc='docker container ls'
+# alias dnet='docker network ls'
+# alias dlog='docker logs'
+# alias dcsa='docker stop $(docker ps -q)' # Docker stop all
 
-function dccr() {
-  CMD1="docker container stop $1"
-  eval $CMD1
-  CMD2="docker container rm $1"
-  eval $CMD2
-  CMD3="docker image rm $1"
-  eval $CMD3
-}
+# function dccr() {
+#   CMD1="docker container stop $1"
+#   eval $CMD1
+#   CMD2="docker container rm $1"
+#   eval $CMD2
+#   CMD3="docker image rm $1"
+#   eval $CMD3
+# }
