@@ -7,8 +7,8 @@ branch_name() {
 }
 
 alias g='git'
-alias opgt='open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)'
-alias opgtb='open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)/tree/$(branch_name)'
+# alias opgt='open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)'
+# alias opgtb='open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)/tree/$(branch_name)'
 alias gcl='git clone'
 alias ga='git add'
 alias gc='git commit -m'
@@ -23,8 +23,8 @@ alias gbmd='clean && git branch --merged | egrep -v "(^\*|master|dev)" | xargs g
 alias gd="clean && git diff"
 alias gg="clean && git grep --color -n"
 # alias gk="gitk 2>/dev/null --all &"
-alias gpl='git pull origin'
-alias gps='git push origin'
+# alias gpl='git pull origin'
+# alias gps='git push origin'
 alias gpr='git remote prune origin'
 
 alias pull='git pull origin $(branch_name)'
@@ -33,11 +33,11 @@ alias push='git push origin $(branch_name)'
 alias gm='git merge'
 alias gl='git log'
 alias gly='git log --author=Yaser'
-alias gsh='git show'
-alias grm='git rm'
+# alias gsh='git show'
+# alias grm='git rm'
 # alias grmf='git ls-files --deleted -z | xargs -0 git rm'
-alias grlc='git reset --soft HEAD^'
-alias grh='git reset HEAD'
+alias grlc='git reset --soft HEAD^' # Remove last commit
+alias grh='git reset HEAD' # Reset checked files
 alias gss='git stash save'
 alias gsp='git stash pop'
 alias gt='git tag'
