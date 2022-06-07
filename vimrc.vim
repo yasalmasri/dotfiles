@@ -174,6 +174,8 @@ nmap K k
 nnoremap – :bp<CR>
 nnoremap ≠ :bn<CR>
 
+" ctags
+nnoremap <f5> :!ctags -R --languages=ruby<CR>
 
 " format JSON
 map <Leader>j :%!python3 -m json.tool<CR>
