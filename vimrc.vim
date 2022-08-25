@@ -80,7 +80,7 @@ let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
 let g:snipMate.snippet_version = 1
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'
-set runtimepath+=/Users/yaser/.dotfiles/vim-snippets/
+set runtimepath+=~/.dotfiles/vim-snippets/
 
 " :help html-indenting
 " let g:javascript_plugin_ngdoc = 1
@@ -174,6 +174,8 @@ nmap K k
 nnoremap – :bp<CR>
 nnoremap ≠ :bn<CR>
 
+" ctags
+nnoremap <f5> :!ctags -R --languages=ruby<CR>
 
 " format JSON
 map <Leader>j :%!python3 -m json.tool<CR>
