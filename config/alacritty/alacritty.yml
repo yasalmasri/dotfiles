@@ -1,0 +1,46 @@
+# Any items in the `env` entry below will be added as
+# environment variables. Some entries may override variables
+# set by alacritty itself.
+env:
+  # TERM variable
+  #
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  TERM: xterm-256color
+
+import:
+  - ~/.dotfiles/config/alacritty/dracula.yml
+
+font:
+  normal:
+    family: "MesloLGS NF"
+    size: 12.0
+
+# Bindings are always filled by default, but will be replaced when a new
+# binding with the same triggers is defined. To unset a default binding, it can
+# be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
+# a no-op if you do not wish to receive input characters for that binding.
+key_bindings:
+  # (Windows, Linux, and BSD only)
+  # - { key: V,         mods: Control|Shift, action: Paste                       }
+  # - { key: C,         mods: Control|Shift, action: Copy                        }
+  # - { key: Insert,    mods: Shift,         action: PasteSelection              }
+  # - { key: Key0,      mods: Control,       action: ResetFontSize               }
+  # - { key: Equals,    mods: Control,       action: IncreaseFontSize            }
+  # - { key: Plus,      mods: Control,       action: IncreaseFontSize            }
+  # - { key: Minus,     mods: Control,       action: DecreaseFontSize            }
+  # - { key: F11,       mods: None,          action: ToggleFullscreen            }
+  # - { key: Paste,     mods: None,          action: Paste                       }
+  # - { key: Copy,      mods: None,          action: Copy                        }
+  # - { key: L,         mods: Control,       action: ClearLogNotice              }
+  # - { key: L,         mods: Control,       chars: "\x0c"                       }
+  # - { key: PageUp,    mods: None,          action: ScrollPageUp,   mode: ~Alt  }
+  # - { key: PageDown,  mods: None,          action: ScrollPageDown, mode: ~Alt  }
+  # - { key: Home,      mods: Shift,         action: ScrollToTop,    mode: ~Alt  }
+  # - { key: End,       mods: Shift,         action: ScrollToBottom, mode: ~Alt  }
+  - { key: J,        mods: Alt,     chars: "\x1bj"                       }
+  - { key: K,        mods: Alt,     chars: "\x1bk"                       }
+  - { key: H,        mods: Alt,     chars: "\x1bh"                       }
+  - { key: L,        mods: Alt,     chars: "\x1bl"                       }
