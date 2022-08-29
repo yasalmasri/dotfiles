@@ -13,45 +13,51 @@ Plugin 'gmarik/Vundle.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 2. Plugin list
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'sickill/vim-monokai'
+Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'tComment'
-Plugin 'chreekat/vim-paren-crosshairs'
-Plugin 'ngmy/vim-rubocop'
+Plugin 'majutsushi/tagbar'
+
+Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
 Plugin 'honza/vim-snippets'
+Plugin 'junegunn/fzf'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'terryma/vim-multiple-cursors'
+
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'ngmy/vim-rubocop'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'itmammoth/run-rspec.vim'
+
+Plugin 'chreekat/vim-paren-crosshairs'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-Plugin 'mattn/emmet-vim'
-Plugin 'easymotion/vim-easymotion'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'farfanoide/inflector.vim'
-" Plugin 'chrisbra/NrrwRgn'
-" Plugin 'w0rp/ale'
-
-Plugin 'vim-ruby/vim-ruby'
-" Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
-" Plugin 'isRuslan/vim-es6'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'slim-template/vim-slim'
 Plugin 'wavded/vim-stylus'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'Quramy/vim-js-pretty-template'
 Plugin 'posva/vim-vue'
-Plugin 'keith/swift.vim'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'itmammoth/run-rspec.vim'
+Plugin 'andymass/vim-matchup'
+
+" Plugin 'chrisbra/NrrwRgn'
+" Plugin 'w0rp/ale'
+" Plugin 'sickill/vim-monokai'
+" Plugin 'jelera/vim-javascript-syntax'
+" Plugin 'isRuslan/vim-es6'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'slim-template/vim-slim'
+" Plugin 'keith/swift.vim'
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
-Plugin 'dracula/vim', { 'name': 'dracula' }
-Plugin 'andymass/vim-matchup'
 
 set tags=tags,./.git/tags
 
@@ -66,21 +72,6 @@ filetype plugin indent on    " required
 "filetype plugin on
 
 let mapleader = " "
-let g:NERDTreeNodeDelimiter = "\u00a0"
-nnoremap <leader>d :NERDTreeToggle<cr>
-
-" Plugin 'kien/ctrlp.vim' Config:
-map <Leader>b :CtrlPBuffer<CR>
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:30'
-
-" Plugin 'garbas/vim-snipmate' Config:
-let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
-let g:snipMate.snippet_version = 1
-let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'
-set runtimepath+=~/.dotfiles/vim-snippets/
 
 " :help html-indenting
 " let g:javascript_plugin_ngdoc = 1
@@ -88,8 +79,12 @@ set runtimepath+=~/.dotfiles/vim-snippets/
 let g:html_indent_script1 = 'zero'
 " let g:html_indent_style1 = 'auto'
 
+" dracula/vim, should be set before loading the colorscheme
+let g:dracula_italic = 0
+" let g:dracula_colorterm = 0
+
 syntax enable
-colorscheme monokai
+" colorscheme monokai
 colorscheme dracula
 
 " Prettify Vagrantfile
@@ -145,9 +140,9 @@ set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%
 " set visualbell
 
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype coffeescript setlocal ts=4 sw=4 sts=0 expandtab
-autocmd Filetype jade setlocal ts=4 sw=4 sts=0 expandtab
-autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
+" autocmd Filetype coffeescript setlocal ts=4 sw=4 sts=0 expandtab
+" autocmd Filetype jade setlocal ts=4 sw=4 sts=0 expandtab
+" autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype json setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
@@ -160,13 +155,11 @@ match ExtraWhitespace /\s\+\%#\@<!$/
 " remove trailing whitespace
 map <Leader>c :%s/\s\+$//<CR>
 
-let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
-nnoremap <leader>r :RuboCop -A<cr>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-nnoremap <C-T> <C-W><C-T>
+" nnoremap <C-T> <C-W><C-T>
 vnoremap <leader>p "0p
 nmap K k
 
@@ -203,6 +196,7 @@ map <Leader>veb :set ve=block<CR>
 :command! Wq :wq
 :command! Q :q
 
+" Tabs config
 if has("gui_macvim")
   " Press Ctrl-Tab to switch between open tabs (like browser tabs) to
   " the right side. Ctrl-Shift-Tab goes the other way.
@@ -230,18 +224,6 @@ endif
 "   autocmd BufWinEnter *.* silent loadview
 " augroup END
 
-" vim-syntastic/syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['standard']
-let g:syntastic_enable_highlighting = 1
-nnoremap <leader>e :SyntasticCheck<cr>
-
 " Syntax coloring lines that are too long just slows down the world
 " set synmaxcol=128
 " set ttyfast " u got a fast terminal
@@ -249,17 +231,9 @@ nnoremap <leader>e :SyntasticCheck<cr>
 " set lazyredraw " to avoid scrolling problems
 " set nocursorline
 
-" Plugin 'farfanoide/inflector.vim'
-let g:inflector_mapping = 'gI'
-
 " Ruby Hash
 " nnoremap <leader>rh :%s/:\([^=,'"]*\) =>/\1:/g<CR>
 nnoremap <leader>rh :%s/[":]\([a-z0-9_]\+\)\("\)\?\( \)\?=>\( \)\?/\1: /g<CR>
-
-" arkwright/vim-whiplash
-let g:WhiplashProjectsDir = "~/dev/"
-let g:WhiplashCommandName = "SW"
-let g:WhiplashConfigDir = "~/dev/whiplash-config/"
 
 function! DoPrettyXML()
   " save the filetype so we can restore it later
@@ -297,6 +271,45 @@ function! ParseJSON()
 endfunction
 command! ParseJSON call ParseJSON()
 
+" Plugins Configs
+
+" Plugin 'scrooloose/nerdtree' Config:
+let g:NERDTreeNodeDelimiter = "\u00a0"
+nnoremap <leader>d :NERDTreeToggle<cr>
+
+" Plugin 'kien/ctrlp.vim' Config:
+map <Leader>b :CtrlPBuffer<CR>
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:30'
+
+" Plugin 'garbas/vim-snipmate' Config:
+let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
+let g:snipMate.snippet_version = 1
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'
+set runtimepath+=~/.dotfiles/vim-snippets/
+
+" vim-syntastic/syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['standard']
+let g:syntastic_enable_highlighting = 1
+nnoremap <leader>e :SyntasticCheck<cr>
+
+" Plugin 'farfanoide/inflector.vim'
+let g:inflector_mapping = 'gI'
+
+" arkwright/vim-whiplash
+let g:WhiplashProjectsDir = "~/dev/"
+let g:WhiplashCommandName = "SW"
+let g:WhiplashConfigDir = "~/dev/whiplash-config/"
+
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
@@ -317,3 +330,9 @@ let g:rspec_runner = "os_x_iterm2"
 " vim-gitgutter
 map <Leader>gb :Git blame<CR>
 
+" majutsushi/tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" ngmy/vim-rubocop
+let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
+nnoremap <leader>r :RuboCop -A<cr>
