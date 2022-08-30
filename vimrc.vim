@@ -47,6 +47,7 @@ Plugin 'Quramy/tsuquyomi'
 Plugin 'Quramy/vim-js-pretty-template'
 Plugin 'posva/vim-vue'
 Plugin 'andymass/vim-matchup'
+Plugin 'yggdroot/indentline'
 
 " Plugin 'chrisbra/NrrwRgn'
 " Plugin 'w0rp/ale'
