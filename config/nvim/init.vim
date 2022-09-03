@@ -21,6 +21,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'farfanoide/inflector.vim'
 Plug 'andymass/vim-matchup'
 Plug 'yggdroot/indentline'
+Plug 'MarcWeber/vim-addon-mw-utils'
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
