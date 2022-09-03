@@ -41,14 +41,14 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'farfanoide/inflector.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'wavded/vim-stylus'
-Plugin 'Quramy/tsuquyomi'
-Plugin 'Quramy/vim-js-pretty-template'
-Plugin 'posva/vim-vue'
 Plugin 'andymass/vim-matchup'
 Plugin 'yggdroot/indentline'
 
+" Plugin 'pangloss/vim-javascript'
+" Plugin 'wavded/vim-stylus'
+" Plugin 'Quramy/tsuquyomi'
+" Plugin 'Quramy/vim-js-pretty-template'
+" Plugin 'posva/vim-vue'
 " Plugin 'chrisbra/NrrwRgn'
 " Plugin 'w0rp/ale'
 " Plugin 'sickill/vim-monokai'
@@ -60,14 +60,14 @@ Plugin 'yggdroot/indentline'
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
 
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
 set tags=tags,./.git/tags
 
 "" Folding configuration
 set foldcolumn=1
 set foldmethod=syntax
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
