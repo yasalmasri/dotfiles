@@ -3,7 +3,7 @@
 call plug#begin()
 
 Plug 'preservim/nerdtree'
-Plug 'Mofiqul/dracula.nvim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'dense-analysis/ale'
 Plug 'tomtom/tcomment_vim'
 
