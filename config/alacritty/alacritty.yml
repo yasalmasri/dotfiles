@@ -13,6 +13,10 @@ env:
 import:
   - ~/.dotfiles/config/alacritty/dracula.yml
 
+window:
+  padding:
+    x: 5
+
 font:
   normal:
     family: "MesloLGS NF"
