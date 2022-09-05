@@ -45,7 +45,10 @@ let mapleader = " "
 " let g:dracula_colorterm = 0
 
 " Startup
-autocmd VimEnter * :helptags ~/.dotfiles/config/nvim/doc
+if empty(glob("~/.dotfiles/config/nvim/doc/yas_commands.txt"))
+  !ln -s ~/.dotfiles/vim_commands.txt ~/.dotfiles/config/nvim/doc/yas_commands.txt
+endif
+helptags ~/.dotfiles/config/nvim/doc
 
 syntax enable
 " colorscheme monokai
