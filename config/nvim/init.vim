@@ -44,6 +44,9 @@ let mapleader = " "
 " let g:dracula_italic = 0
 " let g:dracula_colorterm = 0
 
+" Startup
+autocmd VimEnter * :helptags ~/.dotfiles/config/nvim/doc
+
 syntax enable
 " colorscheme monokai
 colorscheme dracula
@@ -150,6 +153,8 @@ map <Leader>vea :set ve=all<CR>
 map <Leader>veb :set ve=block<CR>
 " Copy selected text
 map <Leader>ct "*y<CR>
+" Show YasCmds help
+map <Leader>hh :h YasCMDs<CR>
 
 :command! W :w
 :command! Wq :wq

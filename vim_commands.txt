@@ -1,0 +1,16 @@
+1. Intro                                                                                *YasCommands*
+A list of custom commands, key binding, shortcuts to use in vim, those commands can be VIM
+default commands or can be custom commands defined in `vimrc` or `nvimrc`.
+
+
+
+====================================================================================================
+2. Commands provided                                                                        *YasCMDs*
+
+----------------------------------------------------------------------------------------------------
+2.1. Split Navigations Commands                                                           *YasCmdNav*
+      
+      CTR-h ....................................... Move to left split
+      CTR-j ....................................... Move to bottom split
+      CTR-k ....................................... Move to upper split
+      CTR-l ....................................... Move to right split
