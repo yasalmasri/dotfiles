@@ -52,3 +52,4 @@ key_bindings:
   - { key: RBracket, mods: Alt,     chars: "\x1b]"                       }
   - { key: O,        mods: Alt,     chars: "\x1bo"                       }
   - { key: P,        mods: Alt,     chars: "\x1bp"                       }
+  - { key: U,        mods: Alt,     chars: "\x1bu"                       }
