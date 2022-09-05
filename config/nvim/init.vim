@@ -13,15 +13,18 @@ Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim'
 Plug 'mattn/emmet-vim'
-Plug 'honza/vim-snippets'
 Plug 'easymotion/vim-easymotion'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'tomtom/tlib_vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'honza/vim-snippets'
 Plug 'garbas/vim-snipmate'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'farfanoide/inflector.vim'
 Plug 'andymass/vim-matchup'
 Plug 'yggdroot/indentline'
 Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'ellisonleao/glow.nvim'
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
@@ -38,7 +41,7 @@ filetype plugin indent on    " required
 let mapleader = " "
 
 " dracula/vim, should be set before loading the colorscheme
-let g:dracula_italic = 0
+" let g:dracula_italic = 0
 " let g:dracula_colorterm = 0
 
 syntax enable
@@ -47,6 +50,8 @@ colorscheme dracula
 
 " Prettify Vagrantfile
 autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
+autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
+autocmd BufRead,BufNewFile *.vue set filetype=html
 
 " Prettify Markdown files
 augroup markdown
@@ -98,15 +103,9 @@ set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%
 " set visualbell
 
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
-" autocmd Filetype coffeescript setlocal ts=4 sw=4 sts=0 expandtab
-" autocmd Filetype jade setlocal ts=4 sw=4 sts=0 expandtab
-" autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype json setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
-
-" autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
-" autocmd BufRead,BufNewFile *.vue set filetype=html
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+\%#\@<!$/
@@ -157,25 +156,25 @@ map <Leader>ct "*y<CR>
 :command! Q :q
 
 " Tabs config
-if has("gui_macvim")
-  " Press Ctrl-Tab to switch between open tabs (like browser tabs) to
-  " the right side. Ctrl-Shift-Tab goes the other way.
-  noremap <C-Tab> :tabnext<CR>
-  noremap <C-S-Tab> :tabprev<CR>
-
-  " Switch to specific tab numbers with Command-number
-  noremap <D-1> :tabn 1<CR>
-  noremap <D-2> :tabn 2<CR>
-  noremap <D-3> :tabn 3<CR>
-  noremap <D-4> :tabn 4<CR>
-  noremap <D-5> :tabn 5<CR>
-  noremap <D-6> :tabn 6<CR>
-  noremap <D-7> :tabn 7<CR>
-  noremap <D-8> :tabn 8<CR>
-  noremap <D-9> :tabn 9<CR>
-  " Command-0 goes to the last tab
-  noremap <D-0> :tablast<CR>
-endif
+" if has("gui_macvim")
+"   " Press Ctrl-Tab to switch between open tabs (like browser tabs) to
+"   " the right side. Ctrl-Shift-Tab goes the other way.
+"   noremap <C-Tab> :tabnext<CR>
+"   noremap <C-S-Tab> :tabprev<CR>
+"
+"   " Switch to specific tab numbers with Command-number
+"   noremap <D-1> :tabn 1<CR>
+"   noremap <D-2> :tabn 2<CR>
+"   noremap <D-3> :tabn 3<CR>
+"   noremap <D-4> :tabn 4<CR>
+"   noremap <D-5> :tabn 5<CR>
+"   noremap <D-6> :tabn 6<CR>
+"   noremap <D-7> :tabn 7<CR>
+"   noremap <D-8> :tabn 8<CR>
+"   noremap <D-9> :tabn 9<CR>
+"   " Command-0 goes to the last tab
+"   noremap <D-0> :tablast<CR>
+" endif
 
 " Save folds
 " augroup AutoSaveFolds
