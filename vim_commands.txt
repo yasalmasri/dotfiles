@@ -5,12 +5,27 @@ default commands or can be custom commands defined in `vimrc` or `nvimrc`.
 
 
 ====================================================================================================
-2. Commands provided                                                                        *YasCMDs*
+2. VIM Commands                                                                          *YasVimCmds*
 
 ----------------------------------------------------------------------------------------------------
-2.1. Split Navigations Commands                                                           *YasCmdNav*
-      
+2.1. Split Navigations Commands
+
       CTR-h ....................................... Move to left split
       CTR-j ....................................... Move to bottom split
       CTR-k ....................................... Move to upper split
       CTR-l ....................................... Move to right split
+
+
+====================================================================================================
+3. tmux Commands                                                                        *YasTmuxCmds*
+
+      ALT-u ....................................... Clear screen
+      ALT-[ ....................................... Previous window
+      ALT-] ....................................... Next window
+      ALT-o ....................................... Previous client
+      ALT-p ....................................... Next client
+
+      CTRL+b c ....................................... Create window
+      CTRL+b , ....................................... Rename window
+      CTRL+b $ ....................................... Rename session
+      CTRL+b q ....................................... Show pane numbers
