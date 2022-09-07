@@ -30,6 +30,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'ngmy/vim-rubocop'
 Plug 'thoughtbot/vim-rspec'
+Plug 'jgdavey/tslime.vim'
 Plug 'itmammoth/run-rspec.vim'
 
 call plug#end()
@@ -87,6 +88,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set autoread              " auto-read
 set autoindent            " auto-indent
 set shiftround            " always indent/outdent to the nearest tabstop
 
@@ -157,7 +159,7 @@ map <Leader>veb :set ve=block<CR>
 " Copy selected text
 map <Leader>ct "*y<CR>
 " Show YasCmds help
-map <Leader>hh :h YasCMDs<CR>
+map <Leader><leader>h :h YasCommands<CR>
 
 :command! W :w
 :command! Wq :wq
@@ -271,7 +273,8 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = "!clear && bundle exec rspec {spec}"
+" let g:rspec_command = "!clear && bundle exec rspec {spec}"
+let g:rspec_command = 'call Send_to_Tmux("clear && bundle exec rspec {spec}\n")'
 " let g:rspec_runner = "os_x_iterm2"
 
 " vim-gitgutter
