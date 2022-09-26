@@ -25,6 +25,7 @@ Plug 'farfanoide/inflector.vim'
 Plug 'yggdroot/indentline'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'ellisonleao/glow.nvim'
+Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
