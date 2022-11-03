@@ -42,7 +42,7 @@ alias gss='git stash save'
 alias gsp='git stash pop'
 alias gt='git tag'
 
-alias gppro="git push prod master"
+alias gppro="git push prod main:master"
 alias gpint="git push int master"
 function gpsta() {
   BRANCH="`git branch | grep \* | cut -d ' ' -f2`"

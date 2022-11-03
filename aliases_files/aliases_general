@@ -1,5 +1,5 @@
 # General
-alias op='open .'
+# alias op='open .'
 alias ..='cd ..'
 alias ls='ls -1 -F -p'
 alias clean='clear; echo -e "\033c\e[3J"'
