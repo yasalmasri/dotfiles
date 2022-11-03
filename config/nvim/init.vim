@@ -4,7 +4,7 @@ call plug#begin()
 
 Plug 'preservim/nerdtree'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 Plug 'tomtom/tcomment_vim'
 
 Plug 'tpope/vim-fugitive'
@@ -22,10 +22,11 @@ Plug 'garbas/vim-snipmate'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'farfanoide/inflector.vim'
 " Plug 'andymass/vim-matchup'
-Plug 'yggdroot/indentline'
+" Plug 'yggdroot/indentline'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'ellisonleao/glow.nvim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'posva/vim-vue'
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
@@ -59,7 +60,8 @@ colorscheme dracula
 " Prettify Vagrantfile
 autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
-autocmd BufRead,BufNewFile *.vue set filetype=html
+autocmd BufRead,BufNewFile *.vue set filetype=vue
+" autocmd BufReadPost,BufNewFile *.vue setlocal filetype=vue
 
 " Prettify Markdown files
 augroup markdown
@@ -80,6 +82,7 @@ endif
 set nobackup
 set noswapfile
 set nowrap
+set nohidden              " prevent exit for unsaved buffer
 
 set cursorline
 set cursorline cursorcolumn " show cursor vertical highlight
