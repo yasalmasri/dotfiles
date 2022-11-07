@@ -1,3 +1,4 @@
 /tmp/backups/*
 /tmp/swap/*
 .DS_Store
+config/nvim/plugin/packer_compiled.lua
