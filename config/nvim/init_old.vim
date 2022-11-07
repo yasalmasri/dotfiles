@@ -16,23 +16,25 @@ Plug 'mattn/emmet-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tlib_vim'
-Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'honza/vim-snippets'
 Plug 'garbas/vim-snipmate'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'farfanoide/inflector.vim'
 " Plug 'andymass/vim-matchup'
 " Plug 'yggdroot/indentline'
-Plug 'MarcWeber/vim-addon-mw-utils'
+" Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'ellisonleao/glow.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'posva/vim-vue'
+
+" https://thoughtbot.com/blog/running-specs-from-vim-sent-to-tmux-via-tslime
+" Send commands to tmux
+Plug 'jgdavey/tslime.vim'
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'ngmy/vim-rubocop'
 Plug 'thoughtbot/vim-rspec'
-Plug 'jgdavey/tslime.vim'
 Plug 'itmammoth/run-rspec.vim'
 
 call plug#end()
@@ -287,3 +289,8 @@ map <Leader>gb :Git blame<CR>
 " ngmy/vim-rubocop
 let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
 nnoremap <leader>r :RuboCop -A<cr>
+
+" jgdavey/tslime.vim
+let g:tslime_always_current_session = 1
+let g:tslime_always_current_window = 1
+let g:tslime_autoset_pane = 1
