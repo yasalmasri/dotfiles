@@ -47,7 +47,7 @@ M.config = function()
     find_files = {
       hidden = true,
       previewer = false,
-      file_ignore_patterns = { '.git/' },
+      file_ignore_patterns = { '.git/', 'node_modules/', 'dist/' },
     },
     git_files = {
       hidden = true,
