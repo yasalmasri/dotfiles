@@ -10,6 +10,7 @@ local keymaps = {
   { { 'i', 'v' }, 'jk', '<ESC>', { desc = 'Return to normal mode' } },
 
   { { 'n' }, '<leader><space>', '<C-^>', { desc = 'Alternate Buffer' } },
+  { { 'n' }, '<leader>d', ':NeoTreeFloatToggle<CR>', { desc = 'Toggle Float Neotree' } },
 
   { { 'n' }, '<leader>w', '<cmd>up<CR>', { desc = 'Write' } },
   { { 'n' }, '<leader>q', 'ZZ', { desc = 'Quit' } },
