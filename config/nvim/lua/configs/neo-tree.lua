@@ -91,7 +91,7 @@ M.config = function()
           nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use
         },
         ["<2-LeftMouse>"] = "open",
-        ["o"] = "open",
+        ["<cr>"] = "open",
         ["<esc>"] = "revert_preview",
         ["P"] = { "toggle_preview", config = { use_float = true } },
         ["S"] = "open_split",

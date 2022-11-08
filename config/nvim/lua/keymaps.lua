@@ -7,10 +7,15 @@ vim.g.maplocalleader = ' '
 keymap('', '<Space>', '<Nop>', opts)
 
 local keymaps = {
+  { { '' }, '<leader>j', '<cmd>%!python3 -m json.tool<CR>', { desc = 'Format JSON' } },
+  { { '' }, '<leader>=', 'mzgg=GG`zzz', { desc = 'Indent all the file' } },
+  { { '' }, '<leader>V', '^v$h', { desc = 'Select line' } },
+  { { '' }, '<leader>vt', 'vatV', { desc = 'Select tag' } },
+
   { { 'i', 'v' }, 'jk', '<ESC>', { desc = 'Return to normal mode' } },
 
+  { { 'n' }, '<leader>d', '<cmd>NeoTreeFloatToggle<CR>', { desc = 'Toggle Float Neotree' } },
   { { 'n' }, '<leader><space>', '<C-^>', { desc = 'Alternate Buffer' } },
-  { { 'n' }, '<leader>d', ':NeoTreeFloatToggle<CR>', { desc = 'Toggle Float Neotree' } },
 
   { { 'n' }, '<leader>w', '<cmd>up<CR>', { desc = 'Write' } },
   { { 'n' }, '<leader>q', 'ZZ', { desc = 'Quit' } },
@@ -28,17 +33,19 @@ local keymaps = {
   { { 'n' }, '<C-k>', '<C-W><C-K>', { desc = 'Move to down split' } },
   { { 'n' }, '<C-l>', '<C-W><C-L>', { desc = 'Move to right split' } },
 
+  { { 'n' }, '<A-q>', "<cmd>lua require('utils').quickfix_toggle()<CR>", { desc = 'QuickFix Toggle' } },
+  { { 'n' }, ']q', '<cmd>cnext<CR>', { desc = 'QuickFix Next Item' } },
+  { { 'n' }, '[q', '<cmd>cprevious<CR>', { desc = 'QuickFix Previous Item' } },
+
   -- { { 'v' }, '<C-j>', ":m '>+1<CR>gv-gv", { desc = 'Move line up' } },
   -- { { 'v' }, '<C-k>', ":m '<-2<CR>gv-gv", { desc = 'Move line down' } },
 
   { { 'v' }, '<', '<gv', { desc = 'Keep visual selection on indent decrease' } },
   { { 'v' }, '>', '>gv', { desc = 'Keep visual selection on indent increase' } },
 
-  { { 'v' }, 'p', '"_dP', { desc = 'Paste without replacing' } },
+  -- { { 'v' }, '<leader>p', '"0p', { desc = 'Paste last copy with yank' } },
 
-  { { 'n' }, '<A-q>', "<cmd>lua require('utils').quickfix_toggle()<CR>", { desc = 'QuickFix Toggle' } },
-  { { 'n' }, ']q', '<cmd>cnext<CR>', { desc = 'QuickFix Next Item' } },
-  { { 'n' }, '[q', '<cmd>cprevious<CR>', { desc = 'QuickFix Previous Item' } },
+  { { 'v' }, 'p', '"_dP', { desc = 'Paste without replacing' } },
 
   { { 'i' }, '<C-l>', "<cmd>lua require('utils').escape_pair()<CR>", { desc = 'Escape pair' } },
 

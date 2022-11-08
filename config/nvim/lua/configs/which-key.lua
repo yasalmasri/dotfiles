@@ -29,6 +29,7 @@ M.config = function()
 
   require 'which-key'.register({
     f = { name = 'Telescope' },
+    d = { name = 'Neotree' },
     g = {
       name = 'Git',
       t = 'Toggle'
