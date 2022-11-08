@@ -224,6 +224,14 @@ return packer.startup(function(use)
     end
   }
 
+  use {
+    'ngmy/vim-rubocop',
+    config = function()
+      vim.g['vimrubocop_rubocop_cmd'] = 'bundle exec rubocop '
+      vim.keymap.set('n', '<leader>r', '<cmd>RuboCop -A<cr>', { desc = 'RuboCop' })
+    end
+  }
+
   --------------------
   -- Autocompletion --
   --------------------
