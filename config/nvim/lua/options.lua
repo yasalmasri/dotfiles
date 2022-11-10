@@ -1,5 +1,5 @@
 local options = {
-  clipboard = 'unnamedplus', -- allows neovim to access the system clipboard
+  -- clipboard = 'unnamedplus', -- allows neovim to access the system clipboard
   colorcolumn = '+1',
   completeopt = { 'menu', 'menuone', 'noselect' }, -- mostly just for cmp
   expandtab = true, -- convert tabs to spaces

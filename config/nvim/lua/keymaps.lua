@@ -11,10 +11,11 @@ local keymaps = {
   { { '' }, '<leader>=', 'mzgg=GG`zzz', { desc = 'Indent all the file' } },
   { { '' }, '<leader>V', '^v$h', { desc = 'Select line' } },
   { { '' }, '<leader>vt', 'vatV', { desc = 'Select tag' } },
+  { { '' }, '<leader>ct', '"*y', { desc = 'Copy Selected to Clipboard' } },
 
   { { 'i', 'v' }, 'jk', '<ESC>', { desc = 'Return to normal mode' } },
 
-  { { 'n' }, '<leader>d', '<cmd>NeoTreeFloatToggle<CR>', { desc = 'Toggle Float Neotree' } },
+  { { 'n' }, '<leader>d', '<cmd>NeoTreeRevealToggle<CR>', { desc = 'Toggle Neotree' } },
   { { 'n' }, '<leader><space>', '<C-^>', { desc = 'Alternate Buffer' } },
 
   { { 'n' }, '<leader>w', '<cmd>up<CR>', { desc = 'Write' } },
@@ -23,7 +24,7 @@ local keymaps = {
   { { 'n' }, '<leader>c', '<cmd>execute (v:count > 0 ? v:count : "") . "bd!"<CR>', { desc = 'Close Buffer' } },
   { { 'n' }, '<leader>C', '<cmd>%bd|e#|bd#<CR>', { desc = 'Close Other Buffers' } },
 
-  { { 'n' }, 'J', 'mzJ`z', { desc = 'Join on same line' } },
+  -- { { 'n' }, 'J', 'mzJ`z', { desc = 'Join on same line' } },
 
   -- { { 'n' }, '<C-j>', ':m .+1<CR>==', { desc = 'Move line up' } },
   -- { { 'n' }, '<C-k>', ':m .-2<CR>==', { desc = 'Move line down' } },
@@ -43,9 +44,9 @@ local keymaps = {
   { { 'v' }, '<', '<gv', { desc = 'Keep visual selection on indent decrease' } },
   { { 'v' }, '>', '>gv', { desc = 'Keep visual selection on indent increase' } },
 
-  -- { { 'v' }, '<leader>p', '"0p', { desc = 'Paste last copy with yank' } },
+  { { 'v' }, '<leader>p', '"0p', { desc = 'Paste last copy with yank' } },
 
-  { { 'v' }, 'p', '"_dP', { desc = 'Paste without replacing' } },
+  -- { { 'v' }, 'p', '"_dP', { desc = 'Paste without replacing' } },
 
   { { 'i' }, '<C-l>', "<cmd>lua require('utils').escape_pair()<CR>", { desc = 'Escape pair' } },
 
