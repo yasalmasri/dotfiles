@@ -140,16 +140,28 @@ return packer.startup(function(use)
   ---------------------
 
   use {
-    "williamboman/nvim-lsp-installer",
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
+    config = function()
+      require("mason").setup()
+    end,
   }
 
-  use {
-    'neovim/nvim-lspconfig',
-    config = function()
-      require 'configs.lsp'
-    end
-  }
+  -- use {
+  --   "williamboman/nvim-lsp-installer",
+  --   "neovim/nvim-lspconfig",
+  --   config = function()
+  --     require 'configs.lsp'
+  --   end
+  -- }
+
+  -- use {
+  --   'neovim/nvim-lspconfig',
+  --   config = function()
+  --     require 'configs.lsp'
+  --   end
+  -- }
 
   use {
     'SmiteshP/nvim-navic',
