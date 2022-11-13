@@ -1,1 +1,1 @@
-alias ggres='gga && node bin/drop.js && psql gg_dev < ~/backups/gg_dev && npm run migrate'
+# alias ggres='gga && node bin/drop.js && psql gg_dev < ~/backups/gg_dev && npm run migrate'
