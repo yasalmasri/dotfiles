@@ -1,60 +1,56 @@
-local keymap = vim.keymap.set
-local opts = { noremap = true, silent = true }
+-- set leader key to space
+vim.g.mapleader = " "
 
---Remap space as leader key
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-keymap('', '<Space>', '<Nop>', opts)
+local keymap = vim.keymap -- for conciseness
 
-local keymaps = {
-  { { '' }, '<leader>j', '<cmd>%!python3 -m json.tool<CR>', { desc = 'Format JSON' } },
-  { { '' }, '<leader>=', 'mzgg=GG`zzz', { desc = 'Indent all the file' } },
-  { { '' }, '<leader>V', '^v$h', { desc = 'Select line' } },
-  { { '' }, '<leader>vt', 'vatV', { desc = 'Select tag' } },
-  { { '' }, '<leader>ct', '"*y', { desc = 'Copy Selected to Clipboard' } },
+---------------------
+-- General Keymaps
+---------------------
 
-  { { 'i', 'v' }, 'jk', '<ESC>', { desc = 'Return to normal mode' } },
+-- clear search highlights
+keymap.set("n", "<leader>nh", ":nohl<CR>")
 
-  { { 'n' }, '<leader>d', '<cmd>NeoTreeRevealToggle<CR>', { desc = 'Toggle Neotree' } },
-  { { 'n' }, '<leader><space>', '<C-^>', { desc = 'Alternate Buffer' } },
+-- window management
+keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
+keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
+keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
+keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
-  { { 'n' }, '<leader>w', '<cmd>up<CR>', { desc = 'Write' } },
-  { { 'n' }, '<leader>q', 'ZZ', { desc = 'Quit' } },
+keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
+keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
+keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
+keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
-  { { 'n' }, '<leader>c', '<cmd>execute (v:count > 0 ? v:count : "") . "bd!"<CR>', { desc = 'Close Buffer' } },
-  { { 'n' }, '<leader>C', '<cmd>%bd|e#|bd#<CR>', { desc = 'Close Other Buffers' } },
+keymap.set('n', '<leader>j', '<cmd>%!python3 -m json.tool<CR>', { desc = 'Format JSON' })
+keymap.set('n', '<leader>=', 'mzgg=GG`zzz', { desc = 'Indent all the file' })
+keymap.set('n', '<leader>V', '^v$h', { desc = 'Select line' })
+keymap.set('n', '<leader>vt', 'vatV', { desc = 'Select tag' })
+keymap.set('n', '<leader>ct', '"*y', { desc = 'Copy Selected to Clipboard' })
+keymap.set('n', '<leader><space>', '<C-^>', { desc = 'Alternate Buffer' })
+keymap.set('v', '<leader>p', '"0p', { desc = 'Paste last copy with yank' })
 
-  -- { { 'n' }, 'J', 'mzJ`z', { desc = 'Join on same line' } },
+----------------------
+-- Plugin Keybinds
+----------------------
 
-  -- { { 'n' }, '<C-j>', ':m .+1<CR>==', { desc = 'Move line up' } },
-  -- { { 'n' }, '<C-k>', ':m .-2<CR>==', { desc = 'Move line down' } },
+-- vim-maximizer
+keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
 
-  { { 'n' }, '<C-h>', '<C-W><C-H>', { desc = 'Move to left split' } },
-  { { 'n' }, '<C-j>', '<C-W><C-J>', { desc = 'Move to up split' } },
-  { { 'n' }, '<C-k>', '<C-W><C-K>', { desc = 'Move to down split' } },
-  { { 'n' }, '<C-l>', '<C-W><C-L>', { desc = 'Move to right split' } },
+-- nvim-tree
+keymap.set("n", "<leader>d", ":NvimTreeToggle<CR>") -- toggle file explorer
 
-  { { 'n' }, '<A-q>', "<cmd>lua require('utils').quickfix_toggle()<CR>", { desc = 'QuickFix Toggle' } },
-  { { 'n' }, ']q', '<cmd>cnext<CR>', { desc = 'QuickFix Next Item' } },
-  { { 'n' }, '[q', '<cmd>cprevious<CR>', { desc = 'QuickFix Previous Item' } },
+-- telescope
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
+keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
+keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
+keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
+keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
-  -- { { 'v' }, '<C-j>', ":m '>+1<CR>gv-gv", { desc = 'Move line up' } },
-  -- { { 'v' }, '<C-k>', ":m '<-2<CR>gv-gv", { desc = 'Move line down' } },
+-- telescope git commands (not on youtube nvim video)
+keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git commits (use <cr> to checkout) ["gc" for git commits]
+keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git commits for current file/buffer (use <cr> to checkout) ["gfc" for git file commits]
+keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
+keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
-  { { 'v' }, '<', '<gv', { desc = 'Keep visual selection on indent decrease' } },
-  { { 'v' }, '>', '>gv', { desc = 'Keep visual selection on indent increase' } },
-
-  { { 'v' }, '<leader>p', '"0p', { desc = 'Paste last copy with yank' } },
-
-  -- { { 'v' }, 'p', '"_dP', { desc = 'Paste without replacing' } },
-
-  { { 'i' }, '<C-l>', "<cmd>lua require('utils').escape_pair()<CR>", { desc = 'Escape pair' } },
-
-  { { 'i' }, ',', ',<C-g>u', { desc = 'Undo Break Point' } },
-  { { 'i' }, '.', '.<C-g>u', { desc = 'Undo Break Point' } },
-  { { 'i' }, ';', ';<C-g>u', { desc = 'Undo Break Point' } },
-}
-
-for _, val in pairs(keymaps) do
-  keymap(val[1], val[2], val[3], vim.tbl_extend('keep', opts, val[4]))
-end
+-- restart lsp server (not on youtube nvim video)
+keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
