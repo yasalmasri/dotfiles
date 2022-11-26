@@ -20,7 +20,7 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 -- cursor line
 opt.cursorline = true -- highlight the current cursor line
 opt.colorcolumn = "101"
-opt.textwidth = 100
+-- opt.textwidth = 100
 
 -- appearance
 
@@ -44,3 +44,5 @@ opt.splitbelow = true -- split horizontal window to the bottom
 opt.hidden = false -- prevent quit file if not saved
 opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
 opt.swapfile = false -- create a swap file
+opt.undofile = false
+opt.updatetime = 300
