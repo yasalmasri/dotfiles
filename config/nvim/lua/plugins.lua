@@ -140,11 +140,11 @@ return packer.startup(function(use)
   ---------------------
 
   use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
     config = function()
-      require("mason").setup()
+      require('mason').setup()
     end,
   }
 
@@ -245,14 +245,26 @@ return packer.startup(function(use)
   }
 
   use({
-    "kylechui/nvim-surround",
-    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    'kylechui/nvim-surround',
+    tag = '*', -- Use for stability; omit to use `main` branch for the latest features
     config = function()
-      require("nvim-surround").setup({
+      require('nvim-surround').setup({
         -- Configuration here, or leave empty to use defaults
       })
     end
   })
+
+  use {
+    'ellisonleao/glow.nvim',
+    as = 'glow',
+    setup = function()
+      require('glow').setup({
+        border = 'shadow',
+        style = 'dark',
+        width = 220,
+      })
+    end,
+  }
 
   --------------------
   -- Autocompletion --
@@ -378,12 +390,12 @@ return packer.startup(function(use)
   }
 
   use {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v2.x',
     requires = {
-      "nvim-lua/plenary.nvim",
-      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
+      'nvim-lua/plenary.nvim',
+      'kyazdani42/nvim-web-devicons', -- not strictly required, but recommended
+      'MunifTanjim/nui.nvim',
     },
 
     config = function()
