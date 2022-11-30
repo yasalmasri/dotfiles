@@ -37,12 +37,16 @@ nvimtree.setup({
   -- 		ignore = false,
   -- 	},
   view = {
-    adaptive_size = true,
+    adaptive_size = false,
     mappings = {
       list = {
         { key = "<C-o>", action = "system_open" },
         { key = "s", action = "vsplit" },
       },
     },
+  },
+
+  filters = {
+    dotfiles = true,
   },
 })

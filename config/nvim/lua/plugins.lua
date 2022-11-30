@@ -46,7 +46,7 @@ return packer.startup(function(use)
     --event = 'ColorSchemePre',
     config = function()
       vim.api.nvim_command 'colorscheme dracula'
-    end
+    end,
   }
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
@@ -62,7 +62,7 @@ return packer.startup(function(use)
     "numToStr/Comment.nvim",
     config = function()
       require('Comment').setup()
-    end
+    end,
   }
 
   -- file explorer
@@ -70,7 +70,7 @@ return packer.startup(function(use)
     "nvim-tree/nvim-tree.lua",
     config = function()
       require('configs.nvim-tree')
-    end
+    end,
   }
 
   -- vs-code like icons
@@ -81,7 +81,7 @@ return packer.startup(function(use)
     "nvim-lualine/lualine.nvim",
     config = function()
       require('configs.lualine')
-    end
+    end,
   }
 
   -- fuzzy finding w/ telescope
@@ -91,7 +91,7 @@ return packer.startup(function(use)
     branch = "0.1.x",
     config = function()
       require('configs.telescope')
-    end
+    end,
   }
 
   -- autocompletion
@@ -99,7 +99,7 @@ return packer.startup(function(use)
     "hrsh7th/nvim-cmp",
     config = function()
       require('configs.nvim-cmp')
-    end
+    end,
   }
   use("hrsh7th/cmp-buffer") -- source for text in buffer
   use("hrsh7th/cmp-path") -- source for file system paths
@@ -132,7 +132,7 @@ return packer.startup(function(use)
     end,
     config = function()
       require('configs.treesitter')
-    end
+    end,
   })
 
   -- auto closing
@@ -140,7 +140,7 @@ return packer.startup(function(use)
     "windwp/nvim-autopairs",
     config = function()
       require('configs.autopairs')
-    end
+    end,
   }
   use {
     "windwp/nvim-ts-autotag",
@@ -152,7 +152,14 @@ return packer.startup(function(use)
     "lewis6991/gitsigns.nvim",
     config = function()
       require('configs.gitsigns')
-    end
+    end,
+  }
+
+  use {
+    'farfanoide/inflector.vim',
+    config = function()
+      vim.g.inflector_mapping = "gI"
+    end,
   }
 
   if packer_bootstrap then
