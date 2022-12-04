@@ -96,17 +96,30 @@ return packer.startup(function(use)
 
   -- autocompletion
   use {
-    "hrsh7th/nvim-cmp",
+    'hrsh7th/nvim-cmp',
+    requires = {
+      {
+        'L3MON4D3/LuaSnip',
+        requires = {
+          { 'rafamadriz/friendly-snippets', }
+        },
+        config = function()
+          require 'luasnip/loaders/from_vscode'.lazy_load()
+        end,
+      },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'saadparwaiz1/cmp_luasnip' },
+      { 'hrsh7th/cmp-nvim-lua' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+    },
     config = function()
-      require('configs.nvim-cmp')
+      require 'configs.nvim-cmp'
     end,
   }
-  use("hrsh7th/cmp-buffer") -- source for text in buffer
-  use("hrsh7th/cmp-path") -- source for file system paths
 
   -- snippets
   use("L3MON4D3/LuaSnip") -- snippet engine
-  use("saadparwaiz1/cmp_luasnip") -- for autocompletion
   use("rafamadriz/friendly-snippets") -- useful snippets
 
   -- managing & installing lsp servers, linters & formatters
@@ -115,7 +128,6 @@ return packer.startup(function(use)
 
   -- configuring lsp servers
   use("neovim/nvim-lspconfig") -- easily configure language servers
-  use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
   use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
   use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
