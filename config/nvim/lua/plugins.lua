@@ -174,6 +174,17 @@ return packer.startup(function(use)
     end,
   }
 
+  use {
+    'vim-test/vim-test',
+    setup = function()
+      require 'configs.vim-test'.setup()
+    end,
+    config = function()
+      require 'configs.vim-test'.config()
+    end,
+    cmd = { 'TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit' }
+  }
+
   if packer_bootstrap then
     require("packer").sync()
   end
