@@ -25,8 +25,8 @@ keymap.set('n', '<leader>j', '<cmd>%!python3 -m json.tool<CR>', { desc = 'Format
 keymap.set('n', '<leader>=', 'mzgg=GG`zzz', { desc = 'Indent all the file' })
 keymap.set('n', '<leader>V', '^v$h', { desc = 'Select line' })
 keymap.set('n', '<leader>vt', 'vatV', { desc = 'Select tag' })
-keymap.set('n', '<leader>ct', '"*y', { desc = 'Copy Selected to Clipboard' })
 keymap.set('n', '<leader><space>', '<C-^>', { desc = 'Alternate Buffer' })
+keymap.set('v', '<leader>ct', '"*y', { desc = 'Copy Selected to Clipboard' })
 keymap.set('v', '<leader>p', '"0p', { desc = 'Paste last copy with yank' })
 
 ----------------------
