@@ -22,6 +22,7 @@ alias rdbd='bundle exec rake db:drop'
 alias rdbs='bundle exec rake db:seed'
 alias rdbrb='bundle exec rake db:rollback; RAILS_ENV=test bundle exec rake db:rollback'
 alias rdbsr='rails db:reset:schema'
+alias red='bin/rails db:environment:set RAILS_ENV=development'
 
 # Test db
 alias trdbc='RAILS_ENV=test bundle exec rake db:create'
