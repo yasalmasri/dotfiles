@@ -185,6 +185,16 @@ return packer.startup(function(use)
     cmd = { 'TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit' }
   }
 
+  use {
+    "ngmy/vim-rubocop",
+    config = function()
+      -- vim.g.vimrubocop_keymap = 0
+      vim.g.vimrubocop_rubocop_cmd = 'bundle exec rubocop '
+      vim.g.vimrubocop_extra_args = '-A'
+      -- vim.nmap = "<Leader>r :RuboCop<CR>"
+    end,
+  }
+
   if packer_bootstrap then
     require("packer").sync()
   end
