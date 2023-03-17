@@ -1,4 +1,5 @@
 # tmux
+alias tmn='tmux new -s'
 alias tmls='tmux ls'
 alias tma='tmux a -t'
 alias tmks='tmux kill-session -t'
