@@ -18,31 +18,31 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 Plugin 'tComment'
-Plugin 'majutsushi/tagbar'
+" Plugin 'majutsushi/tagbar'
 
 Plugin 'kien/ctrlp.vim'
-Plugin 'mattn/emmet-vim'
+" Plugin 'mattn/emmet-vim'
 Plugin 'honza/vim-snippets'
 Plugin 'junegunn/fzf'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'terryma/vim-multiple-cursors'
+" Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'thoughtbot/vim-rspec'
-Plugin 'itmammoth/run-rspec.vim'
+" Plugin 'itmammoth/run-rspec.vim'
 
-Plugin 'chreekat/vim-paren-crosshairs'
+" Plugin 'chreekat/vim-paren-crosshairs'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-Plugin 'editorconfig/editorconfig-vim'
+" Plugin 'editorconfig/editorconfig-vim'
 Plugin 'farfanoide/inflector.vim'
-Plugin 'andymass/vim-matchup'
-Plugin 'yggdroot/indentline'
+" Plugin 'andymass/vim-matchup'
+" Plugin 'yggdroot/indentline'
 
 " Plugin 'pangloss/vim-javascript'
 " Plugin 'wavded/vim-stylus'
@@ -111,8 +111,8 @@ set nobackup
 set noswapfile
 set nowrap
 
-set cursorline
-set cursorline cursorcolumn " show cursor vertical highlight
+" set cursorline
+" set cursorline cursorcolumn " show cursor vertical highlight
 
 " Format config
 set expandtab
@@ -292,16 +292,16 @@ let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'
 set runtimepath+=~/.dotfiles/vim-snippets/
 
 " vim-syntastic/syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['standard']
-let g:syntastic_enable_highlighting = 1
-nnoremap <leader>e :SyntasticCheck<cr>
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 0
+" let g:syntastic_auto_loc_list = 0
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_javascript_checkers = ['standard']
+" let g:syntastic_enable_highlighting = 1
+" nnoremap <leader>e :SyntasticCheck<cr>
 
 " Plugin 'farfanoide/inflector.vim'
 let g:inflector_mapping = 'gI'
