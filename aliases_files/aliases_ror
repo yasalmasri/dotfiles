@@ -18,7 +18,7 @@ alias rdbr='bundle exec rails db:drop; bundle exec rails db:create; bundle exec 
 alias rdbrs='bundle exec rails db:drop; bundle exec rails db:create; bundle exec rails db:migrate; bundle exec rails db:seed;'
 alias rdbc='bundle exec rails db:create'
 alias rdbm='bundle exec rails db:migrate; RAILS_ENV=test bundle exec rails db:migrate'
-alias rdbms='bundle exec rails db:migrate:reset'
+alias rdbms='bundle exec rails db:migrate:reset; bundle exec rails db:seed;'
 alias rdbd='bundle exec rails db:drop'
 alias rdbs='bundle exec rails db:seed'
 alias rdbrb='bundle exec rails db:rollback; RAILS_ENV=test bundle exec rails db:rollback'

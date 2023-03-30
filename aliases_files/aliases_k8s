@@ -1,0 +1,3 @@
+alias k=kubectl
+alias knodes='kubectl get nodes'
+alias kpods='kubectl get pods'
