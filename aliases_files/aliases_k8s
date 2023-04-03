@@ -1,4 +1,5 @@
 alias k=kubectl
 alias kj='kubectl -n jenkins'
+alias ka='kubectl -n apps'
 alias knodes='kubectl get nodes'
 alias kpods='kubectl get pods'
