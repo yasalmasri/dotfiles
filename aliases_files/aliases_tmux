@@ -9,3 +9,9 @@ alias mux=tmuxinator
 alias trn='tmuxinator new'
 alias trs='tmuxinator start'
 alias trls='tmuxinator list'
+
+function tmnc() {
+  DIR="`basename $PWD`"
+  CMD="tmux new -s $DIR"
+  eval $CMD
+}
