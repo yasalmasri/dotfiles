@@ -26,6 +26,7 @@ treesitter.setup({
     "lua",
     "vim",
     "ruby",
+    "python",
     "javascript"
   },
   -- auto install above language parsers
