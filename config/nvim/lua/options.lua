@@ -18,8 +18,8 @@ opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 
 -- cursor line
-opt.cursorline = true -- highlight the current cursor line
-opt.colorcolumn = "101"
+-- opt.cursorline = true -- highlight the current cursor line
+-- opt.colorcolumn = "101"
 -- opt.textwidth = 100
 
 -- appearance
