@@ -201,6 +201,12 @@ return packer.startup(function(use)
     "modille/groovy.vim",
   }
 
+  use {
+    "https://git.sr.ht/~soywod/himalaya-vim",
+    config = function()
+    end
+  }
+
   if packer_bootstrap then
     require("packer").sync()
   end
