@@ -60,6 +60,8 @@ Plugin 'farfanoide/inflector.vim'
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'https://git.sr.ht/~soywod/himalaya-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -271,6 +273,14 @@ function! ParseJSON()
   :%s/\\"/"/g
 endfunction
 command! ParseJSON call ParseJSON()
+
+function! HashToJSON()
+  :%s/"=>"/":"/g
+  :%s/" => "/":"/g
+  :%s/"=> "/":"/g
+  :%s/" =>"/":"/g
+endfunction
+command! HashToJSON call HashToJSON()
 
 " Plugins Configs
 
