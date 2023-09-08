@@ -1,5 +1,8 @@
 alias k=kubectl
-alias kj='kubectl -n jenkins'
+alias kuc='kubectl config use-context'
 alias ka='kubectl -n apps'
 alias knodes='kubectl get nodes'
 alias kpods='kubectl get pods'
+
+alias k9sprod='k9s --context hs-prod -c pod'
+alias k9sdev='k9s --context hs-dev -c pod'
