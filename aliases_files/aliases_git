@@ -18,8 +18,8 @@ alias gs='clean && git status'
 # alias gco='git checkout '
 alias gcob='git checkout -b'
 alias gb='clean && git branch'
-alias gbm='clean && git branch --merged | egrep -v "(^\*|master|dev)"'
-alias gbmd='clean && git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+alias gbm='clean && git branch --merged | egrep -v "(^\*|main|master|dev)"'
+alias gbmd='clean && git branch --merged | egrep -v "(^\*|main|master|dev)" | xargs git branch -d'
 alias gd="clean && git diff"
 alias gg="clean && git grep --color -n"
 # alias gk="gitk 2>/dev/null --all &"
@@ -41,6 +41,7 @@ alias grh='git reset HEAD' # Reset checked files
 alias gss='git stash save'
 alias gsp='git stash pop'
 alias gt='git tag'
+alias glt='git describe --abbrev=0 --tags'
 
 alias gppro="git push prod main:master"
 alias gpint="git push int master"
