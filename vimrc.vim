@@ -154,7 +154,7 @@ autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
 " autocmd BufRead,BufNewFile *.vue set filetype=html
 
 highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+\%#\@<!$/
+match ExtraWhitespace /\s\+$/
 " remove trailing whitespace
 map <Leader>c :%s/\s\+$//<CR>
 
