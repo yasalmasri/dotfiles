@@ -1,7 +1,7 @@
 # Node npm
-# alias nrd='clean && npm run dev'
-# alias nrs='clean && npm run serve'
-# alias nrb='clean && npm run build'
+alias nrd='clean && npm run dev'
+alias nrs='clean && npm run serve'
+alias nrb='clean && npm run build'
 # alias nrt='clean && npm test -b'
 # alias nrtu='clean && npm test -b test/unit'
 # alias ts='tabset'
