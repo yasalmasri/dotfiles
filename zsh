@@ -89,7 +89,7 @@ SAVEHIST=100000
 #   fi
 # }
 
-source ~/.dotfiles/aliases
+for f in ~/.dotfiles/aliases_files/*; do source $f; done
 source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.

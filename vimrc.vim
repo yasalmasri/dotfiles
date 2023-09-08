@@ -60,6 +60,8 @@ Plugin 'farfanoide/inflector.vim'
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'https://git.sr.ht/~soywod/himalaya-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -152,7 +154,7 @@ autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
 " autocmd BufRead,BufNewFile *.vue set filetype=html
 
 highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+\%#\@<!$/
+match ExtraWhitespace /\s\+$/
 " remove trailing whitespace
 map <Leader>c :%s/\s\+$//<CR>
 
@@ -271,6 +273,14 @@ function! ParseJSON()
   :%s/\\"/"/g
 endfunction
 command! ParseJSON call ParseJSON()
+
+function! HashToJSON()
+  :%s/"=>"/":"/g
+  :%s/" => "/":"/g
+  :%s/"=> "/":"/g
+  :%s/" =>"/":"/g
+endfunction
+command! HashToJSON call HashToJSON()
 
 " Plugins Configs
 

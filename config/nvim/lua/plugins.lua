@@ -201,6 +201,16 @@ return packer.startup(function(use)
     "modille/groovy.vim",
   }
 
+  -- use {
+  --   "https://git.sr.ht/~soywod/himalaya-vim",
+  --   config = function()
+  --   end
+  -- }
+
+  use {
+    "lukoshkin/highlight-whitespace"
+  }
+
   if packer_bootstrap then
     require("packer").sync()
   end
