@@ -10,8 +10,25 @@ vim.g.loaded_netrwPlugin = 1
 -- change color for arrows in tree to light blue
 vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
+local function my_on_attach(bufnr)
+  local api = require "nvim-tree.api"
+
+  local function opts(desc)
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+  -- default mappings
+  api.config.mappings.default_on_attach(bufnr)
+
+  -- custom mappings
+  vim.keymap.set('n', '<C-o>', api.node.run.system,                   opts('Run System'))
+  vim.keymap.set('n', 's',     api.node.open.vertical,                opts('Open: Vertical Split'))
+end
+
 -- configure nvim-tree
 nvimtree.setup({
+  on_attach = my_on_attach,
+
   -- change folder arrow icons
   renderer = {
     icons = {
