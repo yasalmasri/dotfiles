@@ -46,6 +46,8 @@ return packer.startup(function(use)
     --event = 'ColorSchemePre',
     config = function()
       vim.api.nvim_command 'colorscheme dracula'
+      vim.api.nvim_command [[highlight ExtraWhitespace ctermbg=red guibg=red]]
+      vim.api.nvim_command [[match ExtraWhitespace /\s\+$/]]
     end,
   }
 
@@ -206,10 +208,6 @@ return packer.startup(function(use)
   --   config = function()
   --   end
   -- }
-
-  use {
-    "lukoshkin/highlight-whitespace"
-  }
 
   if packer_bootstrap then
     require("packer").sync()
