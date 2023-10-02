@@ -5,10 +5,10 @@ alias tma='tmux a -t'
 alias tmks='tmux kill-session -t'
 
 # tmuxinator
-alias mux=tmuxinator
-alias trn='tmuxinator new'
-alias trs='tmuxinator start'
-alias trls='tmuxinator list'
+# alias mux=tmuxinator
+# alias trn='tmuxinator new'
+# alias trs='tmuxinator start'
+# alias trls='tmuxinator list'
 
 function tmnc() {
   DIR="`basename $PWD`"
