@@ -13,10 +13,10 @@ local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
-vim.cmd([[ 
+vim.cmd([[
   augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  autocmd!
+  autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]])
 
@@ -33,12 +33,14 @@ return packer.startup(function(use)
 
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-  -- use {
-  --   "bluz71/vim-nightfly-guicolors",
-  --   config = function()
-  --     vim.cmd("colorscheme nightfly")
-  --   end
-  -- }
+  -- Themes -----------------------------------------------------------------
+
+  use {
+    "bluz71/vim-nightfly-guicolors",
+    config = function()
+      -- vim.cmd("colorscheme nightfly")
+    end
+  }
 
   use {
     'dracula/vim', as = 'dracula',
@@ -50,6 +52,33 @@ return packer.startup(function(use)
       vim.api.nvim_command [[match ExtraWhitespace /\s\+$/]]
     end,
   }
+
+  use {
+    'olivercederborg/poimandres.nvim',
+    config = function()
+      require('poimandres').setup {
+      }
+
+      -- vim.cmd("colorscheme poimandres")
+      -- vim.api.nvim_command [[highlight ExtraWhitespace ctermbg=red guibg=red]]
+      -- vim.api.nvim_command [[match ExtraWhitespace /\s\+$/]]
+    end
+  }
+
+  use({
+    'projekt0n/github-nvim-theme',
+    config = function()
+      require('github-theme').setup({
+        -- ...
+      })
+
+      -- vim.cmd('colorscheme github_dark')
+      -- vim.api.nvim_command [[highlight ExtraWhitespace ctermbg=red guibg=red]]
+      -- vim.api.nvim_command [[match ExtraWhitespace /\s\+$/]]
+    end
+  })
+
+  -- Themes -----------------------------------------------------------------
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -102,15 +131,7 @@ return packer.startup(function(use)
   use {
     'hrsh7th/nvim-cmp',
     requires = {
-      {
-        'L3MON4D3/LuaSnip',
-        requires = {
-          { 'rafamadriz/friendly-snippets', }
-        },
-        config = function()
-          require 'luasnip/loaders/from_vscode'.lazy_load()
-        end,
-      },
+      { 'L3MON4D3/LuaSnip' },
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'saadparwaiz1/cmp_luasnip' },
       { 'hrsh7th/cmp-nvim-lua' },
@@ -123,7 +144,22 @@ return packer.startup(function(use)
   }
 
   -- snippets
-  use("L3MON4D3/LuaSnip") -- snippet engine
+  -- use("L3MON4D3/LuaSnip") -- snippet engine
+  use {
+    "L3MON4D3/LuaSnip",
+    -- after = 'nvim-cmp',
+    config = function()
+      require('configs.snippets')
+    end,
+    requires = {
+      { 'rafamadriz/friendly-snippets' }
+    },
+    -- config = function()
+    --   -- require('luasnip/loaders/from_vscode').lazy_load()
+    --   require("luasnip.loaders.from_vscode").lazy_load({ paths = { "../snippets" } })
+    --   require('luasnip').filetype_extend("ruby", {"rails"})
+    -- end,
+  }
   use("rafamadriz/friendly-snippets") -- useful snippets
 
   -- managing & installing lsp servers, linters & formatters
