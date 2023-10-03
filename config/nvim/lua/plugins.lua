@@ -158,6 +158,7 @@ return packer.startup(function(use)
       require('configs.autopairs')
     end,
   }
+
   use {
     "windwp/nvim-ts-autotag",
     after = "nvim-treesitter"

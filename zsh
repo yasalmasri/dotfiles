@@ -105,3 +105,5 @@ fi
 if [ -x "$(command -v figlet)" ]; then
   figlet -f starwars 'Welcome Yaser'
 fi
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
