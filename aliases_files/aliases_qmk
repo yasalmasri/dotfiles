@@ -1,0 +1,1 @@
+alias qmkfls="qmk flash -kb planck/rev7 -km yasalmasri"

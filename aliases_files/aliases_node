@@ -2,6 +2,7 @@
 alias nrd='clean && npm run dev'
 alias nrs='clean && npm run serve'
 alias nrb='clean && npm run build'
+alias yrs='clean && yarn serve'
 # alias nrt='clean && npm test -b'
 # alias nrtu='clean && npm test -b test/unit'
 # alias ts='tabset'

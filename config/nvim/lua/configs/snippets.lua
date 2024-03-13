@@ -22,7 +22,44 @@ local dynamicn = ls.dynamic_node
 --     },
 -- })
 
+ls.add_snippets(nil, {
+  all = {
+    snip({
+      trig = "vjsx",
+      namr = "Vuejs template",
+      dscr = "Compolete Vuejs template",
+    }, {
+        text({ "<template>" }),
+        text({ "", "\t<div>" }),
+        text({ "", "\t</div>" }),
+        text({ "", "</template>", "" }),
+
+        text({ "", "<script>" }),
+        text({ "", "export default {" }),
+        text({ "", "\tname: \"$0\",", "" }),
+        text({ "", "\tdata () {" }),
+        text({ "", "\t\treturn {" }),
+        text({ "", "\t\t}" }),
+        text({ "", "\t},", "" }),
+        text({ "", "\tprops: {" }),
+        text({ "", "\t},", "" }),
+        text({ "", "\tcomponents: {" }),
+        text({ "", "\t},", "" }),
+        text({ "", "\tcomputed: {" }),
+        text({ "", "\t},", "" }),
+        text({ "", "\tmethods: {" }),
+        text({ "", "\t},", "" }),
+        text({ "", "\twatch: {" }),
+        text({ "", "\t},", "" }),
+        text({ "", "\tmounted () {" }),
+        text({ "", "\t}" }),
+        text({ "", "}" }),
+        text({ "", "</script>" }),
+      }),
+  },
+})
+
 ls.filetype_extend("ruby", {"rails"})
+ls.filetype_extend("vue", {"html"})
 
-require('luasnip/loaders/from_vscode').lazy_load()
-
+require('luasnip/loaders/from_vscode').lazy_load({ path = { "./snippets" } })
