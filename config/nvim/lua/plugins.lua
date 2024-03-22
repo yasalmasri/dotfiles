@@ -240,6 +240,15 @@ return packer.startup(function(use)
     "modille/groovy.vim",
   }
 
+  use {
+    'MeanderingProgrammer/markdown.nvim',
+    name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+      require('render-markdown').setup({})
+    end,
+  }
+
   -- use {
   --   "https://git.sr.ht/~soywod/himalaya-vim",
   --   config = function()
