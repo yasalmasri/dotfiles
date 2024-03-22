@@ -30,7 +30,6 @@ treesitter.setup({
     "make",
     "terraform",
     "toml",
-    "help",
     "vue",
     "lua",
     "markdown",
