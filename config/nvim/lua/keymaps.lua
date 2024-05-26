@@ -26,9 +26,9 @@ keymap.set('n', '<leader>=', 'mzgg=GG`zzz', { desc = 'Indent all the file' })
 keymap.set('n', '<leader>V', '^v$h', { desc = 'Select line' })
 keymap.set('n', '<leader>vt', 'vatV', { desc = 'Select tag' })
 keymap.set('n', '<leader><space>', '<C-^>', { desc = 'Alternate Buffer' })
-keymap.set('v', '<leader>ct', '"*y', { desc = 'Copy Selected to Clipboard' })
+keymap.set('v', '<leader>cc', '"*y', { desc = 'Copy Selected to Clipboard' })
 keymap.set('v', '<leader>p', '"0p', { desc = 'Paste last copy with yank' })
-keymap.set("n", "<Leader>c", ":%s/\\s\\+$//<CR>", { desc = 'Remove trailing whitespaces' })
+keymap.set("n", "<Leader>w", ":%s/\\s\\+$//<CR>", { desc = 'Remove trailing whitespaces' })
 
 ----------------------
 -- Plugin Keybinds

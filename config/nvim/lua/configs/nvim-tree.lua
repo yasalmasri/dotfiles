@@ -50,9 +50,11 @@ nvimtree.setup({
       },
     },
   },
-  -- 	git = {
-  -- 		ignore = false,
-  -- 	},
+  git = {
+    enable = true,
+    timeout = 1000
+    -- ignore = false,
+  },
   view = {
     adaptive_size = false,
     -- mappings = {
