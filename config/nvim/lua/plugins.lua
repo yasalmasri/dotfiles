@@ -35,12 +35,12 @@ return packer.startup(function(use)
 
   -- Themes -----------------------------------------------------------------
 
-  use {
-    "bluz71/vim-nightfly-guicolors",
-    config = function()
-      -- vim.cmd("colorscheme nightfly")
-    end
-  }
+  -- use {
+  --   "bluz71/vim-nightfly-guicolors",
+  --   config = function()
+  --     -- vim.cmd("colorscheme nightfly")
+  --   end
+  -- }
 
   use {
     'dracula/vim', as = 'dracula',
@@ -53,33 +53,34 @@ return packer.startup(function(use)
     end,
   }
 
-  use {
-    'olivercederborg/poimandres.nvim',
-    config = function()
-      require('poimandres').setup {
-      }
+  -- use {
+  --   'olivercederborg/poimandres.nvim',
+  --   config = function()
+  --     require('poimandres').setup {
+  --     }
+  --
+  --     -- vim.cmd("colorscheme poimandres")
+  --     -- vim.api.nvim_command [[highlight ExtraWhitespace ctermbg=red guibg=red]]
+  --     -- vim.api.nvim_command [[match ExtraWhitespace /\s\+$/]]
+  --   end
+  -- }
 
-      -- vim.cmd("colorscheme poimandres")
-      -- vim.api.nvim_command [[highlight ExtraWhitespace ctermbg=red guibg=red]]
-      -- vim.api.nvim_command [[match ExtraWhitespace /\s\+$/]]
-    end
-  }
+  -- use({
+  --   'projekt0n/github-nvim-theme',
+  --   config = function()
+  --     require('github-theme').setup({
+  --       -- ...
+  --     })
+  --
+  --     -- vim.cmd('colorscheme github_dark')
+  --     -- vim.api.nvim_command [[highlight ExtraWhitespace ctermbg=red guibg=red]]
+  --     -- vim.api.nvim_command [[match ExtraWhitespace /\s\+$/]]
+  --   end
+  -- })
 
-  use({
-    'projekt0n/github-nvim-theme',
-    config = function()
-      require('github-theme').setup({
-        -- ...
-      })
+  -- /Themes -----------------------------------------------------------------
 
-      -- vim.cmd('colorscheme github_dark')
-      -- vim.api.nvim_command [[highlight ExtraWhitespace ctermbg=red guibg=red]]
-      -- vim.api.nvim_command [[match ExtraWhitespace /\s\+$/]]
-    end
-  })
-
-  -- Themes -----------------------------------------------------------------
-
+  -- tmux navigation
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
   use("szw/vim-maximizer") -- maximizes and restores current window
@@ -142,6 +143,16 @@ return packer.startup(function(use)
       require 'configs.nvim-cmp'
     end,
   }
+
+  -- use {
+  --   'saghen/blink.cmp',
+  --   requires = {
+  --     { 'rafamadriz/friendly-snippets' },
+  --   },
+  --   config = function()
+  --     require 'configs.blink-cmp'
+  --   end,
+  -- }
 
   -- snippets
   -- use("L3MON4D3/LuaSnip") -- snippet engine
@@ -215,6 +226,7 @@ return packer.startup(function(use)
     end,
   }
 
+  -- run tests
   use {
     'vim-test/vim-test',
     setup = function()
@@ -226,6 +238,7 @@ return packer.startup(function(use)
     cmd = { 'TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit' }
   }
 
+  -- rubocop
   use {
     "ngmy/vim-rubocop",
     config = function()
@@ -248,12 +261,6 @@ return packer.startup(function(use)
       require('configs.render-markdown').setup({})
     end,
   }
-
-  -- use {
-  --   "https://git.sr.ht/~soywod/himalaya-vim",
-  --   config = function()
-  --   end
-  -- }
 
   if packer_bootstrap then
     require("packer").sync()
