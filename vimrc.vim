@@ -1,4 +1,4 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"{Previous-Mapping}"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 1. Vbundle
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
@@ -18,32 +18,30 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
-" Plugin 'vim-syntastic/syntastic'
 Plugin 'tComment'
-" Plugin 'majutsushi/tagbar'
-
 Plugin 'kien/ctrlp.vim'
-" Plugin 'mattn/emmet-vim'
 Plugin 'honza/vim-snippets'
 Plugin 'junegunn/fzf'
 Plugin 'easymotion/vim-easymotion'
-" Plugin 'terryma/vim-multiple-cursors'
-
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'thoughtbot/vim-rspec'
-" Plugin 'itmammoth/run-rspec.vim'
-
-" Plugin 'chreekat/vim-paren-crosshairs'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-" Plugin 'editorconfig/editorconfig-vim'
 Plugin 'farfanoide/inflector.vim'
+
+" Plugin 'vim-syntastic/syntastic'
+" Plugin 'majutsushi/tagbar'
+" Plugin 'mattn/emmet-vim'
+" Plugin 'terryma/vim-multiple-cursors'
+" Plugin 'itmammoth/run-rspec.vim'
+" Plugin 'chreekat/vim-paren-crosshairs'
+" Plugin 'editorconfig/editorconfig-vim'
 " Plugin 'andymass/vim-matchup'
 " Plugin 'yggdroot/indentline'
-
 " Plugin 'pangloss/vim-javascript'
 " Plugin 'wavded/vim-stylus'
 " Plugin 'Quramy/tsuquyomi'
@@ -68,8 +66,8 @@ call vundle#end()            " required
 set tags=tags,./.git/tags
 
 "" Folding configuration
-set foldcolumn=1
-set foldmethod=syntax
+" set foldcolumn=1
+" set foldmethod=syntax
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -183,15 +181,14 @@ map <Leader>V ^v$h
 map <Leader>vt vatV
 " map <F6> v%Vy
 " fold
-map <Leader>f V$%zf
+" map <Leader>f V$%zf
 " zf{ fold function
-map <Leader>zf{ V$%zf
+" map <Leader>zf{ V$%zf
 " replace " with '
 map <Leader>" :s/"/'/g<CR>
 " replace ' with "
 map <Leader>' :s/'/"/g<CR>
-" set visualedit=all
-map <Leader>vea :set ve=all<CR>
+" set visualedit=all map <Leader>vea :set ve=all<CR>
 " set visualedit=block
 map <Leader>veb :set ve=block<CR>
 
@@ -347,3 +344,11 @@ nmap <F8> :TagbarToggle<CR>
 " ngmy/vim-rubocop
 let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
 nnoremap <leader>r :RuboCop -A<cr>
+
+" tmux navigation
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <c-h> :<C-U>TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :<C-U>TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :<C-U>TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
+nnoremap <silent> <c-/> :<C-U>TmuxNavigatePrevious<cr>
