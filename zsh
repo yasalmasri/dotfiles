@@ -1,7 +1,7 @@
 export PATH="/usr/local/bin:/usr/bin:$PATH"
 export EDITOR='vim'
 # if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-. /usr/local/opt/asdf/libexec/asdf.sh
+#. /usr/local/opt/asdf/libexec/asdf.sh
 
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export LC_CTYPE=en_US.UTF-8
@@ -91,7 +91,8 @@ SAVEHIST=100000
 
 for f in ~/.dotfiles/aliases_files/*; do source $f; done
 # source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
-source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
+# source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
+source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
