@@ -65,10 +65,12 @@ require('gitsigns').setup {
     -- Actions
     map({ 'n', 'v' }, '<leader>gs', ':Gitsigns stage_hunk<CR>', { desc = 'Stage Hunk' })
     map({ 'n', 'v' }, '<leader>gr', ':Gitsigns reset_hunk<CR>', { desc = 'Reset Hunk' })
-    map('n', '<leader>gS', gs.stage_buffer, { desc = 'Stage Buffer' })
     map('n', '<leader>gu', gs.undo_stage_hunk, { desc = 'Unstage Hunk' })
-    map('n', '<leader>gR', gs.reset_buffer, { desc = 'Reset Buffer' })
     map('n', '<leader>gp', gs.preview_hunk, { desc = 'Preview Hunk' })
+
+    map('n', '<leader>gS', gs.stage_buffer, { desc = 'Stage Buffer' })
+    map('n', '<leader>gR', gs.reset_buffer, { desc = 'Reset Buffer' })
+
     map('n', '<leader>ge', function() gs.blame_line { full = true } end, { desc = 'Blame Line' })
     map('n', '<leader>gtb', gs.toggle_current_line_blame, { desc = 'Toggle Line Blame' })
     map('n', '<leader>gd', gs.diffthis, { desc = 'Diff File' })
