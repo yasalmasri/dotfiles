@@ -22,5 +22,5 @@ alias xcd='cd /Users/yaser/Desktop/Xcode'
 
 # Hydra
 alias hyd='cd ~/dev/hydra-co'
-alias hsh='cd ~/dev/hydra-co/ship'
+alias hsh='cd ~/dev/hydra-co/ship-api'
 alias hfr='cd ~/dev/hydra-co/front'
