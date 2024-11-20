@@ -61,6 +61,8 @@ function insertFullPath()
   vim.fn.setreg('+', filepath) -- write to clippoard
 end
 
+-- Copy file path
 keymap.set('n', '<leader>pc', insertFullPath, { noremap = true, silent = true })
-keymap.set("n", "<Leader>xc", ":call setreg('+', expand('%:.') .. ':' .. line('.'))<CR>", opts)
+keymap.set("n", "<Leader>xc", ":call setreg('+', expand('%:.'))<CR>", opts)
+keymap.set("n", "<Leader>xcl", ":call setreg('+', expand('%:.') .. ':' .. line('.'))<CR>", opts)
 keymap.set("n", "<Leader>xo", ":e <C-r>+<CR>", { noremap = true, desc = "Go to location in clipboard" })
