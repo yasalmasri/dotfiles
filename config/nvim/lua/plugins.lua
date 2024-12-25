@@ -87,7 +87,7 @@ return packer.startup(function(use)
 
   -- essential plugins
   use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
-  use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
+  -- use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
   -- commenting with gc
   use {
