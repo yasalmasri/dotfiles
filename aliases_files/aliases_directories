@@ -5,6 +5,8 @@ alias devs='cd ~/dev/'
 alias masys='cd ~/dev/masys/'
 alias test='cd ~/dev/test/'
 alias xcd='cd /Users/yaser/Desktop/Xcode'
+alias mmm='cd /Users/yaser/dev/masys/my_money'
+alias pel='cd /Users/yaser/dev/masys/pellet-api'
 
 ## Masys
 # alias mror='cd ~/dev/masys/manager-ror/'
