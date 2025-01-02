@@ -126,6 +126,7 @@ set shiftround            " always indent/outdent to the nearest tabstop
 set nohlsearch            " Don't continue to highlight searched phrases.
 set incsearch             " But do highlight as you type your search.
 set ignorecase            " Make searches case-insensitive.
+set termguicolors         " turn on termguicolors for nightfly colorscheme to work
 " Toggle Highlight Search
 noremap <F4> :set hlsearch! hlsearch?<CR>
 
