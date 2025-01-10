@@ -7,9 +7,10 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- config.tab_bar_at_bottom = true
-config.window_background_opacity = 0.999
+config.window_background_opacity = 0.8
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = 'AlwaysPrompt'
+config.allow_win32_input_mode = false
 
 -- config.color_scheme = 'Batman'
 config.color_scheme = 'Dracula (Official)'
@@ -18,32 +19,32 @@ config.color_scheme = 'Dracula (Official)'
 -- It prefers the title that was set via `tab:set_title()`
 -- or `wezterm cli set-tab-title`, but falls back to the
 -- title of the active pane in that tab.
-function tab_title(tab_info)
-  local title = tab_info.tab_title
-
-  -- if the tab title is explicitly set, take that
-  if title and #title > 0 then
-    return title
-  end
-
-  -- Otherwise, use the title from the active pane
-  -- in that tab
-  return tab_info.active_pane.title
-end
-
-wezterm.on(
-  'format-tab-title',
-  function(tab, tabs, panes, config, hover, max_width)
-    local title = tab_title(tab)
-    if tab.is_active then
-      return {
-        { Background = { Color = '#7c4d9c' } },
-        { Text = ' ' .. title .. ' ' },
-      }
-    end
-    return title
-  end
-)
+-- function tab_title(tab_info)
+--   local title = tab_info.tab_title
+--
+--   -- if the tab title is explicitly set, take that
+--   if title and #title > 0 then
+--     return title
+--   end
+--
+--   -- Otherwise, use the title from the active pane
+--   -- in that tab
+--   return tab_info.active_pane.title
+-- end
+--
+-- wezterm.on(
+--   'format-tab-title',
+--   function(tab, tabs, panes, config, hover, max_width)
+--     local title = tab_title(tab)
+--     if tab.is_active then
+--       return {
+--         { Background = { Color = '#7c4d9c' } },
+--         { Text = ' ' .. title .. ' ' },
+--       }
+--     end
+--     return title
+--   end
+-- )
 
 -- Key Table ===============================================================
 local act = wezterm.action
@@ -67,6 +68,12 @@ config.keys = {
       name = 'activate_pane',
       timeout_milliseconds = 1000,
     },
+  },
+
+  {
+    key = 'A',
+    mods = 'CTRL|SHIFT',
+    action = act.QuickSelect,
   },
 
   { key = 'LeftArrow', mods = 'CMD', action = act.ActivateTabRelative(-1) },
