@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- config.tab_bar_at_bottom = true
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = 'AlwaysPrompt'
 config.allow_win32_input_mode = false
