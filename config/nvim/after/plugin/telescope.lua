@@ -1,0 +1,5 @@
+-- MiniDeps.add({ source = 'nvim-lua/plenary.nvim', })
+-- MiniDeps.add({
+--   source = 'nvim-telescope/telescope.nvim',
+--   checkout = '0.1.8',
+-- })

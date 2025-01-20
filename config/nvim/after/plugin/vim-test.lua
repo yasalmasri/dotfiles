@@ -1,6 +1,6 @@
-local M = {}
+MiniDeps.add({ source = 'vim-test/vim-test' })
 
-M.setup = function()
+MiniDeps.later(function()
   local keymap = vim.keymap.set
   local opts = { noremap = true, silent = true }
 
@@ -18,9 +18,4 @@ M.setup = function()
 
   vim.g["test#preserve_screen"] = true
   vim.g['test#neovim#start_normal'] = true
-end
-
-M.config = function()
-end
-
-return M
+end)
