@@ -24,4 +24,6 @@ MiniDeps.add('echasnovski/mini.starter')
       starter.gen_hook.adding_bullet("- "),
       starter.gen_hook.aligning("center", "center")
     },
+    header = "Hello, Yaser!",
+    footer = "",
   })
