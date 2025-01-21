@@ -7,13 +7,15 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- config.tab_bar_at_bottom = true
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = 'AlwaysPrompt'
 config.allow_win32_input_mode = false
 
 -- config.color_scheme = 'Batman'
 config.color_scheme = 'Dracula (Official)'
+
+config.max_fps = 60
 
 -- This function returns the suggested title for a tab.
 -- It prefers the title that was set via `tab:set_title()`

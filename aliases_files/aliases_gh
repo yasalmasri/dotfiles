@@ -1,2 +1,2 @@
-alias gprc='gh pr create -a @me'
-alias gprv='gh pr view -w'
+alias prc='gh pr create -a @me'
+alias prv='gh pr view -w'
