@@ -44,6 +44,8 @@ alias gss='git stash save'
 alias gsp='git stash pop'
 alias gt='git tag'
 alias glt='git describe --abbrev=0 --tags'
+alias ctp='ruby tag.rb --patch'
+alias ctm='ruby tag.rb --minor'
 
 alias gppro="git push prod main:master"
 alias gpint="git push int master"
