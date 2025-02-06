@@ -53,6 +53,11 @@ MiniDeps.later(function()
           enable = false,
         },
       },
+      change_dir = {
+        enable = false,
+        global = true,
+        restrict_above_cwd = true,
+      },
     },
     git = {
       enable = true,

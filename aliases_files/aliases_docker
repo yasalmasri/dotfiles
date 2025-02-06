@@ -1,3 +1,4 @@
+alias ld='lazydocker'
 # alias doc='docker'
 # alias dimgs='docker images'
 # alias dimg='docker image'

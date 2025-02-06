@@ -1,6 +1,0 @@
--- MiniDeps.add('nvzone/volt')
--- MiniDeps.add('nvzone/typr')
---
--- MiniDeps.later(function()
---   vim.cmd('TyprStats')
--- end)
