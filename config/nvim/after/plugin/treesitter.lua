@@ -9,8 +9,7 @@ MiniDeps.add({
 MiniDeps.now(function()
   -- Possible to immediately execute code which depends on the added plugin
   require('nvim-treesitter.configs').setup({
-    ensure_installed = { 'lua', 'vimdoc', 'ruby' },
+    ensure_installed = { 'lua', 'vimdoc', 'ruby', 'http' },
     highlight = { enable = true },
   })
 end)
-
