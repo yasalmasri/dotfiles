@@ -1,0 +1,6 @@
+POST https://01jpakrz482st4v6thvxchx6qd00-905376ce6c03eca5d904.requestinspector.com HTTP/1.1
+Authorization: Bearer test-token
+Content-Type: application/json
+Accept: application/json
+
+{"status":"ok"}
