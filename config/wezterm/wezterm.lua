@@ -18,6 +18,11 @@ config.color_scheme = 'Dracula (Official)'
 
 config.max_fps = 60
 
+config.colors = {
+  selection_fg = "none", 
+  selection_bg = "rgba:50% 50% 50% 50%"
+}
+
 -- This function returns the suggested title for a tab.
 -- It prefers the title that was set via `tab:set_title()`
 -- or `wezterm cli set-tab-title`, but falls back to the
