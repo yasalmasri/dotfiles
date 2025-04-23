@@ -24,6 +24,7 @@ alias rdbs='bundle exec rails db:seed'
 alias rdbrb='bundle exec rails db:rollback; RAILS_ENV=test bundle exec rails db:rollback'
 alias rdbsr='rails db:reset:schema'
 alias red='bin/rails db:environment:set RAILS_ENV=development'
+alias kiq='bundle exec sidekiq -C config/sidekiq.yml'
 
 alias tpat='ruby tag.rb --patch'
 alias tmin='ruby tag.rb --minor'
