@@ -69,6 +69,21 @@ end)
 --config.disable_default_key_bindings = true
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
 config.keys = {
+  -- Clears the scrollback and viewport leaving the prompt line the new first line.
+  {
+    key = 'K',
+    mods = 'CMD',
+    action = act.ClearScrollback('ScrollbackAndViewport'),
+  },
+  -- Clears only the scrollback and leaves the viewport intact.
+  -- You won't see a difference in what is on screen, you just won't
+  -- be able to scroll back until you've output more stuff on screen.
+  -- This is the default behavior.
+  {
+    key = 'L',
+    mods = 'CMD|SHIFT',
+    action = act.ClearScrollback 'ScrollbackOnly',
+  },
   {
     key = 'a',
     mods = 'LEADER',
