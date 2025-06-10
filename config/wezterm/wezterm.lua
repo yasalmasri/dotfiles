@@ -19,7 +19,7 @@ config.color_scheme = 'Dracula (Official)'
 config.max_fps = 60
 
 config.colors = {
-  selection_fg = "none", 
+  selection_fg = "none",
   selection_bg = "rgba:50% 50% 50% 50%"
 }
 
