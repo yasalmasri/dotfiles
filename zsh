@@ -1,7 +1,7 @@
 export PATH="/usr/local/bin:/usr/bin:$PATH"
 export EDITOR='vim'
 # if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-. /usr/local/opt/asdf/libexec/asdf.sh
+# . /usr/local/opt/asdf/libexec/asdf.sh
 
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export LC_CTYPE=en_US.UTF-8
