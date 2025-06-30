@@ -37,3 +37,7 @@ Host dns
 Host gotify
   HostName 192.168.68.99
   User root
+
+Host radi
+  HostName 192.168.68.93
+  User root
