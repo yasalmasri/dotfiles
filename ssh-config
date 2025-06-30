@@ -1,3 +1,7 @@
+Host yaser
+  Hostname 192.168.68.58
+  user yaser
+
 Host mss
   HostName 167.99.174.188
   User root
@@ -16,10 +20,6 @@ Host docker
 
 Host navi
   HostName 192.168.68.62
-  User root
-
-Host torrent
-  HostName 192.168.68.94
   User root
 
 Host omv

@@ -75,15 +75,6 @@ config.keys = {
     mods = 'CMD',
     action = act.ClearScrollback('ScrollbackAndViewport'),
   },
-  -- Clears only the scrollback and leaves the viewport intact.
-  -- You won't see a difference in what is on screen, you just won't
-  -- be able to scroll back until you've output more stuff on screen.
-  -- This is the default behavior.
-  {
-    key = 'L',
-    mods = 'CMD|SHIFT',
-    action = act.ClearScrollback 'ScrollbackOnly',
-  },
   {
     key = 'a',
     mods = 'LEADER',
