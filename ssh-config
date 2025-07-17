@@ -14,6 +14,14 @@ Host pve
   HostName 192.168.68.240
   User root
 
+Host npm
+  HostName 192.168.68.88
+  User root
+
+Host omv
+  HostName 192.168.68.85
+  User root
+
 Host docker
   HostName 192.168.68.74
   User root
@@ -22,16 +30,8 @@ Host navi
   HostName 192.168.68.62
   User root
 
-Host omv
-  HostName 192.168.68.85
-  User root
-
 Host ente
   HostName 192.168.68.94
-  User root
-
-Host dns
-  HostName 192.168.68.96
   User root
 
 Host gotify
@@ -40,4 +40,8 @@ Host gotify
 
 Host radi
   HostName 192.168.68.93
+  User root
+
+Host nas
+  HostName 192.168.70.241
   User root
