@@ -43,5 +43,5 @@ Host radi
   User root
 
 Host nas
-  HostName 192.168.70.241
+  HostName 192.168.68.251
   User root
