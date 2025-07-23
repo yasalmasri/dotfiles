@@ -1,0 +1,19 @@
+-- Luarocks is not supported by MiniDeps
+-- MiniDeps.add({
+--     source = "vhyrro/luarocks.nvim",
+--     priority = 1000, -- Ensuring it runs first
+-- })
+-- MiniDeps.now(function()
+--   require('luarocks-nvim').setup({
+--     rocks = { "mimetypes" },
+--     -- luarocks_build_args = { "--with-lua=/my/path" },
+--   })
+-- end)
+-- MiniDeps.add({
+--   source = 'rest-nvim/rest.nvim',
+--   depends = {
+--     'nvim-neotest/nvim-nio',
+--     'a-usr/xml2lua.nvim',
+--     'j-hui/fidget.nvim',
+--   },
+-- })
