@@ -1,5 +1,5 @@
 Host yaser
-  Hostname 192.168.68.52
+  Hostname 192.168.68.235
   user yaser
 
 Host mss
@@ -15,33 +15,29 @@ Host pve
   User root
 
 Host npm
-  HostName 192.168.68.88
+  HostName 192.168.68.241
   User root
 
 Host omv
-  HostName 192.168.68.85
+  HostName 192.168.68.243
   User root
 
 Host docker
-  HostName 192.168.68.74
-  User root
-
-Host navi
-  HostName 192.168.68.62
+  HostName 192.168.68.242
   User root
 
 Host ente
   HostName 192.168.68.94
   User root
 
-Host gotify
-  HostName 192.168.68.99
-  User root
-
 Host radi
-  HostName 192.168.68.93
+  HostName 192.168.68.244
   User root
 
 Host nas
   HostName 192.168.68.251
+  User root
+
+Host pango
+  HostName 147.182.212.40
   User root
