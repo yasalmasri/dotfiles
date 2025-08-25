@@ -10,6 +10,14 @@ Host pel
   HostName 134.209.209.16
   User root
 
+Host pango
+  HostName 147.182.212.40
+  User root
+
+Host ente
+  HostName 192.168.68.94
+  User root
+
 Host pve
   HostName 192.168.68.240
   User root
@@ -18,26 +26,22 @@ Host npm
   HostName 192.168.68.241
   User root
 
-Host omv
-  HostName 192.168.68.243
-  User root
-
 Host docker
   HostName 192.168.68.242
   User root
 
-Host ente
-  HostName 192.168.68.94
+Host omv
+  HostName 192.168.68.243
   User root
 
 Host radi
   HostName 192.168.68.244
   User root
 
-Host nas
-  HostName 192.168.68.251
+Host docker2
+  HostName 192.168.68.247
   User root
 
-Host pango
-  HostName 147.182.212.40
+Host nas
+  HostName 192.168.68.251
   User root
