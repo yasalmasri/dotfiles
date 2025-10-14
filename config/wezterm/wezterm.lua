@@ -11,7 +11,7 @@ config.window_background_opacity = 0.9
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = 'AlwaysPrompt'
 config.allow_win32_input_mode = false
-config.default_cwd = '~/.dotfiles'
+config.default_cwd = '~/dev'
 
 -- config.color_scheme = 'Batman'
 config.color_scheme = 'Dracula (Official)'
