@@ -1,4 +1,5 @@
 # Directories
+alias down='cd ~/Downloads/'
 alias dot='cd ~/.dotfiles/'
 alias mdot='mvim ~/.dotfiles/'
 alias devs='cd ~/dev/'
