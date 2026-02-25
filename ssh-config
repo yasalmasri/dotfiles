@@ -45,3 +45,13 @@ Host docker2
 Host nas
   HostName 192.168.68.251
   User root
+
+Host prom
+  HostName 192.168.68.249
+  User root
+
+#==============================================
+
+Host hsjen
+  HostName 167.172.151.21
+  User root
