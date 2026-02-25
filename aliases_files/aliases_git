@@ -21,7 +21,11 @@ alias gs='clean && git status'
 alias gcob='git checkout -b'
 alias gb='clean && git branch'
 alias gbd='clean && git branch -D'
+# Delete all branches except main
+alias gbda='clear && git branch | grep -v "main" | xargs git branch -D'
+# List merged branches
 alias gbm='clean && git branch --merged | egrep -v "(^\*|main|master|dev)"'
+# Delete merged branches
 alias gbmd='clean && git branch --merged | egrep -v "(^\*|main|master|dev)" | xargs git branch -d'
 alias gd="clean && git diff"
 alias gg="clean && git grep --color -n"

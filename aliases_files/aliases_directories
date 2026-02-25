@@ -26,4 +26,5 @@ alias pel='cd /Users/yaser/dev/masys/pellet-api'
 # Hydra
 alias hyd='cd ~/dev/hydra-co'
 alias hsh='cd ~/dev/hydra-co/ship-api'
+alias hsu='cd ~/dev/hydra-co/ship-ui'
 alias hfr='cd ~/dev/hydra-co/front'
