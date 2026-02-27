@@ -27,5 +27,9 @@ ls.add_snippets("ruby", {
   s("debug", {
     t("ap error.message"),
     t({"", "ap error.backtrace.first(10)"})
+  }),
+  s("rd", {
+    t("# rubocop:disable "),
+    i(1)
   })
 })

@@ -5,7 +5,19 @@ alias knodes='kubectl get nodes'
 alias kpods='kubectl get pods'
 
 alias knsprd='k9s --context do-nyc1-hs-prod -n ship-api -c pod'
+alias knsui='k9s --context do-nyc1-hs-prod -n ui -c pod'
 
 alias shiprc='kubectl -n ship-api --context hs-prod  exec -it deploy/ship-api --container ship-api -- rails c'
 
 alias kfailed='k --context hs-prod -n ship-api delete pods --field-selector status.phase=Failed'
+
+# Open CI pipeline for current repo or a given repo
+# Usage: ci  OR  ci ship-ui  OR  ci other-org/some-repo
+ci() {
+  local target="${1:-$(basename $(git rev-parse --show-toplevel 2>/dev/null))}"
+  if [[ "$target" == */* ]]; then
+    open "https://ci.prod.hydraship.app/$target"
+  else
+    open "https://ci.prod.hydraship.app/hydraship/$target"
+  fi
+}

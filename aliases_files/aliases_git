@@ -8,8 +8,6 @@ branch_name() {
 
 alias g='git'
 alias lg='lazygit'
-# alias opgt='open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)'
-# alias opgtb='open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)/tree/$(branch_name)'
 alias gcl='git clone'
 alias ga='git add'
 alias gc='git commit -m'
@@ -105,4 +103,18 @@ function gfiles() {
   BRANCH="`git rev-parse --abbrev-ref HEAD`"
   CMD="git diff --name-only $BRANCH $(git merge-base $BRANCH master)"
   eval $CMD
+}
+
+# Open current git repo in browser (GitHub, GitLab, Forgejo, etc.)
+function repo() {
+  local url
+  url=$(git remote get-url origin 2>/dev/null) || { echo "No git remote 'origin' found."; return 1; }
+  # Convert SSH format (git@host:user/repo.git) to HTTPS
+  if [[ "$url" == git@* ]]; then
+    url=$(echo "$url" | sed 's|git@\([^:]*\):\(.*\)\.git|\1/\2|; s|git@\([^:]*\):\(.*\)|\1/\2|')
+    url="https://$url"
+  fi
+  # Strip trailing .git
+  url="${url%.git}"
+  open "$url"
 }
