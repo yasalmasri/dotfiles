@@ -1,0 +1,2 @@
+# Redis delete all
+alias fshall='redis-cli flushall'

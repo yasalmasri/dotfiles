@@ -63,6 +63,7 @@ end
 
 -- Copy file path
 keymap.set('n', '<leader>pc', insertFullPath, { noremap = true, silent = true })
+keymap.set("n", "<Leader>cp", ":call setreg('+', expand('%:p'))<CR>", opts)
 keymap.set("n", "<Leader>cf", ":call setreg('+', expand('%:.'))<CR>", opts)
 keymap.set("n", "<Leader>cfl", ":call setreg('+', expand('%:.') .. ':' .. line('.'))<CR>", opts)
 keymap.set("n", "<Leader>xo", ":e <C-r>+<CR>", { noremap = true, desc = "Go to location in clipboard" })
