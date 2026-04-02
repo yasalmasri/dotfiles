@@ -46,7 +46,7 @@ Host nas
   HostName 192.168.68.251
   User root
 
-Host prom
+Host prome
   HostName 192.168.68.249
   User root
 
