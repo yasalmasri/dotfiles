@@ -7,18 +7,18 @@ MiniDeps.now(function()
     -- Configuration options (all optional)
     enabled = true,
     features = {
-      list_management = true,  -- List management features
-      text_formatting = true,  -- Text formatting features
-      thematic_break = true,   -- Thematic break insert/cycle
-      headers_toc = true,      -- Headers + TOC features
-      links = true,            -- Link management features
-      images = true,           -- Image link management features
-      quotes = true,           -- Blockquote toggling feature
-      callouts = true,         -- GFM callouts/admonitions feature
-      code_block = true,       -- Fenced code block workflows
+      list_management = true,      -- List management features
+      text_formatting = true,      -- Text formatting features
+      thematic_break = true,       -- Thematic break insert/cycle
+      headers_toc = true,          -- Headers + TOC features
+      links = true,                -- Link management features
+      images = true,               -- Image link management features
+      quotes = true,               -- Blockquote toggling feature
+      callouts = true,             -- GFM callouts/admonitions feature
+      code_block = true,           -- Fenced code block workflows
       html_block_awareness = true, -- Skip operations inside HTML blocks
-      table = true,            -- Table support features
-      footnotes = true,        -- Footnotes management features
+      table = true,                -- Table support features
+      footnotes = true,            -- Footnotes management features
     },
     footnotes = {        -- Footnotes configuration
       section_header = "Footnotes",  -- Header for footnotes section
