@@ -7,6 +7,8 @@ export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+eval "$(zoxide init zsh)"
+
 HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=100000

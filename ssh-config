@@ -14,16 +14,16 @@ Host pango
   HostName 72.11.145.12
   User root
 
-Host ente
-  HostName 192.168.68.94
-  User root
-
-Host pve
+Host pve1
   HostName 192.168.68.240
   User root
 
-Host npm
-  HostName 192.168.68.241
+Host pve2
+  HostName 192.168.68.250
+  User root
+
+Host hermes
+  HostName 195.201.102.115
   User root
 
 Host docker
