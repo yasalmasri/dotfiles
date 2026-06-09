@@ -35,6 +35,11 @@ alias gpr='git remote prune origin'
 alias pull='git pull origin $(branch_name)'
 alias push='git push origin $(branch_name)'
 
+# Git worktree
+alias gwl='git worktree list'
+alias gwa='git worktree add'
+alias gwr='git worktree remove'
+
 alias gm='git merge'
 alias gl='git log'
 alias gly='git log --author=Yaser'
