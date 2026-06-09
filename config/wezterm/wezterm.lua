@@ -3,6 +3,7 @@ local wezterm = require 'wezterm'
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
+local default_cwd = '/Users/yaser/dev'
 
 -- This is where you actually apply your config choices
 
@@ -11,7 +12,7 @@ config.window_background_opacity = 0.9
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = 'AlwaysPrompt'
 config.allow_win32_input_mode = false
-config.default_cwd = '~/dev'
+config.default_cwd = default_cwd
 
 -- config.color_scheme = 'Batman'
 config.color_scheme = 'Dracula (Official)'
@@ -57,6 +58,13 @@ config.colors = {
 -- Key Table ===============================================================
 local act = wezterm.action
 
+wezterm.on('new-tab-button-click', function(window, pane, button, default_action)
+  if button == 'Left' then
+    window:perform_action(act.SpawnCommandInNewTab { cwd = default_cwd }, pane)
+    return false
+  end
+end)
+
 -- Show which key table is active in the status area
 wezterm.on('update-right-status', function(window, pane)
   local name = window:active_key_table()
@@ -92,6 +100,10 @@ config.keys = {
 
   { key = 'LeftArrow', mods = 'CMD', action = act.ActivateTabRelative(-1) },
   { key = 'RightArrow', mods = 'CMD', action = act.ActivateTabRelative(1) },
+  { key = 't', mods = 'CMD', action = act.SpawnCommandInNewTab { cwd = default_cwd } },
+  { key = 't', mods = 'CTRL|SHIFT', action = act.SpawnCommandInNewTab { cwd = default_cwd } },
+  { key = 'n', mods = 'CMD', action = act.SpawnCommandInNewWindow { cwd = default_cwd } },
+  { key = 'n', mods = 'CTRL|SHIFT', action = act.SpawnCommandInNewWindow { cwd = default_cwd } },
   { key = 'F9', mods = 'ALT', action = act.ShowTabNavigator },
 }
 
