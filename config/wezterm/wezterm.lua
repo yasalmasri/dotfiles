@@ -104,7 +104,7 @@ config.keys = {
   { key = 't', mods = 'CTRL|SHIFT', action = act.SpawnCommandInNewTab { cwd = default_cwd } },
   { key = 'n', mods = 'CMD', action = act.SpawnCommandInNewWindow { cwd = default_cwd } },
   { key = 'n', mods = 'CTRL|SHIFT', action = act.SpawnCommandInNewWindow { cwd = default_cwd } },
-  { key = 'F9', mods = 'ALT', action = act.ShowTabNavigator },
+  { key = 'F9', mods = 'ALT', action = act.ShowLauncherArgs { flags = 'FUZZY|TABS' } },
 }
 
 config.key_tables = {
