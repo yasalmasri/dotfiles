@@ -5,7 +5,8 @@ alias knodes='kubectl get nodes'
 alias kpods='kubectl get pods'
 
 alias knsprd='k9s --context do-nyc1-hs-prod -n ship-api -c pod'
-alias knsui='k9s --context do-nyc1-hs-prod -n ui -c pod'
+alias knsar='k9s --context do-nyc1-hs-prod -n arian -c pod'
+alias knsui='k9s --context do-nyc1-hs-prod -n apps -c pod'
 
 alias shiprc='kubectl -n ship-api --context hs-prod  exec -it deploy/ship-api --container ship-api -- rails c'
 
