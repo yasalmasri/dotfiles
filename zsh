@@ -112,3 +112,7 @@ fi
 
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+
+setopt AUTOCD
+setopt NOBEEP
+setopt NUMERIC_GLOB_SORT # sort file10 after file9
