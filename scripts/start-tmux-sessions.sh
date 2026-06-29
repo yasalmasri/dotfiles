@@ -6,6 +6,7 @@ set -u
 # Format: "session_name:/path/to/project[:startup_command]" or ":/path/to/project[:startup_command]" to use the folder name.
 PROJECTS=(
   "dot:$HOME/.dotfiles:nvim"
+  ":$HOME/dev/hydra-co:nvim"
   ":$HOME/dev/hydra-co/ship-api:nvim"
   ":$HOME/dev/hydra-co/front:nvim"
   ":$HOME/dev/hydra-co/tower:nvim"
@@ -18,6 +19,7 @@ PROJECTS=(
   ":$HOME/dev/masys/haos:nvim"
   ":$HOME/dev/masys/chrono:nvim"
   ":$HOME/dev/masys/ms_info:nvim"
+  ":$HOME/dev/masys/https:nvim"
 )
 
 if ! command -v tmux >/dev/null 2>&1; then
