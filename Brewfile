@@ -12,6 +12,7 @@ brew 'postgresql'
 brew 'tmux'
 
 # zsh plugins
+brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 
 # Services
