@@ -14,6 +14,7 @@ brew 'tmux'
 # zsh plugins
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
+brew 'zsh-you-should-use'
 
 # Services
 # services start postgresql
