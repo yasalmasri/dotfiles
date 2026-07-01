@@ -116,3 +116,8 @@ export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agen
 setopt AUTOCD
 setopt NOBEEP
 setopt NUMERIC_GLOB_SORT # sort file10 after file9
+
+for plugin_config in ~/.dotfiles/config/zsh/plugin/*.zsh; do
+  [[ -r "$plugin_config" ]] && source "$plugin_config"
+done
+unset plugin_config
