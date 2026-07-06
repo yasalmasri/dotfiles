@@ -1,27 +1,12 @@
 # Directories
 alias down='cd ~/Downloads/'
+alias desk='cd ~/Desktop/'
 alias dot='cd ~/.dotfiles/'
 alias mdot='mvim ~/.dotfiles/'
 alias devs='cd ~/dev/'
 alias masys='cd ~/dev/masys/'
 alias test='cd ~/dev/test/'
 alias xcd='cd /Users/yaser/Desktop/Xcode'
-alias mmm='cd /Users/yaser/dev/masys/my_money'
-alias pel='cd /Users/yaser/dev/masys/pellet-api'
-
-## Masys
-# alias mror='cd ~/dev/masys/manager-ror/'
-# alias mvue='cd ~/dev/masys/manager-vue/'
-# alias groa='cd ~/dev/masys/groceries-api/'
-# alias groi='cd /Users/yaser/Desktop/Xcode/Groceries/'
-# alias ppa='cd /Users/yaser/dev/masys/ping-pong-api'
-# alias ppi='cd /Users/yaser/Desktop/Xcode/ping-pong'
-# alias tga='cd /Users/yaser/dev/masys/trade_games-api'
-# alias tgu='cd /Users/yaser/dev/masys/trade_games-ui'
-# alias tgi='cd /Users/yaser/Desktop/Xcode/TradeGames'
-
-# GG
-# alias ggd='cd ~/dev/gg/'
 
 # Hydra
 alias hyd='cd ~/dev/hydra-co'

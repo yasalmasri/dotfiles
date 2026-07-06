@@ -26,10 +26,6 @@ alias rdbsr='rails db:reset:schema'
 alias red='bin/rails db:environment:set RAILS_ENV=development'
 alias kiq='bundle exec sidekiq -C config/sidekiq.yml'
 
-alias tpat='ruby tag.rb --patch'
-alias tmin='ruby tag.rb --minor'
-alias tmaj='ruby tag.rb --major'
-
 # Test db
 alias trdbc='RAILS_ENV=test bundle exec rails db:create'
 alias trdbm='RAILS_ENV=test bundle exec rails db:migrate'
