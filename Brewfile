@@ -28,6 +28,7 @@ brew 'netlify-cli'
 brew 'redis'
 brew 'taproom'
 brew 'tea'
+brew '1password-cli'
 
 # zsh plugins
 brew 'zsh-autosuggestions'
