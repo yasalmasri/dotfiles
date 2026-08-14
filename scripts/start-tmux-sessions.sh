@@ -6,20 +6,20 @@ set -u
 # Format: "session_name:/path/to/project[:startup_command]" or ":/path/to/project[:startup_command]" to use the folder name.
 PROJECTS=(
   "dot:$HOME/.dotfiles:nvim"
-  ":$HOME/dev/hydra-co:nvim"
+  # ":$HOME/dev/hydra-co:nvim"
   ":$HOME/dev/hydra-co/ship-api:nvim"
   ":$HOME/dev/hydra-co/front:nvim"
   ":$HOME/dev/hydra-co/tower:nvim"
-  ":$HOME/dev/hydra-co/arian:nvim"
+  # ":$HOME/dev/hydra-co/arian:nvim"
   ":$HOME/dev/hydra-co/infra:nvim"
-  ":$HOME/dev/masys/grocery-list:nvim"
-  ":$HOME/dev/masys/pellet:nvim"
-  ":$HOME/dev/masys/pango:nvim"
-  ":$HOME/dev/masys/npm:nvim"
-  ":$HOME/dev/masys/haos:nvim"
-  ":$HOME/dev/masys/chrono:nvim"
-  ":$HOME/dev/masys/ms_info:nvim"
   ":$HOME/dev/masys/https:nvim"
+  # ":$HOME/dev/masys/haos:nvim"
+  # ":$HOME/dev/masys/grocery-list:nvim"
+  # ":$HOME/dev/masys/pellet:nvim"
+  # ":$HOME/dev/masys/pango:nvim"
+  # ":$HOME/dev/masys/npm:nvim"
+  # ":$HOME/dev/masys/chrono:nvim"
+  # ":$HOME/dev/masys/ms_info:nvim"
 )
 
 if ! command -v tmux >/dev/null 2>&1; then
