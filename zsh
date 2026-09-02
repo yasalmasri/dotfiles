@@ -1,10 +1,9 @@
-export PATH="/usr/local/bin:$PATH"
-export EDITOR='vim'
-# . /usr/local/opt/asdf/libexec/asdf.sh
-
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 eval "$(zoxide init zsh)"
 
@@ -95,22 +94,12 @@ for f in ~/.dotfiles/aliases_files/*; do source $f; done
 # source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
 source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.dotfiles/p10k.zsh ]] || source ~/.dotfiles/p10k.zsh
 
 if [ -x "$(command -v figlet)" ]; then
   figlet -f starwars 'Welcome Yaser'
 fi
-
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
 setopt AUTOCD
 setopt NOBEEP
