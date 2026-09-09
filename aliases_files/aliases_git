@@ -123,3 +123,22 @@ function repo() {
   url="${url%.git}"
   open "$url"
 }
+
+function release-check() {
+  git fetch origin --tags || exit
+  tag=$(git for-each-ref --sort=-creatordate --count=1 --format="%(refname:short)" refs/tags)
+  [[ -n "$tag" ]] || { echo "No tags found"; exit 1; }
+
+  head_commit=$(git rev-parse HEAD)
+  tag_commit=$(git rev-parse "${tag}^{commit}")
+
+  echo "Current commit: $head_commit"
+  echo "Latest tag:     $tag ($tag_commit)"
+
+  if [[ "$head_commit" == "$tag_commit" ]]; then
+    echo "✓ Current commit matches the latest tag"
+  else
+    echo "✗ Current commit differs from the latest tag"
+    git log --oneline "${tag}..HEAD"
+  fi
+}

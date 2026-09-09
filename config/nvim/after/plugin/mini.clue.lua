@@ -1,23 +1,23 @@
-MiniDeps.add('echasnovski/mini.clue')
+-- MiniDeps.add('echasnovski/mini.clue')
 
-require('mini.clue').setup({
-  clues = {
-    { mode = 'n', keys = '<LocalLeader>h', desc = 'Markdown Plus: Headers / TOC' },
-    { mode = 'n', keys = '<LocalLeader>m', desc = 'Markdown Plus: Editing' },
-    { mode = 'x', keys = '<LocalLeader>m', desc = 'Markdown Plus: Editing' },
-    { mode = 'n', keys = '<LocalLeader>t', desc = 'Markdown Plus: Tables' },
-  },
-  triggers = {
-    { mode = 'n', keys = '<Leader>' },
-    { mode = 'x', keys = '<Leader>' },
-    { mode = 'n', keys = '<LocalLeader>' },
-    { mode = 'x', keys = '<LocalLeader>' },
-  },
-  window = {
-    config = {
-      anchor = 'SW',
-      col = 'auto',
-      row = 'auto',
-    },
-  },
-})
+-- require('mini.clue').setup({
+--   clues = {
+--     { mode = 'n', keys = '<LocalLeader>h', desc = 'Markdown Plus: Headers / TOC' },
+--     { mode = 'n', keys = '<LocalLeader>m', desc = 'Markdown Plus: Editing' },
+--     { mode = 'x', keys = '<LocalLeader>m', desc = 'Markdown Plus: Editing' },
+--     { mode = 'n', keys = '<LocalLeader>t', desc = 'Markdown Plus: Tables' },
+--   },
+--   triggers = {
+--     { mode = 'n', keys = '<Leader>' },
+--     { mode = 'x', keys = '<Leader>' },
+--     { mode = 'n', keys = '<LocalLeader>' },
+--     { mode = 'x', keys = '<LocalLeader>' },
+--   },
+--   window = {
+--     config = {
+--       anchor = 'SW',
+--       col = 'auto',
+--       row = 'auto',
+--     },
+--   },
+-- })

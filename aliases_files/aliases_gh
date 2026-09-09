@@ -1,2 +1,28 @@
-alias prc='gh pr create -a @me'
-alias prv='gh pr view -w'
+function _pr_remote_url() {
+  git remote get-url origin 2>/dev/null || {
+    echo "No git remote 'origin' found." >&2
+    return 1
+  }
+}
+
+function prc() {
+  local remote_url
+  remote_url=$(_pr_remote_url) || return 1
+
+  case "$remote_url" in
+    *github.com[:/]*) gh pr create -a @me "$@" ;;
+    *codeberg.org[:/]*) fj pr create "$@" ;;
+    *) echo "Unsupported git host in origin: $remote_url" >&2; return 1 ;;
+  esac
+}
+
+function prv() {
+  local remote_url
+  remote_url=$(_pr_remote_url) || return 1
+
+  case "$remote_url" in
+    *github.com[:/]*) gh pr view -w "$@" ;;
+    *codeberg.org[:/]*) fj pr view "$@" ;;
+    *) echo "Unsupported git host in origin: $remote_url" >&2; return 1 ;;
+  esac
+}
