@@ -23,7 +23,7 @@ Host pve2
   User root
 
 Host hermes
-  HostName 195.201.102.115
+  HostName 67.205.181.144
   User root
 
 Host docker
