@@ -93,8 +93,8 @@ pointer_scaling = false
 [devices."serial:2206lz52g7p8".bindings]
 Forward = "MouseForward"
 Thumbwheel = "None"
-ThumbwheelScrollUp = "VolumeDown"
-ThumbwheelScrollDown = "VolumeUp"
+ThumbwheelScrollUp = "VolumeUp"
+ThumbwheelScrollDown = "VolumeDown"
 GestureButton = "ShowActionsRing"
 
 [devices."serial:2206lz52g7p8".bindings.MiddleClick.OpenApplication]
