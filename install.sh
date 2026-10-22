@@ -15,6 +15,10 @@ echo source ~/.dotfiles/zsh >> ~/.zshrc
 ln -s /Users/$(whoami)/.dotfiles/config/nvim /Users/$(whoami)/.config
 ln -s /Users/$(whoami)/.dotfiles/config/wezterm /Users/$(whoami)/.config
 
+# Keep OpenLogi runtime files local; only its config belongs in dotfiles.
+mkdir -p "$HOME/.config/openlogi"
+ln -s "$HOME/.dotfiles/config/openlogi/config.toml" "$HOME/.config/openlogi/config.toml"
+
 git config --global core.excludesfile ~/.dotfiles/gitignore_global
 git config --global core.editor `which vim`
 

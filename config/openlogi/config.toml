@@ -1,0 +1,151 @@
+schema_version = 9
+
+[app_settings]
+launch_at_login = false
+check_for_updates = true
+auto_install_updates = false
+update_prompt_seen = true
+show_in_menu_bar = true
+capture_mouse_events = true
+auto_download_assets = true
+asset_source = "automatic"
+thumbwheel_sensitivity = 14
+appearance = "system"
+smooth_scroll = false
+vertical_scroll_sensitivity = 14
+app_icon = "openlogi"
+ui_scale = "normal"
+device_view_mode = "grid"
+mouse_profile_target = "pointer"
+low_battery_notifications = true
+lock_key_notifications = true
+animate_desktop_switch = true
+
+[devices]
+
+[devices."serial:2206lz52g7p8"]
+dpi = 1500
+
+[devices."serial:2206lz52g7p8".identity]
+display_name = "MX Master 3S"
+codename = "MX Master 3S"
+kind = "mouse"
+
+[devices."serial:2206lz52g7p8".identity.model_info]
+entity_count = 3
+unit_id = [
+    0,
+    0,
+    0,
+    0,
+]
+model_ids = [
+    45108,
+    0,
+    0,
+]
+extended_model_id = 0
+
+[devices."serial:2206lz52g7p8".identity.model_info.transports]
+usb = false
+equad = false
+btle = true
+bluetooth = false
+
+[devices."serial:2206lz52g7p8".identity.capabilities]
+buttons = true
+pointer = true
+lighting = false
+scroll_inversion = true
+hires_wheel = true
+thumbwheel = true
+haptic_feedback = false
+haptic_panel = false
+dpi_gestures = true
+fn_lock = false
+os_layout = false
+report_rate = false
+backlight = false
+easy_switch = true
+virtual_thumbwheel = false
+pointer_scaling = false
+
+[keyboard]
+
+[devices."serial:2206lz52g7p8".links."direct:046d:b034".capabilities]
+buttons = true
+pointer = true
+lighting = false
+scroll_inversion = true
+hires_wheel = true
+thumbwheel = true
+haptic_feedback = false
+haptic_panel = false
+dpi_gestures = true
+fn_lock = false
+os_layout = false
+report_rate = false
+backlight = false
+easy_switch = true
+virtual_thumbwheel = false
+pointer_scaling = false
+
+[devices."serial:2206lz52g7p8".bindings]
+Forward = "MouseForward"
+Thumbwheel = "None"
+ThumbwheelScrollUp = "VolumeDown"
+ThumbwheelScrollDown = "VolumeUp"
+GestureButton = "ShowActionsRing"
+
+[devices."serial:2206lz52g7p8".bindings.MiddleClick.OpenApplication]
+path = "~/Downloads"
+display_name = "Downloads"
+
+[devices."serial:2206lz52g7p8".bindings.DpiToggle]
+Up = "PlayPause"
+Down = "CaptureRegion"
+Left = "PrevTrack"
+Right = "NextTrack"
+Click = "MissionControl"
+
+[devices."serial:2206lz52g7p8".disabled_gestures.MiddleClick]
+Up = "MissionControl"
+Down = "ShowDesktop"
+Left = "PrevTab"
+Right = "NextTab"
+Click = "MissionControl"
+
+[devices."serial:2206lz52g7p8".action_ring]
+enabled = true
+haptics = true
+
+[devices."serial:2206lz52g7p8".disabled_gestures.GestureButton]
+Up = "PlayPause"
+Down = "CaptureRegion"
+Left = "PrevTrack"
+Right = "NextTrack"
+Click = "MissionControl"
+
+[devices."serial:2206lz52g7p8".action_ring.default.slots.Top]
+action = "Screenshot"
+
+[devices."serial:2206lz52g7p8".action_ring.default.slots.TopRight]
+action = "Sleep"
+
+[devices."serial:2206lz52g7p8".action_ring.default.slots.Right]
+action = "Paste"
+
+[devices."serial:2206lz52g7p8".action_ring.default.slots.BottomRight]
+action = "BrowserForward"
+
+[devices."serial:2206lz52g7p8".action_ring.default.slots.Bottom]
+action = "PlayPause"
+
+[devices."serial:2206lz52g7p8".action_ring.default.slots.BottomLeft]
+action = "BrowserBack"
+
+[devices."serial:2206lz52g7p8".action_ring.default.slots.Left]
+action = "Undo"
+
+[devices."serial:2206lz52g7p8".action_ring.default.slots.TopLeft]
+action = "LockScreen"

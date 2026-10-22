@@ -2,3 +2,7 @@
 /tmp/swap/*
 .DS_Store
 config/nvim/plugin/packer_compiled.lua
+
+# OpenLogi may create a lock beside the symlink target.
+/config/openlogi/*
+!/config/openlogi/config.toml
